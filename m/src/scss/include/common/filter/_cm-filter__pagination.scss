@@ -1,0 +1,14 @@
+@charset 'utf-8';
+
+.cm-filter__pagination {
+  margin: 12px 0 5px;
+  font-size: 12px;
+  color: $gray6;
+  line-height: 18px;
+  text-align: center;
+
+  .swiper-pagination-current {
+    font-weight: bold;
+    color: $black;
+  }
+}

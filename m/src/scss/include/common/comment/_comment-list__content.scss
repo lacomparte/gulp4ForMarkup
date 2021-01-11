@@ -1,0 +1,94 @@
+.comment-list {
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__figure {
+    position: relative;
+    max-width: 60%;
+  }
+
+  &__thumb {
+    @include position(absolute, 0, null, null, -42px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: $gray3;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .svg-color {
+      fill: $white;
+    }
+  }
+
+  &__caption {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  &__controls {
+    vertical-align: middle;
+  }
+
+  &__timestamp {
+    font-size: 12px;
+    color: $gray6;
+  }
+
+  &__options {
+    vertical-align: top;
+    position: relative;
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  &__body {
+    margin: 4px 0;
+    color: $gray9;
+    word-break: break-all;
+
+    &--auth {
+      @extend .comment-list__body;
+      &::before {
+        content: '[작성자] ';
+      }
+      color: $fblue2;
+    }
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 21px;
+  }
+
+  &__reply {
+    font-size: 12px;
+    color: $gray6;
+
+    &__cancel {
+      color: $fred1;
+    }
+
+    &__new {
+      margin-left: 4px;
+      color: $fred1;
+    }
+
+    > span.active {
+      color: $fred1;
+    }
+  }
+}

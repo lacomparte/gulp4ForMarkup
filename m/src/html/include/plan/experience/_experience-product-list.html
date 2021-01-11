@@ -1,0 +1,13 @@
+<!--
+  include
+  plan/experience.html
+-->
+
+<ul class="block-products">
+  @@for(var i = 0; i < list.length; i++) {
+  <li>
+    <a href="`+list[i].productLink+`" style="background-image:url(`+list[i].imgUrl+`)"></a>
+    <!-- 상품 대표 이미지  / background-image:url('https://image.msscdn.net/musinsaUI/plan/experience-common/products.jpg')-->
+  </li>
+  }
+</ul>

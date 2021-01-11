@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.main-title {
+	position: relative;
+	padding: 29px 0 13px 0;
+	margin: 0 15px;
+	border-bottom: 1px solid $gray3;
+
+	&__text {
+		font-size: 18px;
+	}
+	&__link {
+		@include position(absolute, 25px, -5px);
+		padding: 5px;
+		font-size: 13px;
+		color: $gray6;
+		line-height: 20px;
+	}
+}

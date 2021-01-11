@@ -1,0 +1,82 @@
+<!--
+  include
+  common/comment/comment.html
+
+  변수
+  depth1: [boolean] 1뎁스 컨텐츠
+  thumb: [boolean] 사진 등록 유무
+  reply: [boolean] 댓글 -> 댓글취소 텍스트 토글
+  class_write: [string]
+  - --auth: 글 작성자가 댓글달 경우
+-->
+<div class="comment-list__content">
+  <div class="comment-list__header">
+    <figure class="comment-list__figure">
+      @@if(depth1) {
+        @@if(thumb) {
+          <img src="https://i.pinimg.com/originals/c8/14/99/c814995b86a60232c93492f5c90c0570.jpg" alt="프로필사진" class="comment-list__thumb">
+        }
+        @@if(!thumb) {
+          <span class="comment-list__thumb">
+            @@include('./common/svg/ic-solid-user.svg', {
+              class: '',
+              title: '프로필 사진 없음',
+            })
+          </span>
+        }
+      }
+      <figcaption class="comment-list__caption">
+        LV.1 무신사사사사사사사사사사사사
+      </figcaption>
+    </figure>
+    <div class="comment-list__controls">
+      <span class="comment-list__timestamp">1시간 전</span>
+      <div class="comment-list__options">
+        <button type="button" class="list-option">
+          @@include('./common/svg/ic-22-solid-more.svg', {
+            title: '댓글팝업열기'
+          })
+        </button>
+        @@include('./common/comment/_comment-tooltip.html', {
+          class: '',
+          button: [
+            {class: '', text: '삭제하기'},
+            {class: '', text: '신고하기'}
+          ],
+        })
+      </div>
+    </div>
+  </div>
+  <!--
+    [D]
+    1. 답글중 내가 쓴 글일 경우 change class comment-list__body--auth
+    2. 댓글 수정일때 .comment-list__body 가 사라지고 아래 파일을 가져옴
+      './common/comment/_comment-write.html'
+  -->
+  <div class="comment-list__body@@class_write">
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  </div>
+  @@if(depth1) {
+    <div class="comment-list__footer">
+      <!-- [D] 클릭시 답글 -> 답글취소로 변경되면서 첫번째 span에 active class 추가 -->
+      <button type="button" class="comment-list__reply">
+        @@if(reply) {
+          <span class="comment-list__reply__cancel">답글취소</span>
+        }
+        @@if(!reply) {
+          <span>답글</span>
+        }
+        <span>4</span>
+        @@if(new_reply) {
+          <span class="comment-list__reply__new">NEW</span>
+        }
+      </button>
+      @@include('./common/comment/_comment_list__evaluate.html', {
+        button: [
+          {title: '좋아요', class: 'thumb-up'},
+          {title: '싫어요', class: 'thumb-down'},
+        ],
+      })
+    </div>
+  }
+</div>

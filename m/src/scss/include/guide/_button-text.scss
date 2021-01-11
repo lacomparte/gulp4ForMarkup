@@ -1,0 +1,232 @@
+@charset 'utf-8';
+
+.guide__button--text {
+  &__30 {
+    .button {
+      &-type01 {
+        @include button(
+          $display: inline-flex,
+          $width: auto,
+          $height: 30px,
+          $fontWeight: normal,
+          $backgroundColor: transparent,
+          $color: $black,
+          $activeBackground: #7c7c7c,
+          $disabledBackground: transparent,
+          $disabledColor: $gray5,
+          $disabledSvgColor: $gray5,
+        );
+        > svg * {
+          fill: $black;
+        }
+        > span {
+          font-size: 20px,
+        }
+      }
+      &-type02 {
+        @include button(
+          $display: inline-flex,
+          $width: auto,
+          $height: 30px,
+          $backgroundColor: transparent,
+          $color: $black,
+          $activeBackground: #7c7c7c,
+          $disabledBackground: transparent,
+          $disabledColor: $gray5,
+          $disabledSvgColor: $gray5,
+        );
+        > svg * {
+          fill: $black;
+        }
+        > span {
+          font-size: 20px,
+        }
+      }
+      &-type03 {
+        @include button(
+          $display: inline-flex,
+          $width: auto,
+          $height: 30px,
+          $backgroundColor: transparent,
+          $color: $black,
+          $activeBackground: #7c7c7c,
+          $disabledBackground: transparent,
+          $disabledColor: $gray5,
+          $disabledSvgColor: $gray5,
+        );
+        text-decoration: underline;
+        > svg * {
+          fill: $black;
+        }
+        > span {
+          font-size: 20px,
+        }
+      }
+      &-type04 {
+        @include button(
+          $display: inline-flex,
+          $width: auto,
+          $height: 30px,
+          $fontWeight: normal,
+          $disabledBackground: transparent,
+          $disabledColor: $gray5,
+          $disabledSvgColor: $gray5,
+        );
+        > svg * {
+          fill: $gray5;
+        }
+        > span {
+          font-size: 20px,
+        }
+      }
+    }
+  }
+  &__22 {
+    .button {
+      &-type01 {
+        @include button(
+          $display: inline-flex,
+          $width: auto,
+          $height: 22px,
+          $fontWeight: normal,
+          $backgroundColor: transparent,
+          $color: $black,
+          $activeBackground: #7c7c7c,
+          $disabledBackground: transparent,
+          $disabledColor: $gray5,
+          $disabledSvgColor: $gray5,
+        );
+        > svg * {
+          fill: $black;
+        }
+      }
+      &-type02 {
+        @include button(
+          $display: inline-flex,
+          $width: auto,
+          $height: 22px,
+          $backgroundColor: transparent,
+          $color: $black,
+          $activeBackground: #7c7c7c,
+          $disabledBackground: transparent,
+          $disabledColor: $gray5,
+          $disabledSvgColor: $gray5,
+        );
+        > svg * {
+          fill: $black;
+        }
+      }
+      &-type03 {
+        @include button(
+          $display: inline-flex,
+          $width: auto,
+          $height: 22px,
+          $backgroundColor: transparent,
+          $color: $black,
+          $activeBackground: #7c7c7c,
+          $disabledBackground: transparent,
+          $disabledColor: $gray5,
+          $disabledSvgColor: $gray5,
+        );
+        text-decoration: underline;
+        > svg * {
+          fill: $black;
+        }
+      }
+      &-type04 {
+        @include button(
+          $display: inline-flex,
+          $width: auto,
+          $height: 22px,
+          $fontWeight: normal,
+          $disabledBackground: transparent,
+          $disabledColor: $gray5,
+          $disabledSvgColor: $gray5,
+        );
+        > svg * {
+          fill: $gray5;
+        }
+      }
+    }
+  }
+  &__18 {
+    .button {
+      &-type01 {
+        @include button(
+          $display: inline-flex,
+          $width: auto,
+          $height: 18px,
+          $fontWeight: normal,
+          $backgroundColor: transparent,
+          $color: $black,
+          $activeBackground: #7c7c7c,
+          $disabledBackground: transparent,
+          $disabledColor: $gray5,
+          $disabledSvgColor: $gray5,
+        );
+        > span {
+          font-size: 12px;
+        }
+        > svg * {
+          fill: $black;
+        }
+      }
+      &-type02 {
+        @include button(
+          $display: inline-flex,
+          $width: auto,
+          $height: 18px,
+          $backgroundColor: transparent,
+          $color: $black,
+          $activeBackground: #7c7c7c,
+          $disabledBackground: transparent,
+          $disabledColor: $gray5,
+          $disabledSvgColor: $gray5,
+        );
+        > span {
+          font-size: 12px;
+        }
+        > svg * {
+          fill: $black;
+        }
+      }
+      &-type03 {
+        @include button(
+          $display: inline-flex,
+          $width: auto,
+          $height: 18px,
+          $backgroundColor: transparent,
+          $color: $black,
+          $activeBackground: #7c7c7c,
+          $disabledBackground: transparent,
+          $disabledColor: $gray5,
+          $disabledSvgColor: $gray5,
+        );
+        text-decoration: underline;
+        > span {
+          font-size: 12px;
+        }
+        > svg * {
+          fill: $black;
+        }
+      }
+      &-type04 {
+        @include button(
+          $display: inline-flex,
+          $width: auto,
+          $height: 18px,
+          $fontWeight: normal,
+          $disabledBackground: transparent,
+          $disabledColor: $gray5,
+          $disabledSvgColor: $gray5,
+        );
+        > span {
+          font-size: 12px;
+        }
+        > svg * {
+          fill: $gray5;
+        }
+      }
+    }
+  }
+}

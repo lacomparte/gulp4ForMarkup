@@ -1,0 +1,142 @@
+.global-filter-v2 {
+  $this: &;
+  width: 40px;
+  height: 94px;
+  overflow: hidden;
+  margin-top: 14px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+  transition: background-color .25s, height .25s;
+
+  // default
+  &__button {
+    width: 100%;
+    height: 47px;
+    background-color: $white;
+    font-family: $font-musinsa;
+    font-size: 13px;
+    line-height: 14px;
+    color: #545454;
+
+    > span {
+      display: inline-block;
+      font-family: $font-musinsa; // store reset 상쇄
+    }
+
+    > svg {
+      display: none;
+
+      .svg-color {
+        fill: $white;
+        opacity: .7;
+      }
+    }
+
+    &--all {
+      display: none;
+      background-color: $black;
+    }
+
+    &--mensinsa {
+      > span {
+        padding-top: 3px;
+      }
+    }
+
+    &--wusinsa {
+      > span {
+        padding-bottom: 3px;
+      }
+    }
+  }
+
+  /** global-filter -- Modifier **/
+  // hide
+  &--hide {
+    height: 40px;
+    background-color: $black;
+
+    #{$this}__button {
+      display: none;
+      height: 100%;
+      border-radius: 20px;
+      color: $white;
+
+      > span {
+        padding: 0;
+      }
+    }
+
+    #{$this}__button--all {
+      display: block;
+    }
+
+    // hide & mensinsa
+    &#{$this}--mensinsa {
+      background-color: $navy8;
+
+      #{$this}__button {
+
+        &--all {
+          display: none;
+        }
+
+        &--mensinsa {
+          display: block;
+  
+          > svg {
+            display: none;
+          }
+        }
+
+      }
+    }
+
+    // hide & wusinsa
+    &#{$this}--wusinsa {
+      background-color: $fpurple2;
+
+      #{$this}__button {
+
+        &--all {
+          display: none;
+        }
+
+        &--wusinsa {
+          display: block;
+  
+          > svg {
+            display: none;
+          }
+        }
+
+      }
+    }
+  }
+
+  // show & mensinsa
+  &--mensinsa {
+    #{$this}__button--mensinsa {
+      background-color: $navy8;
+      color: $white;
+
+      > svg {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  // show & wusinsa
+  &--wusinsa {
+    #{$this}__button--wusinsa {
+      background-color: $fpurple2;
+      color: $white;
+
+      > svg {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}

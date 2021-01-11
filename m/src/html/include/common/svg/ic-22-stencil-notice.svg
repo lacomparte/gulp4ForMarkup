@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Ic/22/stencil/notice</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M14,1.84615385 L14,20.1538462 L7,15.1538462 L7,7.846 L4,7.846 L3.99992731,11.1531538 L2.99992731,11.1531538 L3,6.84615385 L7,6.84615385 L14,1.84615385 Z M13,3.788 L8,7.36 L8,14.639 L13,18.211 L13,3.788 Z M15,6.5 C17.4852814,6.5 19.5,8.51471863 19.5,11 C19.5,13.4142733 17.5987635,15.3844891 15.2118357,15.495102 L15,15.5 L15,14.5 C16.9329966,14.5 18.5,12.9329966 18.5,11 C18.5,9.1314366 17.0357224,7.60487355 15.1920352,7.50517886 L15,7.5 L15,6.5 Z M3.99992731,12.1531538 L4,14.153 L5.99992731,14.1521538 L5.99992731,15.1531538 L3,15.1538462 L2.99992731,12.1531538 L3.99992731,12.1531538 Z" id="path-1"></path>
+    </defs>
+    <g id="Ic/22/stencil/notice" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#000000" xlink:href="#path-1"></use>
+    </g>
+</svg>

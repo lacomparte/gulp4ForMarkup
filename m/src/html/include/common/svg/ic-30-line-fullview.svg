@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/30/Line/Fullview/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Ic/30/Line/Fullview/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M5,5 L5,25 L25,25 L25,5 L5,5 Z M4,4 L26,4 L26,26 L4,26 L4,4 Z" id="Rectangle" fill="#000000" fill-rule="nonzero" transform="translate(15.000000, 15.000000) rotate(-270.000000) translate(-15.000000, -15.000000) "></path>
+        <polygon id="Line-2" fill="#000000" fill-rule="nonzero" transform="translate(15.000000, 20.500000) rotate(-270.000000) translate(-15.000000, -20.500000) " points="14.5 9.5 15.5 9.5 15.5 31.5 14.5 31.5"></polygon>
+    </g>
+</svg>

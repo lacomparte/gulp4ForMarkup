@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/30/Stencil/Previous/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Ic/30/Stencil/Previous/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-2" fill="#000000" transform="translate(8.889087, 11.818019) rotate(-315.000000) translate(-8.889087, -11.818019) " x="8.3890873" y="6.81801948" width="1" height="10"></rect>
+        <rect id="Rectangle-2-" fill="#000000" transform="translate(8.889087, 18.181981) rotate(-585.000000) translate(-8.889087, -18.181981) " x="8.3890873" y="13.1819805" width="1" height="10"></rect>
+        <path d="M25,14.5 L25,15.5 L10,15.5 L10,14.5 L25,14.5 Z M9,14.5 L9,15.5 L6,15.5 L6,14.5 L9,14.5 Z" id="Mask" fill="#000000" transform="translate(15.500000, 15.000000) rotate(-180.000000) translate(-15.500000, -15.000000) "></path>
+    </g>
+</svg>

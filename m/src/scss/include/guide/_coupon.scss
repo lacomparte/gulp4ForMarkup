@@ -1,0 +1,65 @@
+@charset 'utf-8';
+
+.guide__label {
+  &--coupon {
+    .label {
+      &-type01 {
+        @include label(
+          $display: inline-flex,
+          $height: 20px,
+          $padding: 0 0 0 5px,
+          $borderColor: #4162c9,
+          $fontSize: 11px,
+          $lineHeight: 18px,
+          $backgroundColor: #4162c9,
+        );
+        &__coupon {
+          margin-left: 5px;
+          padding: 0 5px;
+          background-color: $white;
+          color: #4162c9;
+          font-family: $font-musinsa;
+        }
+        &-1 {
+          @include label(
+            $display: inline-flex,
+            $height: 20px,
+            $padding: 0 4px,
+            $borderColor: #4162c9,
+            $fontSize: 11px,
+            $lineHeight: 18px,
+            $backgroundColor: #4162c9,
+          );
+        }
+      }
+      &-coupon {
+        display: inline-flex;
+        &--type02 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $borderColor: $fblue2,
+            $fontSize: 11px,
+            $lineHeight: 24px,
+            $color: #4162c9,
+          );
+        }
+        &--type03 {
+          @include label(
+            $display: inline-flex,
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $lineHeight: 24px,
+            $backgroundColor: $fblue2,
+          );
+          align-items: center;
+          font-weight: bold;
+          svg path {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+}

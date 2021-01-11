@@ -1,0 +1,149 @@
+<footer class="footer">
+  <button type="button" class="footer__button" data-toggle="active">
+    (주)무신사 사업자 정보
+    @@include('./common/svg/ic-22-line-arrow-bottom.svg', {
+      class: '',
+      title: '',
+    })
+  </button>
+
+  @@include('./common/layout/footer-info.html', {
+    block: [
+      {
+        class: '--ceo',
+        title: '대표',
+        text: '조만호',
+      },
+      {
+        class: '',
+        title: '대표전화',
+        text: '1544-7199 (1번 배송,교환,환불 | 2번 결제,회원) <a href="/app/cs/counsel" class="footer-info__link">1:1문의</a>',
+      },
+      {
+        class: '',
+        title: '주소',
+        text: '서울특별시 강남구 언주로 174길 30 로빈명품관 지하 1층',
+      },
+      {
+        class: '',
+        title: '사업자등록번호',
+        text: '211-88-79575 <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2118879575&amp;apv_perm_no=" class="footer-info__link" target="_blank" title="새 창">사업자정보</a>',
+      },
+      {
+        class: '',
+        title: '통신판매업',
+        text: '2012-서울강남-01897',
+      },
+      {
+        class: '',
+        title: '개인정보관리책임자',
+        text: '이진우(help@musinsa.com)',
+      },
+      {
+        class: '',
+        title: '호스팅사업자',
+        text: '아마존웹서비스(Amazon Web Service)',
+      },
+    ]
+  })
+
+  <div class="footer__link">
+    <a href="//www.musinsa.com/company/">회사소개</a>
+    <a href="/app/cs/notice_list">공지사항</a>
+    <a href="//recruit.musinsa.com/">채용
+      @@include('./common/_cm-new.html', {
+        text: '진행중'
+      })
+    </a>
+    <a href="/app/company/partner">입점∙제휴∙대량구매</a>
+  </div>
+
+  <div class="footer__clause">
+    <a href="//www.musinsa.com/?mod=private"><strong>개인정보처리방침</strong></a>
+    <a href="//www.musinsa.com/?mod=agreement">이용약관</a>
+    <a href="#" title="새 창">PC화면</a>
+  </div>
+
+  <div class="footer__faq">
+    <a href="/app/cs/faq">
+      @@include('./common/svg/ic-18-line-question.svg', {
+        class: '',
+        title: ''
+      })
+      FAQ
+    </a>
+    <a href="/app/mypage/change_info">
+      @@include('./common/svg/ic-18-line-information.svg', {
+        class: '',
+        title: ''
+      })
+      교환&#47;환불 가이드
+    </a>
+	</div>
+
+  <div class="footer__sns">
+    <a href="//www.facebook.com/musinsa" target="_blank" title="새 창">
+      @@include('./common/svg/btn-facebook-32.svg', {
+        class: '',
+        title: '무신사 페이스북 바로가기'
+      })
+    </a>
+    <!-- [D] 우신사 페이스북 링크
+    <a href="//www.facebook.com/wusinsacom" target="_blank" title="새 창">
+      @@include('./common/svg/btn-facebook-32.svg', {
+        class: '',
+        title: '우신사 페이스북 바로가기'
+      })
+    </a>
+    -->
+    <a href="//instagram.com/musinsacom" target="_blank" title="새 창">
+      @@include('./common/svg/btn-instagram-32.svg', {
+        class: '',
+        title: '무신사 인스타그램 바로가기'
+      })
+    </a>
+    <!-- [D] 우신사 인스타그램 링크
+    <a href="//instagram.com/wusinsa" target="_blank" title="새 창">
+      @@include('./common/svg/btn-instagram-32.svg', {
+        class: '',
+        title: '우신사 인스타그램 바로가기'
+      })
+    </a>
+    -->
+    <a href="//www.youtube.com/musinsatv" target="_blank" title="새 창">
+      @@include('./common/svg/btn-youtube-32.svg', {
+        class: '',
+        title: '무신사 유튜브 채널 바로가기'
+      })
+    </a>
+    <!-- [D] 우신사 유튜브 무신사 공통 -->
+    <a href="//twitter.com/musinsacom" target="_blank" title="새 창">
+      @@include('./common/svg/btn-twitter-32.svg', {
+        class: '',
+        title: '무신사 트위터 바로가기'
+      })
+    </a>
+    <!-- [D] 우신사 트위터 미노출 -->
+    <a href="//m.post.naver.com/musinsa_store" target="_blank" title="새 창">
+      @@include('./common/svg/btn-naver-32.svg', {
+        class: '',
+        title: '무신사 네이버 포스트 바로가기'
+      })
+    </a>
+    <!-- [D] 우신사 네이버 포스트 링크
+    <a href="//m.post.naver.com/wusinsa" target="_blank" title="새 창">
+      @@include('./common/svg/btn-naver-32.svg', {
+        class: '',
+        title: '우신사 네이버 포스트 바로가기'
+      })
+    </a>
+    -->
+  </div>
+  
+  <p class="footer__text">
+    일부 상품의 경우 주식회사 무신사는<br>
+    통신판매의 당사자가 아닌 통신판매중개자로서<br>
+    상품, 상품정보, 거래에 대한 책임이 제한될 수 있으므로,<br>
+    각 상품 페이지에서 구체적인 내용을 확인하시기 바랍니다.
+  </p>
+</footer>

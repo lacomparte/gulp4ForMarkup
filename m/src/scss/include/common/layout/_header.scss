@@ -1,0 +1,161 @@
+.header {
+  $this: &;
+  height: 50px;
+  line-height: 50px;
+  font-family: $font-musinsa;
+  background: $white;
+  z-index: 500;
+
+  &__area {
+    display: flex;
+    justify-content: center;
+		@include position(fixed, 0, 0, null, 0);
+		z-index: 500;
+		height: 50px;
+		line-height: 50px;
+    background-color: $white;
+
+    @at-root {
+      // header fixed 상쇄
+      #{$this}--static & {
+        position: relative;
+      }
+
+      // header bg 이전 버전
+      #{$this}--ex & {
+        background-color: $black;
+      }
+
+      // user-snap 의 댓글팝업에서 사용
+      .layer-comment & {
+        position: relative;
+      }
+    }
+  }
+
+  &__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    font-family: $font-default;
+    font-size: 16px;
+    color: $black;
+
+    @at-root {
+      #{$this}--ex & {
+        color: $white;
+      }
+    }
+  }
+
+  &__util {
+    &--category {
+      width: 20px;
+      height: 20px;
+      padding: 2px;
+      margin: 15px 0 0 4px;
+      border: 1px solid #525252;
+      border-radius: 100%;
+
+      > svg {
+        vertical-align: top;
+
+        .svg-color {
+          fill: $white;
+        }
+      }
+
+      &.active {
+        transform: rotate(180deg);
+      }
+    }
+
+    &--tooltip {
+      position: relative;
+      top: 50%;
+      width: 30px;
+      height: 30px;
+      padding: 4px;
+      box-sizing: border-box;
+      transform: translateY(-50%);
+
+      > svg .svg-color {
+        fill: $black;
+
+        @at-root {
+          #{$this}--ex & {
+            fill: $white;
+          }
+        }
+      }
+
+      &.active {
+        & + #{$this}__tooltip {
+          display: block;
+        }
+      }
+    }
+  }
+
+  // 추후 product design guide 의 mixin으로 대체 해야함
+  &__tooltip {
+    display: none;
+    @include position(fixed, 44px, 50%);
+    width: 300px;
+    padding: 9px 10px 7px 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: $fblue2;
+    font-family: $font-default;
+    font-size: 11px;
+    line-height: 17px;
+    color: #ffffff;
+    text-align: left;
+    transform: translateX(50%);
+    z-index: 10;
+
+    &::before {
+      @include position(absolute, -4px, 117px);
+      width: 0;
+      height: 0;
+      border-right: 4px solid transparent;
+      border-bottom: 4px solid $fblue2;
+      border-left: 4px solid transparent;
+      content: '';
+    }
+  }
+  // 끝 추후 product design guide 의 mixin으로 대체 해야함
+
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__left {
+    @include position(absolute, 0, null, 0, 5px);
+    justify-content: flex-start;
+  }
+
+  &__right {
+    @include position(absolute, 0, 5px, 0);
+    justify-content: flex-end;
+  }
+
+  &__button {
+    position: relative;
+    padding: 5px;
+
+    svg {
+      vertical-align: middle;
+
+      @at-root {
+        // header bg 이전 버전
+        #{$this}--ex & .svg-color {
+          fill: $white;
+        }
+      }
+		}
+  }
+}

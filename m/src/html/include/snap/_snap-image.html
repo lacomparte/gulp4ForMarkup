@@ -1,0 +1,44 @@
+<!--
+  include
+  snap/snap-main.html
+  snap/snap-user-profile.html
+  snap/snap-tag.html
+
+  변수
+  class: [string]
+  - snap-image--3column: 태그 모아보기, 프로필에 사용
+  button: [array] 버튼 폼 이미지 리스트
+  error: [array] 에러 폼 이미지 리스트
+  register: [array] 등록 폼 이미지 리스트
+  plain: [array] 클릭이벤트 없는 이미지 리스트
+
+  기타
+  - 구조상 아래 처럼 array 로 모든 변수를 받는 방법으로 제작
+  - error, button, register, plain 배열 길이만큼 반복함.
+-->
+
+<div class="snap-image @@class">
+  <div class="snap-image__lists swiper-wrapper">
+    @@for(var i = 0; i < register.length; i++) {
+      <div class="snap-image__list swiper-slide">
+        <button type="button" class="snap-image__content snap-image__register">
+          @@include('./common/svg/ic-22-stencil-plus.svg', {
+            title: '스냅 등록하기',
+          })
+        </button>
+      </div>
+    }
+    @@for(var i = 0; i < button.length; i++) {
+      <div class="snap-image__list swiper-slide">
+        <button type="button" class="snap-image__button">
+          <div class="snap-image__content" style="background-image: url('https://image.musinsa.com/mfile_s01/_street_images/48/0504san07_001.jpg?20110929113710')"></div>
+        </button>
+      </div>
+    }
+    @@for(var i = 0; i < plain.length; i++) {
+      <div class="snap-image__list swiper-slide">
+        <div class="snap-image__content" style="background-image: url('https://image.musinsa.com/mfile_s01/_street_images/48/0504san07_001.jpg?20110929113710')"></div>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,89 @@
+@charset 'utf-8';
+
+.cm-filter__item {
+  $this: &;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 35px;
+  padding: 0 15px;
+  margin-right: 5px;
+  border: 1px solid $gray4;
+  border-radius: 17px;
+  box-sizing: border-box;
+  background-color: $white;
+
+  // 필터 상단 캠페인 버튼
+  &--campaign {
+    // $campaign 변수의 정의는 common/filter/variables 에 있음
+    @each $idx, $color in $campaigns {
+      &#{$idx}::before {
+        @include position(absolute, -7px, null, null, -5px);
+
+        padding: 3px 5px 1px;
+        border-radius: 8px 8px 0px;
+        background-color: #{$color};
+        font-family: $font-musinsa;
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 12px;
+        color: $white;
+        content: 'EVENT';
+      }
+    }
+  }
+
+  &:last-of-type::after {
+    @include position(absolute, 0, null, null, 100%);
+
+    width: 15px;
+    height: 100%;
+    content: '';
+  }
+
+  &__text {
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  &__svg {
+    width: 18px;
+    margin: 1px -4px 0 3px;
+
+    .svg-color {
+      fill: #d8d8d8;
+    }
+  }
+
+  // 필터 선택시
+  &--active {
+    border-color: $fblue2;
+    background-color: $fblue2;
+    color: $white;
+
+    #{$this}__arrow {
+      transform: rotate(180deg);
+    }
+  }
+
+  // 필터의 값 선택시
+  &--selected {
+    color: $fblue2;
+
+    @each $idx, $color in $campaigns {
+      &#{$this}--campaign#{$idx} {
+        color: #{$color};
+      }
+    }
+
+    &#{$this}--campaign {
+      color: $fblue2;
+    }
+  }
+
+  &:last-child() {
+    margin-right: 0;
+  }
+}

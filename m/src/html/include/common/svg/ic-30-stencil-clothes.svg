@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/30/Stencil/Clothes/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Ic/30/Stencil/Clothes/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Path" fill="#000000" fill-rule="nonzero" points="21 25.5 9 25.5 9 12 8 12 8 26.5 22 26.5 22 12 21 12"></polygon>
+        <path d="M8,23 L4,23 L4,15.4998861 L5,15.4998861 L5,22 L8,22 L8,23 Z M25,22 L25,12 C25,8.67445181 22.669135,5.85577084 19.509491,5.16281903 C18.6940387,6.86301805 16.9598069,8 15,8 C13.0401931,8 11.3059613,6.86301805 10.490509,5.16281903 C7.33086497,5.85577084 5,8.67445181 5,12 L5,14.4998861 L4,14.4998861 L4,12 C4,7.87291068 7.12516919,4.47574374 11.1381206,4.04588612 C11.5979179,5.74778294 13.1527235,7 15,7 C16.8472765,7 18.4020821,5.74778294 18.8618794,4.04588612 C22.8748308,4.47574374 26,7.87291068 26,12 L26,23 L22,23 L22,22 L25,22 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

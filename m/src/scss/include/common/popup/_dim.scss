@@ -1,0 +1,11 @@
+.popup-dim {
+  display: none;
+  @include position(fixed, 0, 0, 0, 0);
+  z-index: 9998;
+  background-color: rgba(0, 0, 0, .4);
+  
+  &.active {
+    display: block;
+    animation: fadeIn .15s;
+  }
+}

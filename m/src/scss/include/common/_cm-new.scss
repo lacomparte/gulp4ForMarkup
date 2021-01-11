@@ -1,0 +1,19 @@
+.cm-new {
+  display: block;
+  overflow: hidden;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: $fblue2;
+  text-indent: -9999px;
+  @at-root {
+    // header 알림 영역
+    .header__area .header__button & {
+      @include position(absolute, 5px, 5px);
+    }
+    // footer 에서 사용
+    .footer .footer__link > a > & {
+      @include position(absolute, 3px, 1px);
+    }
+  }
+}

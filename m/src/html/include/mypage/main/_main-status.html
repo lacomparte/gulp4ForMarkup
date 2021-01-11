@@ -1,0 +1,15 @@
+<!--
+  include
+	mypage/main.html
+	mypage/main-enroll.html
+	mypage/main-empty.html
+-->
+
+<div class="main-status">
+  @@for(var i = 0; i < button.length; i++) {
+  <a href="#" class="main-status__button">
+    <strong class="main-status__count `+ button[i].class +`">`+ button[i].count +`</strong>
+    <span class="main-status__text">`+ button[i].text +`</span>
+  </a>
+  }
+</div>

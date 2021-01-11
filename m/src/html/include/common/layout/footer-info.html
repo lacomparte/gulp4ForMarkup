@@ -1,0 +1,10 @@
+<div class="footer-info">
+  <strong>주식회사 무신사 (MUSINSA Co., Ltd.)</strong>
+  @@for(var i = 0; i < block.length; i++) {
+    <dl class="footer-info__block`+ block[i].class +`">
+      <dt>`+ block[i].title +`</dt>
+      <dd>`+ block[i].text +`</dd>
+    </dl>
+  }
+  <div class="footer-info__musinsa">ⓒ MUSINSA Co.,Ltd.</div>
+</div>

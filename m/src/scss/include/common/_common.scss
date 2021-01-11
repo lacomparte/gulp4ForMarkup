@@ -1,0 +1,31 @@
+@charset 'utf-8';
+
+// font-face
+@include font-face('Musinsa', 300, 'normal', 'fonts_v3_2/musinsaot-Light', 'MusinsaLight');
+@include font-face('Musinsa', 500, 'normal', 'fonts_v3_2/musinsaot-Medium', 'MusinsaRegular');
+@include font-face('Musinsa', 700, 'normal', 'fonts_v3_2/musinsaot-Bold', 'musinsaot-Bold');
+
+@include font-face('Musinsa Stencil', 300, 'normal', 'fonts_v2/MusinsaLightStencil', 'MusinsaLightStencil');
+@include font-face('Musinsa Stencil', 500, 'normal', 'fonts_v2/MusinsaRegularStencil', 'MusinsaRegularStencil');
+
+@include font-face('Musinsa Italic', 300, 'normal', 'fonts_v3_2/musinsait-Light', 'musinsait-Light');
+@include font-face('Musinsa Italic', 500, 'normal', 'fonts_v3_2/musinsait-Medium', 'musinsait-Medium');
+@include font-face('Musinsa Italic', 700, 'normal', 'fonts_v3_2/musinsait-Bold', 'musinsait-Bold');
+
+@include font-face('Musinsa Round', 500, 'normal', 'fonts_v3_2/musinsard-Medium', 'musinsard-Medium');
+@include font-face('Musinsa Round', 700, 'normal', 'fonts_v3_2/musinsard-Bold', 'musinsard-Bold');
+
+// IR
+.blind { // 텍스트 숨김 처리 시에만 사용
+	overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+body.fixed { // 팝업 오픈 시에만 사용
+  overflow: hidden;
+  @include position(fixed, 0, 0, null, 0);
+}

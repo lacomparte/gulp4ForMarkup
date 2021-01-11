@@ -1,0 +1,22 @@
+<!--
+  include
+-->
+<!-- [D]
+  선택시 cm-filter__sort--active 클래스 추가
+  aria-selected="true"
+-->
+<button type="button" class="cm-filter__sort @@class" @@attribute>
+  @@if(text) {
+    <span class="cm-filter__sort__text">
+      @@text
+    </span>
+  }
+  @@if(svg) {
+    <span class="cm-filter__sort__svg">
+      @@include('./common/svg/@@svg.svg', {
+        title: '@@svg_title',
+        class: '@@svg_class',
+      })
+    </span>
+  }
+</button>

@@ -1,0 +1,26 @@
+<!--
+  include
+  common/filter/cm-filter.html
+
+  변수
+  class: [string]
+  svg: [string] svg 파일명
+  svg_title: [string] svg 대체 텍스트
+  svg_class: [string] svg class
+  placeholder: [string] placeholder 명
+  attribute: [sring] 추가적인 속성들 ex) data, aria 등
+  button: [boolean] 삭제 버튼 랜더링 유무
+-->
+<!-- [D] 브랜드 필터, 검색 필터 일때 keypress 시 cm-filter__input--active 클래스 추가 -->
+<div class="cm-filter__input @@class">
+  @@if(svg) {
+    @@include('./common/svg/@@svg.svg', {
+      title: '@@svg_title',
+      class: '@@svg_class'
+    })
+  }
+  <input type="text" class="cm-filter__input__text" placeholder="@@placeholder" @@attribute>
+  @@if(button) {
+    <button type="button" class="cm-filter__input__button" aria-label="입력내용삭제"></button>
+  }
+</div>

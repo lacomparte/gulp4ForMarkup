@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="56" viewBox="0 0 56 56">
+	<title>@@title</title>
+    <defs>
+        <circle id="n5sbteec4a" cx="28" cy="28" r="28"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <use fill="#B2B2B2" xlink:href="#n5sbteec4a"/>
+        <text fill="#FFF" font-family="musinsaot-Medium, MUSINSA OTF" font-size="18" font-weight="400" letter-spacing=".5">
+            <tspan x="11.543" y="34">UR</tspan> <tspan x="35.583" y="34">L</tspan>
+        </text>
+    </g>
+</svg>

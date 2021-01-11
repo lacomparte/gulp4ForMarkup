@@ -1,0 +1,94 @@
+.footer {
+  position: relative;
+  background-color: #111;
+  border-top: 10px solid $gray3;
+  text-align: center;
+  padding: 36px 0 90px 0;
+  @include resetFont; // 스토어 코드의 reset 상쇄 필요 시에만 적용
+
+  &__button {
+    display: inline-block;
+    padding: 10px;
+    font-family: $font-musinsa;
+    color: $gray4;
+    line-height: 1.5;
+    > svg{
+      margin-top: -1px;
+      vertical-align: top;
+      .svg-color {
+        fill: $white;
+      }
+    }
+    &.active {
+      > svg {
+        transform: rotate(180deg);
+      }
+      & + .footer-info {
+        display: block;
+      }
+    }
+  }
+
+  &__link {
+    padding: 5px 0 3px 0;
+    > a {
+      display: inline-block;
+      position: relative;
+      padding: 5px;
+      color: $gray4;
+    }
+  }
+
+  &__clause {
+    > a {
+      display: inline-block;
+      padding: 5px;
+      color: $gray4;
+      margin: 0 3px;
+      > strong {
+        color: $white;
+      }
+    }
+  }
+
+  &__faq {
+    padding-top: 22px;
+    > a{
+      display: inline-block;
+      padding: 5px;
+      color: $gray4;
+      margin: 0 3px;
+      > svg{
+        vertical-align: top;
+        margin-top: 1px;
+        .svg-color {
+          fill: $gray4;
+        }
+      }
+		}
+  }
+
+  &__sns {
+    padding-top: 22px;
+    > a {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      padding: 4px;
+      margin: 0 3px;
+      vertical-align: top;
+      > svg {
+        vertical-align:top;
+        .svg-color {
+          fill: $gray7;
+        }
+      }
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    color: $gray7;
+    padding-top: 26px;
+  }
+}

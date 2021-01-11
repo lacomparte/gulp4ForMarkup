@@ -1,0 +1,16 @@
+<!--
+  include
+  plan/experience.html
+-->
+<li>
+  <span>@@subject</span>
+  <div class="list-info">
+    <span class="list-info__txt1">@@txt1</span>
+    @@if(txt2){
+    <span class="list-info__txt2">@@txt2</span>
+    }
+    @@if(link){
+    <a href="@@link" class="list-info__link">@@linkName</a>
+    }
+  </div>
+</li>

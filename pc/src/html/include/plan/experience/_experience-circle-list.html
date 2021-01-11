@@ -1,0 +1,12 @@
+<!--
+  include
+  plan/experience.html
+-->
+<ul class="list-circle">
+  @@for(var i = 0; i < list.length; i++) {
+  <li>
+    <span style="background-color:`+list[i].keyColor+`">`+list[i].circle+`</span>
+    `+list[i].text+`
+  </li>
+  }
+</ul>

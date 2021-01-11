@@ -1,0 +1,114 @@
+@charset 'utf-8';
+
+.ranking-list {
+  overflow: hidden;
+  position: relative;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+
+    &::before {
+      flex: 0 0 30px;
+      margin-right: 15px;
+      font-family: $font-musinsa;
+      font-size: 16px;
+      text-align: center;
+      counter-increment: rank;
+      transform: translateY(1px);
+      content: counter(rank);
+    }
+  }
+
+  &__rank {
+    flex: 0 0 30px;
+    margin-right: 15px;
+    font-family: $font-musinsa;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  &__image {
+    display: flex;
+    flex: 0 0 56px;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    padding: 10px 0;
+    margin-right: 25px;
+    box-sizing: border-box;
+    text-align: center;
+
+    img {
+      max-width: 56px;
+      max-height: 20px;
+    }
+  }
+
+  &__text {
+    @include ellipsis(1);
+
+    // calc(100% - (랭킹영역(마진포함) + 이미지영역(마진포함) + 등락폭영역))
+    max-width: calc(100% - 127px);
+    padding-right: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+
+    @at-root {
+      // calc(100% - (랭킹영역(마진포함) + 등락폭영역))
+      .ranking-lists--search & {
+        max-width: calc(100% - 83px);
+      }
+    }
+  }
+
+  &__num {
+    flex: 0 0 38px;
+    position: relative;
+    margin-left: auto;
+    font-family: $font-musinsa;
+    text-align: center;
+
+    span {
+      display: inline-block;
+      width: 25px;
+      text-align: center;
+      vertical-align: top;
+    }
+
+    &--up,
+    &--down {
+      text-align: right;
+    }
+
+    &--up::before,
+    &--down::before {
+      @include position(absolute, 4px, 0, 0, 1px);
+      width: 0;
+      height: 0;
+      content: '';
+    }
+
+    &--up {
+      color: $fred1;
+
+      &::before {
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 9px solid $fred1;
+      }
+    }
+
+    &--down {
+      color: $fblue1;
+
+      &::before {
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 9px solid #06f;
+      }
+    }
+  }
+}

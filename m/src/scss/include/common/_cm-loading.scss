@@ -1,0 +1,19 @@
+.cm-loading {
+  display: none;
+  text-align: center;
+
+  &--active {
+    display: block;
+
+    > svg {
+      transform-origin: 50% 50%;
+      animation: roundAll 1s infinite linear;
+    }
+  }
+
+  @at-root {
+    .n-list-ranking & { // 카테고리 목록 - 이전 버전 클래스명 변경 예정
+      padding: 30px 0 60px 0;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+<!--
+  include
+  common/layout/floating-menu.html
+
+  css
+  include/common/popup/_share.scss
+
+  [D] 활성화 시 클래스 active 추가
+-->
+
+<div class="popup popup-share" data-popup="share">
+	<h2 class="blind">페이지 공유하기</h2>
+
+	<button class="popup-share__button">
+		@@include('./common/svg/btn-facebook-circle-56.svg', {
+      class: '',
+			title: '페이스북으로 공유하기',
+		})
+	</button>
+	<button class="popup-share__button">
+		@@include('./common/svg/btn-twitter-circle-56.svg', {
+      class: '',
+			title: '트위터로 공유하기',
+		})
+	</button>
+	<button class="popup-share__button">
+		@@include('./common/svg/btn-kakao-circle-56.svg', {
+      class: '',
+			title: '카카오톡으로 공유하기',
+		})
+	</button>
+	<button class="popup-share__button">
+		@@include('./common/svg/btn-url-circle-56.svg', {
+      class: '',
+			title: 'URL 복사하기',
+		})
+  </button>
+
+	<button type="button" class="popup-share__close" data-popup-close="share">
+		@@include('./common/svg/ic-30-line-close.svg', {
+      class: '',
+			title: '공유하기 팝업 닫기',
+		})
+	</button>
+</div>

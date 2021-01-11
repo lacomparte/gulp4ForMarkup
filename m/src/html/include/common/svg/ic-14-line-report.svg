@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Ic/14/Line/Report/Black</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Ic/14/Line/Report/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M12,9.19824219 L12,12.1982422 L2,12.1982422 L2,9.19824219 L12,9.19824219 Z M11,10.198 L3,10.198 L3,11.198 L11,11.198 L11,10.198 Z" id="Rectangle" fill="#000000" fill-rule="nonzero"></path>
+        <path d="M7.00054932,3 C9.14274471,3 10.8916282,4.68396847 10.995654,6.80035966 L11.0003503,7.04032114 L10.9994507,10.1982422 L2.99945068,10.1982422 L2.99945068,7 C3.00054932,4.790861 4.79141032,3 7.00054932,3 Z M7.00054932,4 C5.40291138,4 4.0966362,5.24897973 4.00462974,6.82373362 L3.99945068,7 L3.999,9.198 L9.999,9.198 L10.0005493,7 C10.0005493,5.34314575 8.65740357,4 7.00054932,4 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+        <polygon id="Path-2" fill="#000000" fill-rule="nonzero" points="7.5 1.38864641 7.5 2.58990479 6.5 2.58990479 6.5 1.38864641"></polygon>
+        <polygon id="Path-2" fill="#000000" fill-rule="nonzero" transform="translate(3.477817, 3.477817) rotate(-45.000000) translate(-3.477817, -3.477817) " points="3.97781746 2.87781746 3.97781746 4.07781746 2.97781746 4.07781746 2.97781746 2.87781746"></polygon>
+        <polygon id="Path-2" fill="#000000" fill-rule="nonzero" transform="translate(10.526823, 3.476823) rotate(-315.000000) translate(-10.526823, -3.476823) " points="11.0268233 2.87822925 11.0268233 4.07541736 10.0268233 4.07541736 10.0268233 2.87822925"></polygon>
+        <path d="M7.00091553,4.5 L7.00091553,5.5 C6.22074352,5.5 5.57959988,6.09525117 5.50687077,6.85636735 L5.5,7.00091553 L4.5,7.00091553 C4.5,5.67494672 5.5319137,4.58999427 6.83647964,4.50531963 L7.00091553,4.5 Z" id="Oval" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

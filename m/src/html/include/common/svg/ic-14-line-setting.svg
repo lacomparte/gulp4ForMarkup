@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/14/Line/Setting/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Ic/14/Line/Setting/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M7,11 C9.209139,11 11,9.209139 11,7 C11,4.790861 9.209139,3 7,3 C4.790861,3 3,4.790861 3,7 C3,9.209139 4.790861,11 7,11 Z M4,7 C4,5.34314575 5.34314575,4 7,4 C8.65685425,4 10,5.34314575 10,7 C10,8.65685425 8.65685425,10 7,10 C5.34314575,10 4,8.65685425 4,7 Z" id="Oval" fill="#000000" fill-rule="nonzero"></path>
+        <polygon id="Path-6" fill="#000000" fill-rule="nonzero" points="6.5 10.5 6.5 12.5 7.5 12.5 7.5 10.5"></polygon>
+        <polygon id="Path-6" fill="#000000" fill-rule="nonzero" transform="translate(3.750000, 10.250000) rotate(45.000000) translate(-3.750000, -10.250000) " points="3.25 9.18933983 3.25 11.3106602 4.25 11.3106602 4.25 9.18933983"></polygon>
+        <polygon id="Path-6" fill="#000000" fill-rule="nonzero" transform="translate(2.500000, 7.000000) rotate(90.000000) translate(-2.500000, -7.000000) " points="2 6 2 8 3 8 3 6"></polygon>
+        <polygon id="Path-6" fill="#000000" fill-rule="nonzero" transform="translate(3.750000, 3.750000) rotate(135.000000) translate(-3.750000, -3.750000) " points="3.25 2.68933983 3.25 4.81066017 4.25 4.81066017 4.25 2.68933983"></polygon>
+        <polygon id="Path-6" fill="#000000" fill-rule="nonzero" transform="translate(7.000000, 2.500000) rotate(180.000000) translate(-7.000000, -2.500000) " points="6.5 1.5 6.5 3.5 7.5 3.5 7.5 1.5"></polygon>
+        <polygon id="Path-6" fill="#000000" fill-rule="nonzero" transform="translate(10.250000, 3.750000) rotate(225.000000) translate(-10.250000, -3.750000) " points="9.75 2.68933983 9.75 4.81066017 10.75 4.81066017 10.75 2.68933983"></polygon>
+        <polygon id="Path-6" fill="#000000" fill-rule="nonzero" transform="translate(11.500000, 7.000000) rotate(270.000000) translate(-11.500000, -7.000000) " points="11 6 11 8 12 8 12 6"></polygon>
+        <polygon id="Path-6" fill="#000000" fill-rule="nonzero" transform="translate(10.181981, 10.181981) rotate(315.000000) translate(-10.181981, -10.181981) " points="9.68198052 9.18198052 9.68198052 11.1819805 10.6819805 11.1819805 10.6819805 9.18198052"></polygon>
+    </g>
+</svg>

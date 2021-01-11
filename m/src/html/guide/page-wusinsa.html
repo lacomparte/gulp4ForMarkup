@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./common/layout/head.html', {
+    title: '가이드',
+    css: 'page',
+  })
+</head>
+<body class="page-name wusinsa">
+  <!-- Container -->
+  <main class="container">
+    <!-- Header -->
+    @@include('./common/layout/header.html', {
+      class: '',
+      title: '가이드',
+      title_sub: '기본 페이지',
+      title_sub_class: '',
+      util: '',
+      button_left: [
+        {
+          svg: 'ic-30-line-arrow-left',
+          title: '이전 페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '',
+        },
+      ],
+      button_right: [
+        {
+          svg: 'ic-30-stencil-bag',
+          title: '장바구니 페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '@@include(\'./common/_cm-badge.html\', {class: \'cm-badge--new\'})'
+        },
+      ],
+    })
+
+    <!-- Contents -->
+    <section class="content">
+      <a href="page.html">page.html - 기본 무신사 페이지</a><br>
+      <a href="page-main.html">page-main.html - 스토어 메인 페이지</a><br>
+      <a href="page-popup.html">page-popup.html - 레이어 팝업 페이지</a><br>
+      <a href="page-wusinsa.html">page-wusinsa.html - 우신사 페이지</a><br>
+      <a href="page-mensinsa.html">page-mensinsa.html - 무신사 멘 페이지</a><br>
+      <a href="page-player.html">page-player.html - 플레이어 페이지</a><br>
+    </section>
+
+    <!-- Footer -->
+    @@include('./common/layout/footer.html')
+
+    <!-- Floating -->
+    @@include('./common/layout/navigation-bar.html', {
+      page: 'normal'
+    })
+    @@include('./common/layout/floating-menu.html')
+
+    <!-- Popup -->
+    @@include('./common/popup/_share.html')
+    @@include('./common/popup/_dim.html')
+
+    <!-- Layer -->
+    @@include('./common/layer/_app.html', {
+      class: '',
+    })
+    @@include('./common/layer/_coupon.html', {
+      class: '',
+    })
+    @@include('./common/layer/_notice.html', {
+      class: '',
+    })
+  </main>
+  <!-- //Container -->
+
+  <script src="../../js/helper-guide.js"></script>
+</body>

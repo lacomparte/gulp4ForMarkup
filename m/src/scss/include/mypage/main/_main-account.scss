@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.main-account {
+	padding: 0 15px;
+
+	&__link {
+		overflow: hidden;
+		margin-top: 10px;
+	}
+
+	&__button {
+		display: block;
+		float: left;
+		margin-right: 10px;
+		> svg {
+			vertical-align: top;
+		}
+	}
+
+	&__introduce {
+    width: 100%;
+    position: relative;
+		margin-top: 12px;
+    text-align: left;
+    z-index: 1;
+
+    > span {
+      max-height: 32px;
+      font-size: 13px;
+      line-height: 16px;
+      @include ellipsis(2);
+    }
+
+    &.active > span {
+      max-height: none;
+      -webkit-line-clamp: inherit;
+    }
+	}
+}

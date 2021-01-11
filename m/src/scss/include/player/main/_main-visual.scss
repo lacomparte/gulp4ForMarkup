@@ -1,0 +1,35 @@
+@charset 'utf-8';
+
+.main-visual {
+  width: 100%;
+  padding: 100px 0;
+  background-color: #ccc;
+
+  &__list {
+    width: 100%;
+  }
+
+  &__item {
+    width:100%;
+  }
+
+  &__text {
+    width: 100%;
+    text-align: center;
+  }
+
+  &__category {
+    padding-bottom: 5px;
+    font-family: "Musinsa Italic", sans-serif !important;
+    color: #33b9b9;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__title {
+    font-family: "Musinsa", sans-serif !important;
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.5;
+  }
+}

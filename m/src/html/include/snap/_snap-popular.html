@@ -1,0 +1,41 @@
+<!--
+  include
+  snap/snap-main.html
+-->
+<div class="snap-popular">
+  <div class="snap-popular__lists">
+    <!-- 썸네일 없을 경우 -->
+    <div class="snap-popular__list">
+      @@include('./snap/_thumbnail-unit.html')
+      <div class="snap-popular__figure">
+        <div class="snap-popular__thumb">
+          @@include('./common/svg/ic-solid-user.svg', {
+            class: '',
+            title: '프로필 사진 없음',
+          })
+        </div>
+        <strong class="snap-popular__text">indexindexindexindexindexindexindexindex</strong>
+      </div>
+    </div>
+    @@for(var i = 0; i < 5; i++) {
+      <!-- 썸네일 있을 경우 -->
+      <div class="snap-popular__list">
+        @@include('./snap/_thumbnail-unit.html')
+        <div class="snap-popular__figure">
+          @@include('./snap/_thumbnail-unit.html')
+          <strong class="snap-popular__text">indexindexindexindexindexindexindexindex</strong>
+        </div>
+      </div>
+    }
+    <div class="snap-popular__total">
+      <div class="snap-popular__content">
+        <button type="button" class="snap-popular__link">
+          @@include('./common/svg/ic-22-stencil-arrow-right.svg', {
+            title: '스냅 베스트 전체보기',
+            class: '',
+          })
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

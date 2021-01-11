@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./common/layout/head.html', {
+    title: '가이드',
+    css: 'guide',
+  })
+</head>
+<body class="page-guide">
+  <!-- Container -->
+  <main class="container">
+    <!-- Header -->
+    @@include('./common/layout/header.html', {
+      title: '가이드',
+      title_sub: 'Text Buttons',
+      title_sub_class: '',
+      class: '',
+      util: '',
+      button_left: [
+        {
+          svg: 'ic-30-line-arrow-left',
+          title: '이전 페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '',
+        },
+      ],
+      button_right: [
+        {
+          svg: 'ic-30-stencil-musinsa',
+          title: '메인 페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '',
+        },
+      ],
+    })
+    <section class="guide">
+      <ul class="guide__notice">
+        <li>
+          <mark>button</mark> 의 추가 클래스는 임의로 정함(자유롭게 사용가능)
+        </li>
+      </ul>
+      <h1 class="guide__title">Text Buttons</h1>
+      <div class="guide__content">
+
+        <!-- Text 30 size -->
+        <h2 class="guide__title-second">30 size</h2>
+        <div class="guide__button--text__30">
+          <h3 class="guide__title-third">Basic</h3>
+          <div class="guide__area">
+            <div class="guide__items column3">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Normal
+                </h2>
+                @@include('./common/_button.html', {
+                  type: 'button',
+                  href: '',
+                  class: 'button-type01',
+                  class_svg: '',
+                  attribute: '',
+                  text: '버튼명',
+                  icon: 'left',
+                  icon_name: 'ic-30-line-check',
+                  title_svg: '체크',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Bold
+                </h2>
+                @@include('./common/_button.html', {
+                  type: 'button',
+                  href: '',
+                  class: 'button-type02',
+                  class_svg: '',
+                  attribute: '',
+                  text: '버튼명',
+                  icon: 'left',
+                  icon_name: 'ic-30-line-check',
+                  title_svg: '체크',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Underlined
+                </h2>
+                @@include('./common/_button.html', {
+                  type: 'button',
+                  href: '',
+                  class: 'button-type03',
+                  class_svg: '',
+                  attribute: '',
+                  text: '버튼명',
+                  icon: 'left',
+                  icon_name: 'ic-30-line-check',
+                  title_svg: '체크',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disabled
+                </h2>
+                @@include('./common/_button.html', {
+                  type: 'button',
+                  href: '',
+                  class: 'button-type04',
+                  class_svg: '',
+                  attribute: 'disabled',
+                  text: '버튼명',
+                  icon: 'left',
+                  icon_name: 'ic-30-line-check',
+                  title_svg: '체크',
+                })
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text 22 size -->
+        <h2 class="guide__title-second">22 size</h2>
+        <div class="guide__button--text__22">
+          <h3 class="guide__title-third">Basic</h3>
+          <div class="guide__area">
+            <div class="guide__items column3">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Normal
+                </h2>
+                @@include('./common/_button.html', {
+                  type: 'button',
+                  href: '',
+                  class: 'button-type01',
+                  class_svg: '',
+                  attribute: '',
+                  text: '버튼명',
+                  icon: 'left',
+                  icon_name: 'ic-22-line-check',
+                  title_svg: '체크',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Bold
+                </h2>
+                @@include('./common/_button.html', {
+                  type: 'button',
+                  href: '',
+                  class: 'button-type02',
+                  class_svg: '',
+                  attribute: '',
+                  text: '버튼명',
+                  icon: 'left',
+                  icon_name: 'ic-22-line-check',
+                  title_svg: '체크',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Underlined
+                </h2>
+                @@include('./common/_button.html', {
+                  type: 'button',
+                  href: '',
+                  class: 'button-type03',
+                  class_svg: '',
+                  attribute: '',
+                  text: '버튼명',
+                  icon: 'left',
+                  icon_name: 'ic-22-line-check',
+                  title_svg: '체크',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disabled
+                </h2>
+                @@include('./common/_button.html', {
+                  type: 'button',
+                  href: '',
+                  class: 'button-type04',
+                  class_svg: '',
+                  attribute: 'disabled',
+                  text: '버튼명',
+                  icon: 'left',
+                  icon_name: 'ic-22-line-check',
+                  title_svg: '체크',
+                })
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text 18 size -->
+        <h2 class="guide__title-second">18 size</h2>
+        <div class="guide__button--text__18">
+          <h3 class="guide__title-third">Basic</h3>
+          <div class="guide__area">
+            <div class="guide__items column3">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Normal
+                </h2>
+                @@include('./common/_button.html', {
+                  type: 'button',
+                  href: '',
+                  class: 'button-type01',
+                  class_svg: '',
+                  attribute: '',
+                  text: '버튼명',
+                  icon: 'left',
+                  icon_name: 'ic-18-line-check',
+                  title_svg: '체크',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Bold
+                </h2>
+                @@include('./common/_button.html', {
+                  type: 'button',
+                  href: '',
+                  class: 'button-type02',
+                  class_svg: '',
+                  attribute: '',
+                  text: '버튼명',
+                  icon: 'left',
+                  icon_name: 'ic-18-line-check',
+                  title_svg: '체크',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Underlined
+                </h2>
+                @@include('./common/_button.html', {
+                  type: 'button',
+                  href: '',
+                  class: 'button-type03',
+                  class_svg: '',
+                  attribute: '',
+                  text: '버튼명',
+                  icon: 'left',
+                  icon_name: 'ic-18-line-check',
+                  title_svg: '체크',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disabled
+                </h2>
+                @@include('./common/_button.html', {
+                  type: 'button',
+                  href: '',
+                  class: 'button-type04',
+                  class_svg: '',
+                  attribute: 'disabled',
+                  text: '버튼명',
+                  icon: 'left',
+                  icon_name: 'ic-18-line-check',
+                  title_svg: '체크',
+                })
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>

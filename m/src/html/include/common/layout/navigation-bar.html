@@ -1,0 +1,52 @@
+<div class="navigation-bar">
+  <div class="navigation-bar__area">
+    <a href="#" class="navigation-bar__button">
+      @@include('./common/svg/ic-30-stencil-category.svg', {
+        class: '',
+        title: '카테고리 페이지로 이동',
+      })
+    </a>
+    <a href="#" class="navigation-bar__button">
+      @@include('./common/svg/ic-30-stencil-search.svg', {
+        class: '',
+        title: '검색 페이지로 이동',
+      })
+    </a>
+    @@if(page == 'normal') {
+    <a href="#" class="navigation-bar__button">
+      @@include('./common/svg/ic-30-rounded-mhome.svg', {
+        class: '',
+        title: '메인 페이지로 이동',
+      })
+    </a>
+    }
+    @@if(page == 'player') {
+    <a href="#" class="navigation-bar__button">
+      @@include('./common/svg/ic-30-rounded-phome.svg', {
+        class: '',
+        title: '메인 페이지로 이동',
+      })
+    </a>
+    }
+    @@if(page == 'main') {
+    <button type="button" class="navigation-bar__button--gate" data-popup-open="gate" data-dim="true">
+      @@include('./common/svg/btn-main-gate.svg', {
+        class: '',
+        title: '몰 게이트 열기',
+      })
+    </button>
+    }
+    <a href="#" class="navigation-bar__button">
+      @@include('./common/svg/ic-30-stencil-heart.svg', {
+        class: '',
+        title: '좋아요 페이지로 이동',
+      })
+    </a>
+    <a href="#" class="navigation-bar__button">
+      @@include('./common/svg/ic-30-stencil-user.svg', {
+        class: '',
+        title: '마이페이지로 이동',
+      })
+    </a>
+  </div>
+</div>

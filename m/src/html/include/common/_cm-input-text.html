@@ -1,0 +1,39 @@
+<!--
+  변수
+  class: [string]
+  - --error 오류
+  - --positive 긍정
+
+  label_text: [string] label 텍스트
+  wrap_class: [string] button2 를 위한 분기 클래스
+  - --indent: https://app.zeplin.io/project/5e90086256d890b82c7965ca/screen/5f1a4b3c20228585508dadea 의 버튼2 형태
+
+  for: [string] label 과 연결될 input의 id
+  index_text: [string] input 의 용도 ex. 아이디, 비밀번호 같은..
+  value: [string] input value
+  placehodler: [string] placeholder
+  attribute: [string] ex. disabled, size ...
+  button_text: [string] 버튼 텍스트
+  button_class: [string] 작업자가 사용할 버튼의 클래스
+  text_notice: [string] 기본, 헬퍼, 오류, 긍정텍스트
+
+  * 본 파일 include 시 주의 사항!!!!!!!!!!!!!!!!!!!!!
+  1. .cm-input-text 의 부모 DOM 높이값에 따라 높이 및 line-height 결정
+  2. .cm-input-text 의 부모 DOM font-size(px) 에 따라 input 의 font-size 결정
+  위 2개 값은 부모 DOM에 필수로 넣어주세요.
+  [참고] guide/cm-input-text.html
+-->
+<div class="cm-input-text@@class">
+  @@if(label_text) {
+    <label class="cm-input-text__label" for="@@id">@@label_text</label>
+  }
+  <div class="cm-input-text__wrap@@wrap_class">
+    <input type="text" value="@@value" class="cm-input-text__input" placeholder="@@placeholder" @@attribute id="@@id">
+    @@if(text_notice) {
+      <span class="cm-input-text__notice">@@text_notice</span>
+    }
+  </div>
+  @@if(button_text) {
+    <button type="button" class="cm-input-text__button @@button_class" @@attribute>@@button_text</button>
+  }
+</div>

@@ -1,0 +1,270 @@
+@charset 'utf-8';
+
+.cm-filter {
+  background-color: $white;
+
+  &__header {
+    position: relative;
+    height: 55px;
+    border-top: 1px solid $gray3;
+    box-sizing: border-box;
+    font-size: 0;
+
+    &__content {
+      @include overflowScroll('x');
+
+      display: flex;
+      position: relative;
+      padding: 10px;
+    }
+  }
+
+  &__category {
+    @include overflowScroll('x');
+
+    width: 100%;
+    padding: 10px 15px 8px;
+    box-sizing: border-box;
+    font-size: 0;
+  }
+
+  &__contents {
+    padding: 10px 0;
+    box-sizing: border-box;
+    background-color: $gray1;
+  }
+
+  &__swiper {
+    overflow: hidden;
+  }
+
+  &__lists {
+    padding-top: 3px;
+    padding: 3px 15px 0;
+    box-sizing: border-box;
+    font-size: 0;
+  }
+
+  // 검색 필터
+  &__search {
+    margin: 10px 15px;
+  }
+
+  // 가격 필터
+  &__price {
+    margin: 7px 15px 0;
+    font-size: 0;
+
+    &__unit {
+      display: inline-block;
+      width: 5.2%;
+      font-size: 14px;
+      color: $gray6;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+
+  // 브랜드 필터 tabs
+  &__tabs {
+    position: relative;
+    display: flex;
+    padding-top: 5px;
+    margin: 0 15px;
+
+    // 브랜드 필터랑 하단 컨텐츠랑 바로 붙어 있다면 컨텐츠에 간격을 준다.
+    & + .cm-filter__swiper {
+      margin-top: 7px;
+    }
+
+    &::after {
+      @include position(absolute, 0, 0);
+
+      display: block;
+      width: 36px;
+      height: 30px;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #f9f9f9 90%, #f9f9f9 100%);
+      content: '';
+    }
+
+    &__translation {
+      flex: 0 0 auto;
+      position: relative;
+      height: 29px;
+      padding-right: 15px;
+      font-size: 0;
+
+      &::after {
+        @include position(absolute, 4px, 0);
+
+        width: 1px;
+        height: 14px;
+        background-color: #e5e5e5;
+        content: '';
+      }
+    }
+
+    &__contents {
+      @include overflowScroll('x');
+
+      flex: 1 1 100%;
+      padding: 0 25px 7px 9px;
+      font-size: 0;
+    }
+  }
+
+  // 기간 필터
+  &__period {
+    margin: 10px 15px;
+    font-size: 0;
+  }
+
+  // 필터 선택 결과
+  &__result {
+    position: relative;
+    border-top: 1px solid $gray3;
+    box-sizing: border-box;
+
+    &__contents {
+      @include overflowScroll('x');
+
+      display: flex;
+      align-items: center;
+      width: calc(100% - 50px);
+      height: 50px;
+      padding: 12px 0 12px 15px;
+      box-sizing: border-box;
+    }
+
+    &__button {
+      @include position(absolute, 0, 0);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  // 결과 없을때
+  &__empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 205px;
+    text-align: center;
+    color: $gray7;
+  }
+
+  // 태그
+  &__tag {
+    @include overflowScroll('x');
+
+    padding: 13px 15px 12px;
+    font-size: 0;
+  }
+
+  // tooltip
+  &__tooltip {
+    @include position(absolute, 100%, 50%);
+
+    display: none;
+    border-radius: 4px;
+    background-color: $fblue2;
+    transform: translateX(50%);
+    animation: fadeOut 1s cubic-bezier(.72, -0.01, .26, 1) 3s 1 alternate forwards;
+    z-index: 10;
+
+    &::before {
+      @include position(absolute, -4px, 50%);
+
+      width: 5px;
+      height: 5px;
+      background-color: $fblue2;
+      transform: rotate(45deg) translateX(50%);
+      content: '';
+    }
+
+    &__text {
+      position: relative;
+      padding: 7px 34px 6px;
+      font-size: 11px;
+      color: $white;
+      white-space: nowrap;
+
+      &::before,
+      &::after {
+        display: block;
+        width: 12px;
+        height: 9px;
+        background-color: $white;
+        clip-path: polygon(
+          4px 0,
+          0 4.5px,
+          4px 9px,
+          5px 8.5px,
+          1.5px 4.5px,
+          5px 0.5px,
+          4px 0px,
+
+          10px 0,
+          6px 4.5px,
+          10px 9px,
+          11px 8.5px,
+          7.5px 4.5px,
+          11px 0.5px,
+          10px 0px,
+        );
+        content: '';
+      }
+
+      @mixin animation($name) {
+        animation: $name 0.6s cubic-bezier(.72, -0.01, .26, 1) 1s 3 alternate backwards;
+      }
+
+      &::before {
+        @include position(absolute, 50%, null, null, 0);
+        @include animation(filterTooltipBounceLeft);
+
+        transform: translate(11px, -50%);
+
+      }
+
+      &::after {
+        @include position(absolute, 50%, 0);
+        @include animation(filterTooltipBounceRight);
+
+        transform: translate(-11px, -50%) rotate(180deg);
+      }
+    }
+
+    &--active {
+      display: inline-block;
+    }
+  }
+
+  @keyframes filterTooltipBounceLeft {
+    0% {
+      transform: translate(11px, -50%);
+    }
+    50% {
+      transform: translate(8px, -50%);
+    }
+    100% {
+      transform: translate(11px, -50%);
+    }
+  }
+
+  @keyframes filterTooltipBounceRight {
+    0% {
+      transform: translate(-11px, -50%) rotate(180deg);
+    }
+    50% {
+      transform: translate(-8px, -50%) rotate(180deg);
+    }
+    100% {
+      transform: translate(-11px, -50%) rotate(180deg);
+    }
+  }
+}

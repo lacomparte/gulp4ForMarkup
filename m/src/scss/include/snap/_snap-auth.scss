@@ -1,0 +1,52 @@
+@charset 'uft-8';
+
+.snap-auth {
+  display: flex;
+  align-items: center;
+  max-width: calc(100% - 30px);
+  font-family: $font-default;
+  color: $black;
+
+  &__box {
+    margin-right: 10px;
+    line-height: 0;
+  }
+
+  &__thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: $gray3;
+
+    > svg {
+      width: 18px;
+      height: 18px;
+    }
+    .svg-color {
+      fill: $white;
+    }
+  }
+
+  &__area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 19px;
+  }
+
+  &__text {
+    text-align: left;
+    font-size: 11px;
+    line-height: 13px;
+  }
+}

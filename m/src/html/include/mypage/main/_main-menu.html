@@ -1,0 +1,13 @@
+<!--
+  include
+	mypage/mypage-main.html
+-->
+
+<dl class="main-menu">
+  <dt class="main-menu__title">@@title</dt>
+  @@for(var i = 0; i < menu.length; i++) {
+    <dd>
+      <a href="#" class="main-menu__link">`+menu[i]+`</a>
+    </dd>
+  }
+</dl>

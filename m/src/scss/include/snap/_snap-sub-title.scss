@@ -1,0 +1,22 @@
+@charset 'utf-8';
+
+.snap-sub-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: $black;
+  background-color: $white;
+
+  &--left {
+    height: 60px;
+    line-height: 60px;
+    padding-left: 15px;
+    text-align: left;
+  }
+
+  &--center {
+    height: 40px;
+    line-height: 40px;
+    margin-top: 20px;
+    text-align: center;
+  }
+}

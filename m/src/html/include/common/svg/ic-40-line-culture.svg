@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/40/Line/Culture/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M31,6 L31,7 L11,7 C9.8954305,7 9,7.8954305 9,9 C9,10.1045695 9.8954305,11 11,11 L11,11 L31,11 L31,12 L31,34 L8,34 L8,9 L8.00509269,8.82372721 C8.09633912,7.24891996 9.40231912,6 11,6 L11,6 L31,6 Z M9.00009834,11.2361945 L9,33 L30,33 L30,12 L11,12 C10.231693,12 9.53084306,11.7111821 9.00009834,11.2361945 Z" id="path-1"></path>
+    </defs>
+    <g id="Ic/40/Line/Culture/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

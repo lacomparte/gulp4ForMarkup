@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/18/Stencil/Camera/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12,3 L12,5 L15,5 L15,15 L7,15 L7,14 L14,14 L14,6 L4,6 L4,9.508 L3,9.491 L3,5 L6,5 L6,3 L12,3 Z M3,10.491 L4,10.508 L4,14 L6,14 L6,15 L3,15 L3,10.491 Z M9,7.5 C10.3807119,7.5 11.5,8.61928813 11.5,10 C11.5,11.3807119 10.3807119,12.5 9,12.5 C7.61928813,12.5 6.5,11.3807119 6.5,10 C6.5,8.61928813 7.61928813,7.5 9,7.5 Z M9,8.5 C8.17157288,8.5 7.5,9.17157288 7.5,10 C7.5,10.8284271 8.17157288,11.5 9,11.5 C9.82842712,11.5 10.5,10.8284271 10.5,10 C10.5,9.17157288 9.82842712,8.5 9,8.5 Z M13,7 L13,9 L12,9 L12,7 L13,7 Z M11,4 L7,4 L7,5 L11,5 L11,4 Z" id="path-1"></path>
+    </defs>
+    <g id="Ic/18/Stencil/Camera/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

@@ -1,0 +1,58 @@
+@charset 'utf-8';
+
+.guide-link {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 15px 0 15px 25px;
+  box-sizing: border-box;
+
+  &--active {
+    display: flex;
+  }
+
+  &__text {
+    font-family: $font-musinsa;
+    font-size: 14px;
+    color: $black;
+  }
+
+  &__buttons {
+    position: relative;
+    padding-right: 38px;
+  }
+
+  &__link {
+    display: block;
+    padding: 6px 9px 4px 9px;
+    border: 1px solid $gray5;
+    border-radius: 2px;
+    font-family: $font-default;
+    font-size: 12px;
+    color: $black;
+  }
+
+  &__button {
+    @include position(absolute, 0, 0);
+    width: 38px;
+    height: 30px;
+
+    &::before,
+    &::after {
+      @include position(absolute, 50%, 50%);
+      width: 1px;
+      height: 15px;
+      background-color: $black;
+      content: '';
+    }
+
+    &::before {
+      transform: translate(50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(50%, -50%) rotate(-45deg);
+    }
+  }
+}

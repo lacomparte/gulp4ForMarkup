@@ -1,0 +1,28 @@
+.popup-share {
+  display: none;
+  @include position(fixed, 50%, 0, null, 0);
+  z-index: 9999;
+  margin-top: -28px;
+  text-align: center;
+
+  &__button {
+    margin: 0 5px;
+  }
+  &__close {
+    display: block;
+    @include position(absolute, -45px, null, null, 50%);
+    margin-left: -135px;
+
+    svg {
+      vertical-align: top;
+      * {
+        fill: $white;
+      }
+    }
+  }
+
+  &.active {
+    display: block;
+    animation: fadeIn .15s;
+  }
+}

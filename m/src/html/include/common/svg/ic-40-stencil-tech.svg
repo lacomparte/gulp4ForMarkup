@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/40/Stencil/Tech/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M11,29 L11,34 L16,34 L16,35 L10,35 L10,29 L11,29 Z M30,5 L30,35 L17,35 L17,34 L29,34 L29,6 L11,6 L11,28 L10,28 L10,5 L30,5 Z M17,8.5 L17,9.5 L13,9.5 L13,8.5 L17,8.5 Z" id="path-1"></path>
+    </defs>
+    <g id="Ic/40/Stencil/Tech/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

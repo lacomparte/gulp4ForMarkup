@@ -1,0 +1,22 @@
+<!--
+  변수
+  class: [string]
+  - --16
+  - --20
+  - --disabled
+  * 사이즈가 16이고 disabled 면 --16--disabled 로 class 를 할당
+  * --disabled--16 형태로 들어가면 작동하지 않음.
+
+  attribute: [string] disabled, checked 등등
+  text: [string] 함께 맵핑될 텍스트
+  id: [string] input 의 index 값
+-->
+
+<div class="cm-radio@@class">
+  <input type="radio" name="" value="" @@attribute id="@@id" class="blind">
+  <label for="@@id" class="cm-radio__label">
+    @@if(text) {
+      <span>@@text</span>
+    }
+  </label>
+</div>

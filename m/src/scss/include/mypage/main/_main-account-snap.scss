@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+.main-account-snap {
+  margin-top: 20px;
+
+  // Button
+  &__button {
+    position: relative;
+    width: calc(100% - 30px);
+    padding: 24px 50px 23px 15px;
+    margin: 0 15px;
+    border: 1px solid $gray3;
+    border-radius: 6px;
+    background-color: $gray1;
+    text-align: left;
+  }
+  &__text {
+    display: block;
+    font-size: 15px;
+    line-height: 19px;
+  }
+  &__tag {
+    font-size: 13px;
+    line-height: 16px;
+    color: $gray6;
+  }
+  &__enroll {
+    @include position(absolute, 50%, 18px);
+    width: 18px;
+    height: 18px;
+    padding: 3px;
+    margin-top: -13px;
+    border: 1px solid $black;
+    border-radius: 100%;
+  }
+
+  // Link
+  &__link {
+    display: block;
+    position: relative;
+    height: 49px;
+    font-weight: bold;
+    line-height: 49px;
+    text-align: center;
+
+    > svg {
+      margin-top: -2px;
+      vertical-align: middle;
+    }
+
+    .snap-profile + & {
+      margin-top: 10px;
+    }
+  }
+}

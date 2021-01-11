@@ -1,0 +1,13 @@
+<!--
+  변수
+  class: [string]
+  - --disabled: disabled 상태
+  - --error: error 상태
+-->
+<div class="cm-select @@class">
+  <select class="cm-select__box" @@attribute>
+    @@for(var i = 0; i < arr.length; i++) {
+      <option `+ arr[i].attribute +`>`+ arr[i].text +`</option>
+    }
+  </select>
+</div>

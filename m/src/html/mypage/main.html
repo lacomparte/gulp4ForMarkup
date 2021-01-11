@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./common/layout/head.html', {
+    title: '마이페이지',
+    css: 'mypage',
+  })
+</head>
+<body class="mypage">
+  <!-- Container -->
+  <main class="container">
+    <!-- Header -->
+    @@include('./common/layout/header.html', {
+      class: '',
+      title: '마이페이지',
+      title_sub: '메인',
+      title_sub_class: 'blind',
+      util: '',
+      button_left: [],
+      button_right: [
+        {
+          svg: 'ic-30-stencil-setting',
+          title: '설정 페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: ''
+        },
+        {
+          svg: 'ic-30-stencil-bag',
+          title: '장바구니로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '@@include(\'./common/_cm-badge.html\', {class: \'cm-badge--new\'})',
+        },
+      ],
+    })
+
+    <!-- Contents -->
+    <section class="content">
+      <h2 class="blind">마이페이지 프로필</h2>
+
+      <!-- Profile -->
+      @@include('./mypage/main/_main-profile.html', {
+        thumbnail_upload: true,
+        thumbnail_empty: false,
+        profile_me: true,
+      })
+
+      <!-- Account -->
+      @@include('./mypage/main/_main-account.html')
+
+			<!-- Account Snap -->
+      @@include('./mypage/main/_main-account-snap.html', {
+        snap_enroll: true,
+        snap_empty: false,
+        link: '스냅으로 가기',
+      })
+
+      <div class="cm-line"></div>
+
+      <!-- Shopping -->
+      <section>
+        <h3 class="blind">내 쇼핑 활동</h3>
+
+        @@include('./mypage/main/_main-shopping.html', {
+          button: [
+            {'svg': 'ic-40-stencil-money', 'text': '적립금', 'count': '9,999,999', },
+            {'svg': 'ic-40-stencil-point', 'text': '포인트', 'count': '999,999', },
+            {'svg': 'ic-40-stencil-coupon', 'text': '쿠폰', 'count': '20', },
+            {'svg': 'ic-40-stencil-review', 'text': '후기작성', 'count': '56', },
+          ],
+        })
+      </section>
+
+      <div class="cm-line"></div>
+
+      <!-- Status -->
+      <section>
+        @@include('./mypage/main/_main-title.html', {
+          text: '주문/배송조회',
+          link: true,
+          link_text: '전체',
+        })
+
+        @@include('./mypage/main/_main-status.html', {
+          button: [
+            {'count': '99', 'text': '입금/결제', class: ''},
+            {'count': '99', 'text': '배송완료', class: ''},
+            {'count': '0', 'text': '배송중', class: 'main-status__count--empty'},
+            {'count': '99', 'text': '구매확정', class: ''},
+          ],
+        })
+      </section>
+
+      <section>
+        @@include('./mypage/main/_main-title.html', {
+          text: '취소/교환/환불',
+          link: true,
+          link_text: '전체',
+        })
+
+        @@include('./mypage/main/_main-status.html', {
+          button: [
+            {'count': '99', 'text': '교환', class: ''},
+            {'count': '0', 'text': '교환완료', class: 'main-status__count--empty'},
+            {'count': '99', 'text': '환불', class: ''},
+            {'count': '99', 'text': '환불완료', class: ''},
+          ],
+        })
+      </section>
+
+      <a href="#" class="main-status__link">
+        @@include('./common/svg/ic-18-stencil-question.svg', {
+          class: '',
+          title: '',
+        })
+        교환/환불 방법이 궁금하신가요?
+      </a>
+
+      <div class="cm-line"></div>
+
+      <!-- Menu -->
+      @@include('./mypage/main/_main-menu.html', {
+        title: '활동정보',
+        menu: [ '마이 사이즈', '래플 응모 내역', ],
+      })
+
+      @@include('./mypage/main/_main-menu.html', {
+        title: '문의',
+        menu: [ '상품문의', '1:1문의', ],
+      })
+
+      @@include('./mypage/main/_main-menu.html', {
+        title: '매거진 & 커뮤니티',
+        menu: [ '커뮤니티', '친구', '쪽지', ],
+      })
+
+      @@include('./mypage/main/_main-menu.html', {
+        title: '고객센터',
+        menu: [ '공지사항', 'FAQ', '회원혜택', ],
+      })
+    </section>
+
+    <!-- Layout -->
+    @@include('./common/layout/navigation-bar.html', {
+      page: 'normal'
+    })
+    @@include('./common/layout/floating-menu.html')
+
+    <!-- Popup -->
+    @@include('./common/popup/_share.html')
+    @@include('./common/popup/_dim.html')
+  </main>
+  <!-- //Container -->
+
+  <script src="../../js/mypage.js"></script>
+</body>

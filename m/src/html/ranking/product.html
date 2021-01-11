@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./common/layout/head.html', {
+    title: '인기 패션 상품 - 상품 랭킹',
+    css: 'ranking',
+  })
+</head>
+<body class="ranking">
+  <main class="container">
+    @@include('./common/layout/header.html', {
+      title: '상품 랭킹',
+      title_sub: '상품 랭킹',
+      title_sub_class: '',
+			class: 'header--ex',
+      util: 'tooltip',
+      tooltip_text: '무신사 랭킹은 상품 매출, 판매 수량, 상품 조회 수, 작성 후기 수를 반영한 공식에 의해 선정됩니다. 무신사 스토어는 광고 목적으로 랭킹을 절대 임의 조작하지 않으므로 믿고 구매하셔도 됩니다.',
+      button_left: [
+        {
+          svg: 'ic-30-line-arrow-left',
+          title: '이전 페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '',
+        },
+      ],
+      button_right: [
+        {
+          svg: 'ic-30-stencil-bag',
+          title: '이전페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '@@include(\'./common/_cm-badge.html\', {class: \'cm-badge--new\'})',
+        },
+      ],
+    })
+    <section class="content">
+      @@include('./common/_guide-link.html', {
+        class: 'guide-link--active',
+        text: '무신사 랭킹을 알려드립니다.',
+        link: 'https://m.store.musinsa.com/app/cs/faq?q=%EB%9E%AD%ED%82%B9',
+      })
+      <div class="cm-line"></div>
+      <!-- [D] filter 영역 -->
+      @@include('./common/filter/cm-filter.html')
+
+      @@include('./common/list/_cm-util.html', {
+        type: 'count',
+        count_text: '상품',
+        count_num: ' 9,999',
+        count_unit: '건',
+        count_refresh: true,
+        count_time: '03.31 13:50 갱신',
+        util: true,
+        util_option: [
+          {
+            option_type: 'check',
+            option_class: 'cm-util-option__button--check',
+            option_attribute: 'data-toggle="active"',
+            option_button: '체크박스',
+            option_icon: 'ic-18-line-check',
+          },
+          {
+            option_type: 'icon',
+            option_class: 'cm-util-option__button--icon',
+            option_attribute: '',
+            option_button: '목록 뷰 변경',
+            option_icon: 'ic-22-line-3gridview',
+          },
+        ],
+      })
+      <!-- [D] 상풍목록 -->
+      <div style="display: flex; align-items: center; justify-content: center; height: 100px; background-color: coral;">
+        <a href="https://image-dev.msscdn.net/ui/musinsa/category/mw/list.html" target="_blank">
+          상품목록 참고페이지 보러가기
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    @@include('./common/layout/footer.html')
+
+    <!-- Layout -->
+    @@include('./common/layout/navigation-bar.html', {
+      page: 'normal'
+    })
+    @@include('./common/layout/floating-menu.html')
+
+    <!-- Popup -->
+    @@include('./common/popup/_share.html')
+    @@include('./common/popup/_dim.html')
+
+    <!-- Layer -->
+    @@include('./common/layer/_app.html', {
+      class: '',
+    })
+    @@include('./common/layer/_coupon.html', {
+      class: '',
+    })
+    @@include('./common/layer/_notice.html', {
+      class: '',
+    })
+
+  </main>
+  <!-- Share -->
+  @@include('./common/popup/_share.html')
+  @@include('./common/popup/_dim.html')
+  <script src="../../js/ranking.js"></script>
+</body>

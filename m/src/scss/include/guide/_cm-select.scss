@@ -1,0 +1,16 @@
+@charset 'utf-8';
+
+.guide__select {
+  &--50 {
+    .guide_box {
+      height: 50px;
+      font-size: 15px;
+    }
+  }
+  &--40 {
+    .guide_box {
+      height: 40px;
+      font-size: 14px;
+    }
+  }
+}

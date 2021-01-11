@@ -1,0 +1,79 @@
+<!--
+  include
+  mypage/main/_main-account-snap.html
+  snap/_snap-profile-list.html
+  snap/snap-main.html
+
+  변수
+  profile: [boolean] 내 프로필 노출 유무
+  register: [boolean] 등록 버튼 노출 유무
+  class: [string]
+    - snap-profile__button--profile: 프로필에 이미지가 있을 경우
+    - snap-profile__button--empty: 프로필에 이미지가 없을 경우
+    - snap-profile__button--register: 새 스냅 등록 버튼일 경우
+  text: [string] 마지막 텍스트(스냅: 전체보기 / 마이페이지: 더보기)
+  total: [string] 전체보기/더보기 텍스트
+-->
+<div class="snap-profile" role="presentation">
+  <ul class="snap-profile__lists">
+    @@if(profile) {
+      @@loop('./snap/_snap-profile-list.html', [
+        {
+          register: false,
+          class: 'snap-profile__button--profile',
+          thumb: true,
+          text: '프로필',
+        },
+        {
+          register: false,
+          class: 'snap-profile__button--empty',
+          thumb: false,
+          text: '프로필',
+        },
+        {
+          register: true,
+          class: 'snap-profile__button--register',
+          text: '새 스냅',
+        },
+        {
+          register: false,
+          class: '',
+          thumb: true,
+          text: '10.3',
+        },
+      ])
+    }
+    @@if(!profile) {
+      @@loop('./snap/_snap-profile-list.html', [
+        {
+          register: false,
+          class: 'snap-profile__button--profile',
+          thumb: true,
+          text: '프로필',
+        },
+        {
+          register: false,
+          class: 'snap-profile__button--empty',
+          thumb: false,
+          text: '프로필',
+        },
+        {
+          register: true,
+          class: 'snap-profile__button--register',
+          text: '새 스냅',
+        },
+        {
+          register: false,
+          class: '',
+          thumb: true,
+          text: '10.3',
+        },
+      ])
+    }
+    <li class="snap-profile__total">
+      <button type="button" class="snap-profile__link">
+        @@total
+      </button>
+    </li>
+  </ul>
+</div>

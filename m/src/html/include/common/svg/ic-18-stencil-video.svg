@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/18/Stencil/Video/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M9,3 C12.3137085,3 15,5.6862915 15,9 C15,12.3137085 12.3137085,15 9,15 C5.85497576,15 3.27511705,12.5802387 3.02061151,9.50090367 L4.02475737,9.50070198 C4.27594469,12.0270268 6.40756606,14 9,14 C11.7614237,14 14,11.7614237 14,9 C14,6.23857625 11.7614237,4 9,4 C6.40722328,4 4.27538101,5.97349494 4.02465783,8.50030016 L3.02052886,8.50009733 C3.27455798,5.42028573 5.85463498,3 9,3 Z M8,5.5 L12,9 L8,12.5 L8,5.5 Z M9,7.70376823 L9,10.2962318 L10.4814077,9 L9,7.70376823 Z" id="path-1"></path>
+    </defs>
+    <g id="Ic/18/Stencil/Video/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Combined-Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

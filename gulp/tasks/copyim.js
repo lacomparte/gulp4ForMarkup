@@ -1,0 +1,8 @@
+var gulp = require('gulp');
+var plugins = require('gulp-load-plugins')();
+var config = require('../config').copyim;
+
+module.exports = gulp.task(config.taskname, function() {
+    return gulp.src(config.src)
+        .pipe(gulp.dest(config.dest));
+});

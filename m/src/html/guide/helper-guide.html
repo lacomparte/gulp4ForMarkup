@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./common/layout/head.html', {
+    title: 'js 가이드',
+    css: 'guide',
+  })
+</head>
+<body class="common-js">
+  <!-- Container -->
+  <main class="container">
+    <!-- Header -->
+    @@include('./common/layout/header.html', {
+      class: '',
+      title: 'js 가이드',
+      title_sub: 'JS',
+      title_sub_class: 'blind',
+      util: '',
+      button_left: [
+        {
+          svg: 'ic-30-line-arrow-left',
+          title: '이전 페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '',
+        },
+      ],
+      button_right: [
+        {
+          svg: 'ic-30-stencil-musinsa',
+          title: '메인 페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '',
+        },
+      ],
+    })
+    <section class="contents common-js__contents">
+      <h2 class="common-js__title">
+        POPUP OPEN WITH DIM
+      </h2>
+      <div class="common-js__content">
+        <div class="common-js__desc">
+          [사용법]
+          <br>
+          <b>1. popup 을 오픈시킬 DOM 에 추가 할 properties</b>
+          <br>
+          1-1. <code>dim이 같이 열려야 하면 "data-dim='true'"</code> 삽입
+          <br>
+          1-2. <code>data-popup-open 에 "SOMETHING"</code>
+          <br><br>
+          <b>2. popup DOM 에 추가 할 property</b>
+          <br>
+          2-1. <code>data-popup="SOMETHING"</code> 1-2의 "SOMETHING" 과 같은 값
+        </div>
+        <button class="common-js__button" data-dim="true" data-popup-open="popupOpenWithDim">
+          POPUP OPEN WITH DIM
+        </button>
+      </div>
+
+      <h2 class="common-js__title">
+        POPUP OPEN ALONE
+      </h2>
+      <div class="common-js__content">
+        <div class="common-js__desc">
+          [사용법]
+          <br>
+          <b>1. popup 을 오픈시킬 DOM 에 추가 할 properties</b>
+          <br>
+          1-1. <code>dim이 열리지 말아야 하면 "data-dim='false'"</code> 삽입 또는 "data-dim" 미정의
+          <br>
+          1-2. <code>data-popup-open 에 "SOMETHING"</code>
+          <br><br>
+          <b>2. popup DOM 에 추가 할 property</b>
+          <br>
+          2-1. <code>data-popup="SOMETHING"</code> 1-2의 "SOMETHING" 과 같은 값
+        </div>
+        <button class="common-js__button" data-dim="false" data-popup-open="popupOpen">
+          POPUP OPEN
+        </button>
+      </div>
+
+      <h2 class="common-js__title">
+        POPUP OPEN FULL
+      </h2>
+      <div class="common-js__content">
+        <div class="common-js__desc">
+          [사용법]
+          <br>
+          <b>1. POPUP 을 오픈시킬 DOM 에 추가 할 properties</b>
+          <br>
+          1-1. <code>data-popup-open 에 "SOMETHING"</code>
+          <br><br>
+          <b>2. popup DOM 에 추가 할 property</b>
+          <br>
+          2-1. <code>data-popup="SOMETHING" 1-2의 "SOMETHING" 과 같은 값</code>
+          <br>
+          2-2. <code>data-popup-type 에 "full"</code>
+        </div>
+        <button class="common-js__button" data-popup-open="popupOpenFull">
+          POPUP OPEN FULL
+        </button>
+      </div>
+
+      <h2 class="common-js__title">
+        LAYER CLOSE
+      </h2>
+      <div class="common-js__content">
+        <div class="common-js__desc">
+          [사용법]
+          <br>
+          <b>1. layer 를 닫을 DOM 에 추가 할 class</b>
+          <br>
+          1-1. <code>"data-layer-close='layerClose'" 추가</code>
+          <br>
+          <br><br>
+          <b>2. layer DOM 에 추가 할 class</b>
+          <br>
+          2-1. <code>class 에 'layer' 추가</code>
+        </div>
+        <!--
+          LAYER CLOSE
+          이미 .layer 에 .active 가 있다고 가정.
+        -->
+        <div class="layer active">
+          LAYER CLOSE
+          <button class="layer__close" data-layer-close="layerClose">닫기</button>
+        </div>
+      </div>
+
+      <h2 class="common-js__title">
+        TOGGLE CLASS
+      </h2>
+      <div class="common-js__content">
+        <div class="common-js__desc">
+          [사용법]
+          <br>
+          <b>1. toggleClass 대상이 되는 DOM에 추가 할 property</b>
+          <br>
+          <b>2. <code>"data-toggle='className'" 추가</code></b>
+        </div>
+        <button class="common-js__button" data-toggle="toggleToggle">
+          TOGGLE CLASS
+        </button>
+        <p class="common-js__toggle-class">
+          class: <span></span>
+        </p>
+      </div>
+    </section>
+
+
+    <!-- POPUP OPEN WITH DIM -->
+    <div class="popup" data-popup="popupOpenWithDim">
+      <div class="popup__inner">
+        POPUP OPEN WITH DIM
+        <button class="popup__close" data-popup-close="popupOpenWithDim">닫기</button>
+      </div>
+    </div>
+
+    <!-- POPUP OPEN ALONE -->
+    <div class="popup" data-popup="popupOpen">
+      <div class="popup__inner">
+        POPUP OPEN
+        <button class="popup__close" data-popup-close="popupOpen">닫기</button>
+      </div>
+    </div>
+
+    <!-- POPUP OPEN FULL -->
+    <div class="popup popup--full" data-popup="popupOpenFull" data-popup-type="full">
+      <div class="popup__inner">
+        POPUP OPEN FULL
+        <button class="popup__close" data-popup-close="popupOpenFull">닫기</button>
+      </div>
+    </div>
+
+    <!-- Dim -->
+    @@include('./common/popup/_dim.html')
+
+    <!-- Navigation-bar -->
+    @@include('./common/layout/navigation-bar.html', {
+      page: 'player'
+    })
+  </main>
+  <!-- //Container -->
+
+  <script src="../../js/helper-guide.js"></script>
+</body>

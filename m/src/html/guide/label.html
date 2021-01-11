@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./common/layout/head.html', {
+    title: '가이드',
+    css: 'guide',
+  })
+</head>
+<body class="page-guide">
+  <!-- Container -->
+  <main class="container">
+    <!-- Header -->
+    @@include('./common/layout/header.html', {
+      title: '가이드',
+      title_sub: 'Contained Buttons',
+      title_sub_class: '',
+      class: '',
+      util: '',
+      button_left: [
+        {
+          svg: 'ic-30-line-arrow-left',
+          title: '이전 페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '',
+        },
+      ],
+      button_right: [
+        {
+          svg: 'ic-30-stencil-musinsa',
+          title: '메인 페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '',
+        },
+      ],
+    })
+    <section class="guide">
+      <ul class="guide__notice">
+        <li>
+          <mark>Label</mark> 의 추가 클래스는 임의로 정함(자유롭게 사용가능)
+        </li>
+      </ul>
+      <h1 class="guide__title">Label</h1>
+      <div class="guide__content">
+
+        <!-- state 36 size -->
+        <h2 class="guide__title-second">State - 36 size</h2>
+        <div class="guide__label--state__36">
+          <div class="guide__area">
+            <div class="guide__items column3">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Clear
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type01',
+                  icon: '',
+                  text: '클리어런스',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  New
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type02',
+                  icon: '',
+                  text: 'NEW',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Limited
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type03',
+                  icon: '',
+                  text: '한정판매',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Before
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type04',
+                  icon: '',
+                  text: '선발매',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Musinsa
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type05',
+                  icon: '',
+                  text: '무신사 단독',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Online
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type06',
+                  icon: '',
+                  text: '온라인 단독',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Standard
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type07',
+                  icon: '',
+                  text: '스탠다드',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Invitation(with Standard)
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type08',
+                  icon: '',
+                  text: '인비테이션',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Foreign
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type09',
+                  icon: '',
+                  text: '해외배송',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Parallel
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type10',
+                  icon: '',
+                  text: '병행수입',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Terrace
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type11',
+                  icon: '',
+                  text: '테라스샵',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Due
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type12',
+                  icon: '',
+                  text: '10월 4일 배송',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Delay
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type13',
+                  icon: '',
+                  text: '5일 지연',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Delay
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type14',
+                  class_svg: 'label-type14__svg',
+                  title_svg: '선물함',
+                  icon: 'ic-22-stencil-gift',
+                  text: '',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- state 26 size -->
+        <h2 class="guide__title-second">State - 26 size</h2>
+        <div class="guide__label--state__26">
+          <div class="guide__area">
+            <div class="guide__items column3">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Clear
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type01',
+                  icon: '',
+                  text: '클리어런스',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  New
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type02',
+                  icon: '',
+                  text: 'NEW',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+                @@include('./common/_label.html', {
+                  class: 'label-type02-1',
+                  icon: '',
+                  text: 'N',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Limited
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type03',
+                  icon: '',
+                  text: '한정판매',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+                @@include('./common/_label.html', {
+                  class: 'label-type03-1',
+                  icon: '',
+                  text: '한정',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Before
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type04',
+                  icon: '',
+                  text: '선발매',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Musinsa
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type05',
+                  icon: '',
+                  text: '무신사 단독',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+                @@include('./common/_label.html', {
+                  class: 'label-type05-1',
+                  icon: '',
+                  text: '단독',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Online
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type06',
+                  icon: '',
+                  text: '온라인 단독',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+                @@include('./common/_label.html', {
+                  class: 'label-type06-1',
+                  icon: '',
+                  text: '단독',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Standard
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type07',
+                  icon: '',
+                  text: '스탠다드',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+                @@include('./common/_label.html', {
+                  class: 'label-type07-1',
+                  icon: '',
+                  text: '단독',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Invitation(with Standard)
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type08',
+                  icon: '',
+                  text: '인비테이션',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+                @@include('./common/_label.html', {
+                  class: 'label-type08-1',
+                  icon: '',
+                  text: '단독',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Foreign
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type09',
+                  icon: '',
+                  text: '해외배송',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+                @@include('./common/_label.html', {
+                  class: 'label-type09-1',
+                  icon: '',
+                  text: '해외',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Parallel
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type10',
+                  icon: '',
+                  text: '병행수입',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+                @@include('./common/_label.html', {
+                  class: 'label-type10-1',
+                  icon: '',
+                  text: '병행',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Terrace
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type11',
+                  icon: '',
+                  text: '테라스샵',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+                @@include('./common/_label.html', {
+                  class: 'label-type11-1',
+                  icon: '',
+                  text: '테라스',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Terracesale
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type12',
+                  icon: '',
+                  text: '테라스 세일',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Raffle
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type13',
+                  icon: '',
+                  text: '무신사 래플',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+                @@include('./common/_label.html', {
+                  class: 'label-type13-1',
+                  icon: '',
+                  text: '래플',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Stop
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type14',
+                  icon: '',
+                  text: '판매중지',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Soldout
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type15',
+                  icon: '',
+                  text: 'SOLD OUT',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+                @@include('./common/_label.html', {
+                  class: 'label-type15-1',
+                  icon: '',
+                  text: '품절',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  FamilySale
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type16',
+                  icon: '',
+                  text: '패밀리세일',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Event
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type17',
+                  icon: '',
+                  text: 'EVENT',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  EndEvent
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type18',
+                  icon: '',
+                  text: 'EVENT',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Proceeding
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type19',
+                  icon: '',
+                  text: '진행중 YY.MM.DD - YY.MM.DD',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  End
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type20',
+                  icon: '',
+                  text: '종료',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Campaign1
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type21',
+                  icon: '',
+                  text: '캠페인1',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Campaign2
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type22',
+                  icon: '',
+                  text: '캠페인2',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Campaign3
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type23',
+                  icon: '',
+                  text: '캠페인3',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Gift
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type24',
+                  class_svg: 'label-type24__svg',
+                  title_svg: '선물함',
+                  icon: 'ic-22-stencil-gift',
+                  text: '',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- state 18 size -->
+        <h2 class="guide__title-second">State - 18 size</h2>
+        <div class="guide__label--state__18">
+          <div class="guide__area">
+            <div class="guide__items column3">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Sale
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type01',
+                  icon: '',
+                  text: 'SALE',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- outline 21 size -->
+        <h2 class="guide__title-second">Outline - 21 size</h2>
+        <div class="guide__label--outline__21">
+          <div class="guide__area">
+            <div class="guide__items column2">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Red1
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type01',
+                  icon: '',
+                  text: 'Red1라벨',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Blue1
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type02',
+                  icon: '',
+                  text: 'Blue1',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coupon 20 size -->
+        <h2 class="guide__title-second">Coupon - 20 size</h2>
+        <div class="guide__label--coupon__20">
+          <div class="guide__area">
+            <div class="guide__items column2">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Coupon
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type01',
+                  icon: '',
+                  text: '쿠폰',
+                  text_rank: '',
+                  text_coupon: '888,888원',
+                })
+                @@include('./common/_label.html', {
+                  class: 'label-type01-1',
+                  icon: '',
+                  text: '쿠폰',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rank 20 size -->
+        <h2 class="guide__title-second">Rank - 20 size</h2>
+        <div class="guide__label--rank__20">
+          <div class="guide__area">
+            <div class="guide__items column3">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Up
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type01',
+                  class_rank: 'up',
+                  icon: '',
+                  text: '1위',
+                  text_rank: '999',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Down
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type01',
+                  class_rank: 'down',
+                  icon: '',
+                  text: '1위',
+                  text_rank: '999',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Normal
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type01',
+                  class_rank: '',
+                  icon: '',
+                  text: '1위',
+                  text_rank: '-',
+                  text_coupon: '',
+                })
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timesale 20 size -->
+        <h2 class="guide__title-second">Timesale - 20 size</h2>
+        <div class="guide__label--timesale__20">
+          <div class="guide__area">
+            <div class="guide__items column3">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Timesale
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type01',
+                  icon: '',
+                  text: '타임세일 오늘 14시 종료',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  D Day
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type01',
+                  icon: '',
+                  text: '타임세일 D-6',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Radius 16 size -->
+        <h2 class="guide__title-second">Radius - 16 size</h2>
+        <div class="mensinsa">
+          <div class="guide__label--radius__16">
+            <div class="guide__area">
+              <div class="guide__items column2">
+                <div class="guide__item">
+                  <h2 class="guide__title-fourth">
+                    Mensinsa
+                  </h2>
+                  @@include('./common/_label.html', {
+                    class: 'label-type01',
+                    icon: '',
+                    text: '라벨명',
+                    text_rank: '',
+                    text_coupon: '',
+                  })
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wusinsa">
+          <div class="guide__label--radius__16">
+            <div class="guide__area">
+              <div class="guide__items column2">
+                <div class="guide__item">
+                  <h2 class="guide__title-fourth">
+                    Wusinsa
+                  </h2>
+                  @@include('./common/_label.html', {
+                    class: 'label-type01',
+                    icon: '',
+                    text: '라벨명',
+                    text_rank: '',
+                    text_coupon: '',
+                  })
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- around(= 360) 20 size -->
+        <h2 class="guide__title-second">Around(= 360) - 20 size</h2>
+        <div class="guide__label--around__20">
+          <div class="guide__area">
+            <div class="guide__items column3">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  360
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type01',
+                  class_svg: '',
+                  title_svg: '360도로 볼수 있음',
+                  icon: 'label-state-360-20',
+                  text: '',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Autoplay
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type01',
+                  class_svg: '',
+                  title_svg: '자동재생 미디어 포함',
+                  icon: 'label-state-autoplay-20',
+                  text: '',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- around(= 360) 28 size -->
+        <h2 class="guide__title-second">Around(= 360) - 28 size</h2>
+        <div class="guide__label--around__28">
+          <div class="guide__area">
+            <div class="guide__items column3">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  360
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type01',
+                  class_svg: '',
+                  title_svg: '360도로 볼수 있음',
+                  icon: 'label-state-360-28',
+                  text: '',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Autoplay
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type01',
+                  class_svg: '',
+                  title_svg: '자동재생 미디어 포함',
+                  icon: 'label-state-autoplay-28',
+                  text: '',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- around(= 360) 40 size -->
+        <h2 class="guide__title-second">Around(= 360) - 40 size(PC)</h2>
+        <div class="guide__label--around__40">
+          <div class="guide__area">
+            <div class="guide__items column3">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  360
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type01',
+                  class_svg: '',
+                  title_svg: '360도로 볼수 있음',
+                  icon: 'label-state-360-40',
+                  text: '',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Autoplay
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type01',
+                  class_svg: '',
+                  title_svg: '자동재생 미디어 포함',
+                  icon: 'label-state-autoplay-40',
+                  text: '',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

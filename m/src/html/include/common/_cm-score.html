@@ -1,0 +1,36 @@
+<!--
+  변수
+  class: [string]
+  rating: [number] 평가 수 노출 여부
+-->
+<div class="cm-score @@class">
+  <div class="cm-score__wrap" aria-label="5점 만점에 n점">
+    <div class="cm-score__unit">
+      @@include('./common/svg/icon-rating-off.svg', {
+        class: '',
+        title: '별점'
+      })
+    </div>
+    <!--
+      [D] 5점 만점에 4점이면
+      clip-path: polygon(
+        0 0,
+        80% 0,
+        80% 100%,
+        0, 100%
+      )
+      5점 만점일때 3.5점을 획득 했다면
+      2번째와 3번째 인수의 첫번째 값에
+      35% 를 각각 넣어주면 된다.
+    -->
+    <div class="cm-score__unit--on" style="clip-path: polygon(0 0, 32% 0, 32% 100%, 0% 100%);">
+      @@include('./common/svg/icon-rating-on.svg', {
+        class: '',
+        title: '별점'
+      })
+    </div>
+  </div>
+  @@if(rating) {
+    <span class="cm-score__rate" aria-label="평가수">@@rating+</span>
+  }
+</div>

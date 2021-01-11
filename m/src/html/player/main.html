@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./common/layout/head.html', {
+    title: 'PLAYER',
+    css: 'player_main',
+  })
+</head>
+<body class="player-main player">
+  <!-- Container -->
+  <main class="container">
+
+    <!-- Contents -->
+    <div class="content">
+      <h2 class="blind">플레이어 메인</h2>
+
+      <!-- Main Visual -->
+      <div class="main-visual-section">
+        @@include('./player/main/_main-visual.html',{
+          category:'promotion',
+          title:'플레이어<br>6월 스포츠 대전'
+        })
+      </div>
+
+      <!-- Campaign -->
+      <section class="main-section">
+        @@include('./player/main/_main-title.html',{
+          event_title:true,
+          category:'Campaign',
+          title1:'플레이어',
+          title2:'6월 스포츠 대전',
+          label:''
+        })
+
+        @@include('./player/main/_main-big-image.html',{
+          play_video:false
+        })
+
+        @@include('./player/main/_main-event-information.html',{
+          text:'매일 오전 10시 파격특가 입니다. 가나사',
+          date:'~ 20.06.31까지',
+          logo:''
+        })
+      </section>
+
+      <!-- Raffle -->
+      <section class="main-section">
+        @@include('./player/main/_main-title.html',{
+          event_title:true,
+          category:'Raffle',
+          title1:'오프화이트',
+          title2:'X 나이키 에어조던',
+          label:'진행중'
+        })
+
+        @@include('./player/main/_main-big-image.html',{
+          play_video:false
+        })
+
+        @@include('./player/main/_main-event-information.html',{
+          text:'',
+          date:'~ 20.06.31 10:00까지',
+          logo:'nike'
+        })
+      </section>
+
+      <!-- Promotion -->
+      <section class="main-section">
+        @@include('./player/main/_main-title.html',{
+          event_title:false,
+          category:'Promotion',
+          title1:'푸마 Co.Creative',
+          title2:'컬렉션 기획전',
+          label:''
+        })
+
+        @@include('./player/main/_main-big-image.html',{
+          play_video:false
+        })
+
+        @@include('./player/main/_main-slide-product.html',{
+          product_size_big: false,
+          item: [
+            {'brand':'나이키', 'name':'나이키 후드', 'price':'20,000', 'discount':'30'},
+            {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+            {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+            {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+            {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+            {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+            {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          ],
+        })
+      </section>
+
+      <!-- New Brand -->
+      <section class="main-section">
+        @@include('./player/main/_main-title.html',{
+          event_title:false,
+          category:'New Brand',
+          title1:'밴들스 입점 기념 이벤트',
+          title2:'컬렉션 기획전',
+          label:''
+        })
+
+        @@include('./player/main/_main-big-image.html',{
+          play_video:false
+        })
+
+        @@include('./player/main/_main-event-information.html',{
+          text:'밴들스 상품 증정',
+          date:'~ 20.06.31까지',
+          logo:'밴들스'
+        })
+      </section>
+
+      <!-- Update -->
+      <section class="main-section">
+        @@include('./player/main/_main-title.html',{
+          event_title:false,
+          category:'Update',
+          title1:'엔에프엘 20 SUMMER',
+          title2:'팬츠 신상품 발매',
+          label:'인기'
+        })
+
+        @@include('./player/main/_main-slide-product.html',{
+          product_size_big: true,
+          item: [
+            {'brand':'나이키', 'name':'나이키 후드', 'price':'20,000', 'discount':'30'},
+            {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+            {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+            {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+            {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+            {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+            {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          ],
+        })
+      </section>
+      
+      <!-- Curating -->
+      <section class="main-section">
+        @@include('./player/main/_main-title.html',{
+          event_title:false,
+          category:'Curating',
+          title1:'같이 물놀이 어때?',
+          title2:'',
+          label:''
+        })
+
+        @@include('./player/main/_main-big-image.html',{
+          play_video:false
+        })
+
+        @@include('./player/main/_main-slide-product.html',{
+          product_size_big:false,
+          item: [
+            {'brand':'나이키', 'name':'나이키 후드', 'price':'20,000', 'discount':'30'},
+            {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+            {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+            {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+            {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+            {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+            {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          ],
+        })
+    </div>
+
+    <!-- Styling -->
+    <section class="main-section">
+      @@include('./player/main/_main-title.html',{
+        event_title:false,
+        category:'Styling',
+        title1:'',
+        title2:'',
+        label:''
+      })
+
+      @@include('./player/main/_main-slide-contents.html',{
+        contents_size_big:true,
+        item: [
+            {'category':'스포츠 캐주얼', 'text':'스포티한 매력'},
+            {'category':'스포츠 캐주얼', 'text':'스포티한 매력'},
+            {'category':'스포츠 캐주얼', 'text':'스포티한 매력'},
+            {'category':'스포츠 캐주얼', 'text':'스포티한 매력'}
+          ],
+      })
+    </section>
+
+    <!-- Video -->
+    <section class="main-section">
+      @@include('./player/main/_main-title.html',{
+        event_title:false,
+        category:'Video',
+        title1:'배럴 X 한소희의',
+        title2:'2020 배럴핏 컬렉션',
+        label:''
+      })
+
+      @@include('./player/main/_main-big-image.html',{
+        play_video:true
+      })
+
+      @@include('./player/main/_main-slide-product.html',{
+        product_size_big: false,
+        item: [
+          {'brand':'나이키', 'name':'나이키 후드', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+        ],
+      })
+    </section>
+
+    <!-- Lookbook -->
+    <section class="main-section">
+      @@include('./player/main/_main-title.html',{
+        event_title:false,
+        category:'Lookbook',
+        title1:'',
+        title2:'',
+        label:''
+      })
+
+      @@include('./player/main/_main-slide-contents.html',{
+        contents_size_big:false,
+        item: [
+            {'category':'스포츠 캐주얼', 'text':'스포티한 매력'},
+            {'category':'스포츠 캐주얼', 'text':'스포티한 매력'},
+            {'category':'스포츠 캐주얼', 'text':'스포티한 매력'},
+            {'category':'스포츠 캐주얼', 'text':'스포티한 매력'}
+          ],
+      })
+    </section>
+
+    <!-- Supporters -->
+    <section class="main-section">
+      @@include('./player/main/_main-title.html',{
+        event_title:false,
+        category:'Supporters',
+        title1:'캘빈클라인 퍼포먼스',
+        title2:'체험단 30인 모집',
+        label:''
+      })
+
+      @@include('./player/main/_main-big-image.html',{
+        play_video:false
+      })
+
+      @@include('./player/main/_main-event-information.html',{
+        text:'크롭 베를린 P05 아이보리 린스체험 신청',
+        date:'~ 20.06.31까지',
+        logo:'LOGO'
+      })
+    </section>
+
+    <!-- Promotion -->
+    <section class="main-section">
+      @@include('./player/main/_main-title.html',{
+        event_title:false,
+        category:'Promotion',
+        title1:'카파 20 S/S',
+        title2:'컬렉션 기획전',        
+        label:''
+      })
+
+      @@include('./player/main/_main-big-image.html',{
+        play_video:false
+      })
+
+      @@include('./player/main/_main-slide-product.html',{
+        product_size_big: false,
+        item: [
+          {'brand':'나이키', 'name':'나이키 후드', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+        ],
+      })
+    </section>
+
+    <!-- New Brand -->
+    <section class="main-section">
+      @@include('./player/main/_main-title.html',{
+        event_title:false,
+        category:'New Brand',
+        title1:'밴들스 입점 기념 이벤트',
+        title2:'',
+        label:''
+      })
+
+      @@include('./player/main/_main-big-image.html',{
+        play_video:false
+      })
+
+      @@include('./player/main/_main-event-information.html',{
+        text:'크롭 베를린 P05 아이보리 린스체험 신청',
+        date:'~ 20.06.31까지',
+        logo:'LOGO'
+      })
+    </section>
+
+    <!-- Update -->
+    <section class="main-section">
+      @@include('./player/main/_main-title.html',{
+        event_title:false,
+        category:'Update',
+        title1:'베이드 20 S/S 10% 할인',
+        title2:'',
+        label:''
+      })
+
+      @@include('./player/main/_main-slide-product.html',{
+        product_size_big: true,
+        item: [
+          {'brand':'나이키', 'name':'나이키 후드', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+        ],
+      })
+    </section>
+
+    <!-- Staff snap -->
+    <section class="main-section">
+      @@include('./player/main/_main-title.html',{
+        event_title:false,
+        category:'Staff snap',
+        title1:'',
+        title2:'',
+        label:''
+      })
+
+      @@include('./player/main/_main-slide-contents.html',{
+        contents_size_big:true,
+        item: [
+            {'category':'나이키', 'text':'강현석'},
+            {'category':'나이키', 'text':'강현석'},
+            {'category':'나이키', 'text':'강현석'},
+            {'category':'나이키', 'text':'강현석'}
+          ],
+      })
+    </section>
+
+    <!-- Curating -->
+    <section class="main-section">
+      @@include('./player/main/_main-title.html',{
+        event_title:false,
+        category:'Curating',
+        title1:'같이 물놀이 어때?',
+        title2:'',
+        label:''
+      })
+
+      @@include('./player/main/_main-big-image.html',{
+        play_video:false
+      })
+
+      @@include('./player/main/_main-slide-product.html',{
+        product_size_big:false,
+        item: [
+          {'brand':'나이키', 'name':'나이키 후드', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+          {'brand':'나이키', 'name':'나이키 테크팩 후드 바지 SET', 'price':'20,000', 'discount':'30'},
+        ],
+      })
+    </div>
+
+    <!-- Lookbook -->
+    <section class="main-section">
+      @@include('./player/main/_main-title.html',{
+        event_title:false,
+        category:'Lookbook',
+        title1:'',
+        title2:'',
+        label:''
+      })
+
+      @@include('./player/main/_main-slide-contents.html',{
+        contents_size_big:false,
+        item: [
+            {'category':'스포츠 캐주얼', 'text':'스포티한 매력'},
+            {'category':'스포츠 캐주얼', 'text':'스포티한 매력'},
+            {'category':'스포츠 캐주얼', 'text':'스포티한 매력'},
+            {'category':'스포츠 캐주얼', 'text':'스포티한 매력'}
+          ],
+      })
+    </section>
+
+    <!-- Navigation-bar -->
+    @@include('./common/layout/navigation-bar.html', {
+      page: 'player'
+    })
+  </main>
+  <!-- //Container -->
+  <script src="../../js/page.js"></script>
+</body>

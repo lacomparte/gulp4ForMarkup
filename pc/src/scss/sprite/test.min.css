@@ -1,0 +1,17 @@
+/* Error: Undefined operation "398px % sprite-ratio()".
+ *    ,
+ * 96 |     @if ($width % $SPRITE_RATIO != 0) {
+ *    |          ^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   test.scss 96:10  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Undefined operation "398px % sprite-ratio()".\a    \2577 \a 96 \2502      @if ($width % $SPRITE_RATIO != 0) {\a    \2502           ^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   test.scss 96:10  root stylesheet';
+}

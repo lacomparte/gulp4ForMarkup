@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+$SPRITE_RATIO: sprite-ratio();
+
+%{{spritesheet_name}} {
+    display: inline-block;
+    overflow: hidden;
+}
+
+@function get-{{spritesheet_name}}-map($filename) {
+    @if map-has-key(${{spritesheet_name}}, $filename) {
+        @return map-get(${{spritesheet_name}}, $filename);
+    }
+
+    $error_message: "{{spritesheet_name}}에서 이미지 파일 #{$filename}을 찾을 수 없습니다.";
+    @error $error_message;
+}
+
+@function {{spritesheet_name}}-width($filename) {
+    $dimension-map: get-{{spritesheet_name}}-map($filename);
+    $width: map-get($dimension-map, width);
+
+    @if ($width % $SPRITE_RATIO != 0) {
+        $error_message: "{{spritesheet_name}}/#{$filename}의 width가 #{$width}로 이미지 background-size 비율(#{$SPRITE_RATIO})과 맞지 않습니다. 크기를 확인해주세요.";
+        @error $error_message;
+    }
+
+    @return $width/$SPRITE_RATIO;
+}
+
+@function {{spritesheet_name}}-height($filename) {
+    $dimension-map: get-{{spritesheet_name}}-map($filename);
+    $height: map-get($dimension-map, height);
+
+    @if ($height % $SPRITE_RATIO != 0) {
+        $error_message: "{{spritesheet_name}}/#{$filename}의 height가 #{$height}로 이미지 background-size 비율(#{$SPRITE_RATIO})과 맞지 않습니다. 크기를 확인해주세요.";
+        @error $error_message;
+    }
+
+    @return $height/$SPRITE_RATIO;
+}
+
+@function {{spritesheet_name}}-offset-x($filename) {
+    $dimension-map: get-{{spritesheet_name}}-map($filename);
+    @return map-get($dimension-map, offset_x)/$SPRITE_RATIO;
+}
+
+@function {{spritesheet_name}}-offset-y($filename) {
+    $dimension-map: get-{{spritesheet_name}}-map($filename);
+    @return map-get($dimension-map, offset_y)/$SPRITE_RATIO;
+}
+
+@mixin {{spritesheet_name}}-width($filename) {
+    width: {{spritesheet_name}}-width($filename);
+}
+
+@mixin {{spritesheet_name}}-height($filename) {
+    height: {{spritesheet_name}}-height($filename);
+}
+
+@mixin {{spritesheet_name}}-bg($filename) {
+    $offset-x : {{spritesheet_name}}-offset-x($filename);
+    $offset-y : {{spritesheet_name}}-offset-y($filename);
+
+    background: url('{{#replacePathSeperator}}{{{spritesheet.escaped_image}}}{{/replacePathSeperator}}?v=#{timestamp()}') no-repeat;
+    background-position: ($offset-x) ($offset-y);
+    @if ($SPRITE_RATIO != 1) {
+        background-size: ({{spritesheet.width}}px/$SPRITE_RATIO) ({{spritesheet.height}}px/$SPRITE_RATIO);
+    }
+}
+
+@mixin {{spritesheet_name}}($filename, $padding-top: 0, $padding-right: 0, $padding-bottom: 0, $padding-left: 0, $display: inline-block){
+    $width : {{spritesheet_name}}-width($filename);
+    $height : {{spritesheet_name}}-height($filename);
+    $offset-x : {{spritesheet_name}}-offset-x($filename);
+    $offset-y : {{spritesheet_name}}-offset-y($filename);
+
+    @extend %{{spritesheet_name}};
+    width: ($width + $padding-left + $padding-right);
+    height: ($height + $padding-top + $padding-bottom);
+    background: url('{{#replacePathSeperator}}{{{spritesheet.escaped_image}}}{{/replacePathSeperator}}?v=#{timestamp()}') no-repeat;
+    background-position: ($offset-x + $padding-left) ($offset-y + $padding-top);
+    @if ($SPRITE_RATIO != 1) {
+        background-size: ({{spritesheet.width}}px/$SPRITE_RATIO) ({{spritesheet.height}}px/$SPRITE_RATIO);
+    }
+}
+
+${{spritesheet_name}}: (
+    {{#items}}
+    {{name}}: (offset_x: {{px.offset_x}}, offset_y: {{px.offset_y}}, width: {{px.width}}, height: {{px.height}}),
+    {{/items}}
+);
+
+@each $filename, $dimension-map in ${{spritesheet_name}} {
+    $width: map-get($dimension-map, width);
+    $height: map-get($dimension-map, height);
+
+    @if ($width % $SPRITE_RATIO != 0) {
+        $error_message: "{{spritesheet_name}}/#{$filename}의 width가 #{$width}로 이미지 background-size 비율(#{$SPRITE_RATIO})과 맞지 않습니다. 크기를 확인해주세요.";
+        @error $error_message;
+    }
+
+    @if ($height % $SPRITE_RATIO != 0) {
+        $error_message: "{{spritesheet_name}}/#{$filename}의 height가 #{$height}로 이미지 background-size 비율(#{$SPRITE_RATIO})과 맞지 않습니다. 크기를 확인해주세요.";
+        @error $error_message;
+    }
+}

@@ -1,0 +1,24 @@
+<!--
+  include
+	player/player-main.html
+-->
+
+<ul class="main-slide-product @@if(product_size_big) {product-big}">
+  @@for(var i = 0; i < item.length; i++) {
+  <li class="main-slide-product__item product-more">
+    <a href="" title="">
+      <div class="main-slide-product__image">
+        <div class="main-slide-product__more">more</div>
+      </div>
+      <p class="main-slide-product__brand">`+ item[i].brand +`</p>
+      @@if(product_size_big) {
+        <p class="main-slide-product__name">`+ item[i].name +`</p>
+      }
+      <div class="main-slide-product__price-information">
+        <p class="main-slide-product__sale">`+ item[i].price +`</p>
+        <p class="main-slide-product__discount">`+ item[i].discount +`%</p>
+      </div>
+    </a>
+  </li>
+  }
+</ul>

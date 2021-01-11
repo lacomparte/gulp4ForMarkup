@@ -1,0 +1,74 @@
+@charset 'utf-8';
+
+.snap-image {
+  $this: &;
+  overflow: hidden;
+  background-color: $gray3;
+  white-space: nowrap;
+  font-size: 0;
+
+  &__list {
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    padding-top: 133.282%;
+  }
+
+  &__error,
+  &__register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    @include position(absolute, 0, 0, 0, 0);
+    text-align: center;
+    background-color: $white;
+    background-size: 100%, auto;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__register {
+    flex-direction: column;
+    width: calc(100% - 1px);
+    font-size: 12px;
+    color: $black;
+    background-color: $gray1;
+    &::after {
+      content: '새 스냅';
+      display: block;
+      margin-top: 6px;
+    }
+  }
+
+  &--3column {
+    white-space: normal;
+
+    #{$this}__lists {
+      display: flex;
+      width: calc(100% + 2px);
+      flex-wrap: wrap;
+      flex-direction: row;
+      background-color: $white;
+    }
+
+    #{$this}__list {
+      flex: 1 1 33.3%;
+      max-width: 33.3%;
+      box-sizing: border-box;
+      padding-top: 44.15%;
+    }
+
+    #{$this}__content {
+      margin: 0 1px 1px 0;
+    }
+  }
+
+  &__button {
+    display: block;
+    width: 100%;
+  }
+}

@@ -1,0 +1,34 @@
+<!--
+  include
+  guide/list-util.html
+
+  css
+  include/common/cm-pagination.scss
+
+  use
+  list-pagination__prev 비활성화 시 클래스 list-pagination__prev--disabled 추가 또는 속성 disabled 추가
+  list-pagination__next 비활성화 시 클래스 list-pagination__next--disabled 추가 또는 속성 disabled 추가
+  list-pagination__page 활성화 시 클래스 list-pagination__page--active 추가
+-->
+
+<div class="list-pagination">
+  <button type="button" class="list-pagination__prev" disabled>
+    @@include('./common/svg/ic-22-line-arrow-left.svg', {
+      class: '',
+      title: '이전 페이지로 이동',
+    })
+  </button>
+
+  <button type="button" class="list-pagination__page">1</button>
+  <button type="button" class="list-pagination__page list-pagination__page--active">2</button>
+  <button type="button" class="list-pagination__page">3</button>
+  <button type="button" class="list-pagination__page">4</button>
+  <button type="button" class="list-pagination__page">5</button>
+
+  <button type="button" class="list-pagination__next">
+    @@include('./common/svg/ic-22-line-arrow-right.svg', {
+      class: '',
+      title: '다음 페이지로 이동',
+    })
+  </button>
+</div>

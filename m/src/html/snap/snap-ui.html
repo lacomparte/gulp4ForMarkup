@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./common/layout/head.html', {
+    "title": '스냅 :: UI 모음',
+    "css": 'snap',
+  })
+  <style>
+    .wrapper {
+      padding: 10px;
+    }
+    .ul {
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 10px;
+    }
+    .li {
+      overflow: hidden;
+      flex: 0 0 50%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #eee;
+      background-color: #fff;
+    }
+    .li.whole {
+      flex: none;
+      width: 100%;
+    }
+    .li .component {
+      padding: 10px 0;
+    }
+    .li .title {
+      padding: 5px 10px;
+      color: #fff;
+      background: #585c89;
+    }
+    .li .sub_title {
+      padding: 3px;
+      font-size: 12px;
+      color: #ff797a;
+    }
+    .li .desc {
+      background: #fff;
+      border-radius: 0 0 10px 10px;
+    }
+    .li .desc table {
+      border: 1px solid #eee;
+      font-size: 12px;
+    }
+    .li .desc th,
+    .li .desc td {
+      padding: 3px;
+      border: 1px solid #eee;
+      font-size: 10px;
+    }
+    .toast.active {
+      position: static;
+    }
+    .toast.active .toast__content {
+      position: static;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <ul class="ul">
+      <li class="li">
+        <h2 class="title">스냅 리스트 유저사진 </h2>
+        <div class="component_wrap">
+          <div class="component snap-profile">
+            <h3 class="sub_title">스냅 상단(인스타 스토리같은..)</h3>
+            @@include('./snap/_thumbnail-unit.html')
+          </div>
+          <div class="component snap-auth">
+            <h3 class="sub_title">스냅 피드 프로필 이미지</h3>
+            @@include('./snap/_thumbnail-unit.html')
+          </div>
+          <div class="component snap-deal__link">
+            <h3 class="sub_title">구매목록</h3>
+            @@include('./snap/_thumbnail-unit.html')
+          </div>
+          <div class="component">
+            <h3 class="sub_title">인기스냅</h3>
+            <div class="snap-popular__list">
+              @@include('./snap/_thumbnail-unit.html')
+            </div>
+          </div>
+          <div class="component">
+            <h3 class="sub_title">인기스냅 프로필 이미지</h3>
+            <div class="snap-popular__figure" style="position: static;right:initial;top:initial;transform:none">
+              @@include('./snap/_thumbnail-unit.html')
+            </div>
+          </div>
+          <div class="component">
+            <h3 class="sub_title">이미지 + 텍스트조합</h3>
+            @@include('./snap/_snap-auth.html', {
+              thumb: true,
+              withdraw: false,
+            })
+            @@include('./snap/_snap-auth.html', {
+              thumb: true,
+              withdraw: true,
+            })
+          </div>
+        </div>
+        <div class="desc">
+          <h3 class="sub_title">형태 정의</h3>
+          <p>컴포넌트의 모양은 컴포넌트.scss 에서 @at-root 로 작성</p>
+        </div>
+      </li>
+      <li class="li">
+        <h2 class="title">스냅 피드 썸네일</h2>
+        <div class="component_wrap">
+          <div class="component">
+            <h3 class="sub_title">이미지를 불러올 수 없습니다</h3>
+            @@include('./snap/_snap-image.html', {
+              class: '',
+              register: [],
+              button: ['1'],
+              plain: ['1'],
+            })
+          </div>
+          <div class="component">
+            <h3 class="sub_title">스냅 등록</h3>
+            @@include('./snap/_snap-image.html', {
+              class: '',
+              register: ['1'],
+              button: ['1'],
+              plain: ['1'],
+            })
+          </div>
+          <div class="component">
+            <h3 class="sub_title">스냅 리스트(버튼형)</h3>
+            @@include('./snap/_snap-image.html', {
+              class: '',
+              register: [],
+              button: ['1','1'],
+              plain: [],
+            })
+          </div>
+          <div class="component">
+            <h3 class="sub_title">스냅 리스트(일반형)</h3>
+            @@include('./snap/_snap-image.html', {
+              class: '',
+              register: [],
+              button: [],
+              plain: ['1','1'],
+            })
+          </div>
+        </div>
+      </li>
+      <li class="li">
+        <h2 class="title">스냅 컨텐츠 인디케이터 </h2>
+        <div class="component_wrap">
+          <div class="component">
+            @@include('./snap/_indicator.html')
+          </div>
+        </div>
+      </li>
+      <li class="li whole">
+        <h2 class="title">인기 태그 영역</h2>
+        <div class="component_wrap">
+          <div class="component">
+            <h3 class="sub_title">태그</h3>
+            @@include('./snap/_snap-tag.html')
+          </div>
+        </div>
+      </li>
+      <li class="li">
+        <h2 class="title">스냅 프로필 영역</h2>
+        <div class="component_wrap">
+          <div class="component">
+            <h3 class="sub_title">프로필 등록시</h3>
+            @@include('./snap/_snap-profile.html', {
+              profile: true,
+              total: '전체보기',
+            })
+          </div>
+          <div class="component">
+            <h3 class="sub_title">프로필 미등록시</h3>
+            @@include('./snap/_snap-profile.html', {
+              profile: false,
+              total: '전체보기',
+            })
+          </div>
+        </div>
+      </li>
+      <li class="li">
+        <h2 class="title">타이틀</h2>
+        <div class="component_wrap">
+          <div class="component">
+            <h3 class="sub_title">월별 사용(좌정렬)</h3>
+            @@include('./snap/_snap-sub-title.html', {
+              class: 'type-left',
+              text: '7월'
+            })
+          </div>
+          <div class="component">
+            <h3 class="sub_title">베스트에 사용(중앙 정렬)</h3>
+            @@include('./snap/_snap-sub-title.html', {
+              class: 'type-center',
+              text: '7월 베스트'
+            })
+          </div>
+        </div>
+      </li>
+      <li class="li whole">
+        <h2 class="title">스냅 구매목록</h2>
+        <div class="component_wrap">
+          <div class="component">
+            <h3 class="sub_title" style="margin-bottom: 9px;">구매목록</h3>
+            @@include('./snap/_snap-deal.html', {
+              arr: [
+                {
+                  title: 'V232 라이트 논스판 와이드 데님팬츠-(라이트블루)232 라이트 논스판 와이드 데님팬츠',
+                  price: '3,000,000',
+                  discount: '30',
+                },
+                {
+                  'title': '스티치 포인트 셔츠 브라운',
+                  'price': '100,000',
+                  'discount': '25',
+                },
+                {
+                  'title': 'V232 라이트 논스판 와이드 데님팬츠-(라이트블루)',
+                  'price': '3,000,000',
+                  'discount': '30',
+                },
+              ]
+            })
+          </div>
+        </div>
+      </li>
+      <li class="li">
+        <h2 class="title">스냅 본문</h2>
+        <div class="component_wrap">
+          <div class="component">
+            <h3 class="sub_title">본문(2줄 자름)</h3>
+            @@include('./snap/_snap-description.html')
+          </div>
+          <div class="component">
+            <h3 class="sub_title">본문(자름 없음)</h3>
+            <!-- [D] inline style 은 무시 -->
+            <div class="layer-comment active" style="position: static">
+              @@include('./snap/_snap-description.html')
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="li">
+        <h2 class="title">해시태그</h2>
+        <div class="component_wrap">
+          <div class="component">
+            <h3 class="sub_title">color-fblue2</h3>
+            @@include('./snap/_snap-hash.html', {
+              class: 'color-fblue2',
+              text: '#오렌지색',
+            })
+          </div>
+        </div>
+      </li>
+      <li class="li whole">
+        <h2 class="title">인기스냅</h2>
+        <div class="component_wrap">
+          <div class="component">
+            <h3 class="sub_title">각각 고정폭</h3>
+            <div class="snap-list">
+              @@include('./snap/_snap-popular.html')
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="li ">
+        <h2 class="title">토스트</h2>
+        <div class="component_wrap">
+          <div class="component">
+            <h3 class="sub_title">신고완료</h3>
+              @@include('./common/toast/_toast.html', {
+                class: 'active',
+                text: '신고처리 되었습니다.',
+                button_text: '',
+              })
+          </div>
+        </div>
+      </li>
+      <li class="li whole">
+        <h2 class="title">스냅프로필</h2>
+        <div class="component_wrap">
+          <div class="component">
+            <h3 class="sub_title">내 프로필 사진 업로드</h3>
+            <!-- Profile -->
+            @@include('./mypage/main/_main-profile.html', {
+              thumbnail_upload: true,
+              thumbnail_empty: false,
+              profile_me: true,
+            })
+          </div>
+        </div>
+      </li>
+      <li class="li whole">
+        <h2 class="title">스냅프로필</h2>
+        <div class="component_wrap">
+          <div class="component">
+            <h3 class="sub_title">내 프로필 사진 미업로드</h3>
+            <!-- Profile -->
+            @@include('./mypage/main/_main-profile.html', {
+              thumbnail_upload: false,
+              thumbnail_empty: true,
+              profile_me: true,
+            })
+          </div>
+        </div>
+      </li>
+      <li class="li whole">
+        <h2 class="title">스냅프로필</h2>
+        <div class="component_wrap">
+          <div class="component">
+            <h3 class="sub_title">타인 프로필 사진 업로드</h3>
+            <!-- Profile -->
+            @@include('./mypage/main/_main-profile.html', {
+              thumbnail_upload: true,
+              thumbnail_empty: false,
+              profile_me: false,
+            })
+          </div>
+        </div>
+      </li>
+      <li class="li whole">
+        <h2 class="title">스냅프로필</h2>
+        <div class="component_wrap">
+          <div class="component">
+            <h3 class="sub_title">타인 프로필 사진 미업로드</h3>
+            <!-- Profile -->
+            @@include('./mypage/main/_main-profile.html', {
+              thumbnail_upload: false,
+              thumbnail_empty: true,
+              profile_me: false,
+            })
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>

@@ -1,0 +1,16 @@
+<!--
+  include
+	player/player-main.html
+-->
+
+<ul class="main-slide-contents @@if(contents_size_big) {contents-big}">
+  @@for(var i = 0; i < item.length; i++) {
+  <li class="main-slide-contents__item">
+    <a href="" title="">
+      <div class="main-slide-contents__image"></div>
+      <p class="main-slide-contents__category">`+ item[i].category +`</p>
+      <p class="main-slide-contents__text">`+ item[i].text +`</p>
+    </a>
+  </li>
+  }
+</ul>

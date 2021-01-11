@@ -1,0 +1,212 @@
+/*
+* 채널별 컬러 사용
+*
+* @include channelColor($channel, $attribute, $color);
+*
+* - 채널 : $channel
+* -- 채널은 기본적으로 wusinsa, mensinsa 두 가지 / 추가 예정
+* -- 채널 값은 body의 클래스를 의미함(또는 page 의 contents 를 감싸는 최상위 root DOM)
+* -- 원하는 채널에 색상을 선택적으로 적용할 수 있다
+*
+* - CSS속성 : $attribute
+* -- background-color, background-image, color, border-color, fill
+* -- 5가지 속성 중 원하는 속성을 선택하여 변경 할 수 있다
+*
+* - 컬러 : $color
+* -- _variables.scss 에 정의되어 있는 color key 값 사용
+* -- 특정 컬러로 변경해야 하는 경우는 _color.scss 에서 해당하는 컬러 변수를 가져온다
+* -- _color.scss에 없는 컬러로 변경 시 변수를 추가해야할지 논의 필요
+*/
+
+@mixin channelColor($channel, $attribute, $color) {
+  $channels: (wusinsa, mensinsa, player);
+  $attributes: (background-color, background-image, color, border-color, fill);
+
+  @at-root {
+    .#{$channel} & {
+      #{$attribute}: $color;
+    }
+    // 기존 버전 임시 적용
+    .wrapper-#{$channel} & {
+      #{$attribute}: $color;
+    }
+  }
+}
+
+/* guide */
+.cm-badge {
+  &--new {
+    @include channelColor(wusinsa, background-color, $fpurple2);
+    @include channelColor(player, background-color, $fred2);
+  }
+}
+.cm-new {
+  @include channelColor(wusinsa, background-color, $fpurple2);
+  @include channelColor(player, background-color, $fred2);
+}
+
+/* layout */
+.header {
+  &--ex {
+    .header__area {
+      @include channelColor(wusinsa, background-color, $cgray5);
+      @include channelColor(mensinsa, background-color, $navy8);
+    }
+  }
+
+  &__util {
+    &--category {
+      @include channelColor(wusinsa, border-color, $cgray4);
+    }
+  }
+}
+.footer {
+  @include channelColor(wusinsa, background-color, $cgray2);
+  @include channelColor(mensinsa, background-color, $navy7);
+  @include channelColor(player, background-color, $cblue7);
+
+  * {
+    @include channelColor(wusinsa, color, $cgray6);
+    @include channelColor(player, color, $cblue3);
+  }
+  &__faq {
+    > a {
+      > svg {
+        .svg-color {
+          @include channelColor(wusinsa, fill, $cgray6);
+          @include channelColor(player, fill, $cblue3);
+        }
+      }
+    }
+  }
+
+  &__button {
+    > svg {
+      .svg-color {
+        @include channelColor(wusinsa, fill, $cgray6);
+        @include channelColor(player, fill, $cblue3);
+      }
+    }
+  }
+
+  &__sns {
+    > a {
+      > svg {
+        .svg-color {
+          @include channelColor(wusinsa, fill, $cgray5);
+          @include channelColor(mensinsa, fill, $gray4);
+          @include channelColor(player, fill, $cblue3);
+        }
+      }
+    }
+  }
+
+  &__text {
+    @include channelColor(wusinsa, color, $cgray5);
+    @include channelColor(mensinsa, color, $cgray6);
+  }
+}
+
+.navigation-bar {
+  &__area {
+    @include channelColor(wusinsa, background-color, $cgray5);
+    @include channelColor(mensinsa, background-color, $navy8);
+    @include channelColor(player, background-color, $gray2);
+  }
+
+  &__button {
+    .svg-color {
+      @include channelColor(player, fill, $cblue5);
+
+      &--point {
+        @include channelColor(player, fill, $fred2);
+      }
+    }
+    &--gate {
+      &:before {
+        @include channelColor(wusinsa, background-image, linear-gradient(to bottom, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.2) 99%));
+        @include channelColor(mensinsa, background-image, linear-gradient(to bottom, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.2) 99%));
+      }
+    }
+  }
+}
+
+.cm-filter {
+  $this: &;
+
+  &__item {
+    &--active {
+      @include channelColor(wusinsa, background-color, $fpurple2);
+      @include channelColor(wusinsa, border-color, $fpurple2);
+    }
+
+    &--selected {
+      @include channelColor(wusinsa, color, $fpurple1);
+    }
+  }
+
+  &__lists__button--active {
+    @include channelColor(wusinsa, color, $fpurple1);
+
+    @at-root {
+      // 사이즈 필터에서 사용
+      #{$this}__lists--3column & {
+        @include channelColor(wusinsa, color, $fpurple1);
+        @include channelColor(wusinsa, border-color, $fpurple1);
+      }
+
+      // 색상 필터에서 사용
+      #{$this}__lists--6column & #{$this}__lists__desc {
+        @include channelColor(wusinsa, color, $fpurple1);
+      }
+    }
+  }
+
+  &__sort--active {
+    #{$this}__sort__text {
+      @include channelColor(wusinsa, color, $fpurple1);
+    }
+  }
+
+  &__chip--tag {
+    &#{$this}__chip--active {
+      @include channelColor(wusinsa, color, $fpurple1);
+    }
+  }
+
+  &__tabs__translation {
+    #{$this}__sort--active::before {
+      @include channelColor(wusinsa, background-color, $fpurple1);
+    }
+  }
+
+  &__category__button--active {
+    @include channelColor(wusinsa, color, $fpurple1);
+
+    &::before {
+      @include channelColor(wusinsa, border-color, $fpurple1);
+    }
+  }
+
+  &__result {
+    // cm-filter__chip 이외의 클래스를 갖고 있지 않을때만.
+    // [class="cm-filter__chip"] [class="cm-filter__chip "] 두개인 이유는
+    // javascript 에 의한 class 추가 삭제시
+    // 클래스가 한개임에도 불구하고 공백이 포함되어 있을지 모르기 때문
+    [class="cm-filter__chip"],
+    [class="cm-filter__chip "] {
+      #{$this}__chip__text {
+        @include channelColor(wusinsa, color, $white);
+        @include channelColor(wusinsa, background-color, $fpurple2);
+      }
+    }
+  }
+
+  &__tooltip {
+    @include channelColor(wusinsa, background-color, $fpurple2);
+
+    &::before {
+      @include channelColor(wusinsa, background-color, $fpurple2);
+    }
+  }
+}

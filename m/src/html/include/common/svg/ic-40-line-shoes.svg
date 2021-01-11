@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/40/Line/Shoes/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M17.1583069,13 L20.182,14.992 L20.8841762,13.776216 L21.7502016,14.276216 L21.019,15.543 L25.5505008,18.5275145 L29.9306884,18.5275145 C33.2457078,18.5275145 36,20.8767248 36,26.5 L36,26.5 L36,27 L17.8919394,27 L13.0151362,23.7406176 L13.0151362,27 L4,27 L4,13 L17.1583069,13 Z M12.0151362,23.3050548 L5,23.3050548 L5,26 L12.0151362,26 L12.0151362,23.3050548 Z M16.8585695,14 L5,14 L5,22.3050548 L12.6668408,22.3050548 L18.1953485,26 L34.9922646,26 C34.8455749,21.3384401 32.6310657,19.5275145 29.9306884,19.5275145 L29.9306884,19.5275145 L25.2507634,19.5275145 L20.518,16.41 L19.7502016,17.7403176 L18.8841762,17.2403176 L19.681,15.859 L16.8585695,14 Z" id="path-1"></path>
+    </defs>
+    <g id="Ic/40/Line/Shoes/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

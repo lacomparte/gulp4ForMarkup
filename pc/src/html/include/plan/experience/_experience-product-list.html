@@ -1,0 +1,12 @@
+<!--
+  include
+  plan/experience.html
+-->
+
+<ul class="block-products">
+  @@for(var i = 0; i < list.length; i++) {
+  <li>
+    <a href="`+list[i].productLink+`" style="background-image:url(`+list[i].imgUrl+`)"></a>
+  </li>
+  }
+</ul>

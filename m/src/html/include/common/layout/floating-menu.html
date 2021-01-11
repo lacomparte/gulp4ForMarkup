@@ -1,0 +1,47 @@
+<!--
+  include
+  페이지 공통
+
+  css
+  include/common/list/_floating-menu.scss
+-->
+
+<div class="floating-menu">
+  <div class="floating-menu__left">
+    <button type="button" class="floating-menu__button">
+      @@include('./common/svg/ic-30-stencil-arrow-left.svg', {
+        class: '',
+        title: '이전 페이지로 이동',
+      })
+    </button>
+    <button type="button" class="floating-menu__button" data-popup-open="share" data-dim="true">
+      @@include('./common/svg/ic-30-stencil-share.svg', {
+        class: '',
+        title: '페이지 공유하기',
+      })
+    </button>
+  </div>
+
+  <div class="floating-menu__right">
+    <a href="#" class="floating-menu__button">
+      @@include('./common/svg/ic-30-stencil-top.svg', {
+        class: '',
+        title: '페이지 상단으로 이동',
+      })
+    </a>
+    <a href="#" class="floating-menu__button">
+      @@include('./common/svg/ic-30-stencil-clock.svg', {
+        class: '',
+        title: '최근 본 상품 페이지로 이동',
+      })
+    </a>
+    <a href="#" class="floating-menu__button floating-menu__button--recent" style="background-image:url(//image.msscdn.net/images/goods_img/20191024/1201038/1201038_1_180.jpg)">
+      @@include('./common/svg/ic-30-stencil-clock.svg', {
+        class: '',
+        title: '최근 본 상품 페이지로 이동',
+      })
+    </a>
+
+    @@include('./common/layout/global-filter.html')
+  </div>
+</div>

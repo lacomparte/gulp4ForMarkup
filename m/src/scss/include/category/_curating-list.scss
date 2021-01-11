@@ -1,0 +1,27 @@
+.curating-list {
+  overflow: hidden;
+
+  &__link {
+    display: list-item;
+    overflow: hidden;
+    position: relative;
+    width: 33.33%;
+    float: left;
+
+
+    &:nth-child(1) {
+      width: 66.66%;
+    }
+
+    &:nth-child(4) {
+      float: right;
+      width: 66.66%;
+    }
+
+    >img {
+      width: 100%;
+      line-height: 0;
+      vertical-align: top;
+    }
+  }
+}

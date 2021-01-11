@@ -1,0 +1,53 @@
+@charset 'utf-8';
+
+.loading-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+
+  @at-root {
+    // snap-user-profile 에서 사용
+    .snap-image__lists & {
+      flex: 1 0 100%;
+      padding: 50px 0;
+    }
+  }
+
+  &__dots {
+    display: flex;
+    width: 70px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    animation-name: loading-dot;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    background-color: #dadada;
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        $s: $i / 4;
+        animation-delay: #{$s}s;
+      }
+    }
+  }
+
+  &--entire {
+    @extend .loading-dot;
+    height: calc(100vh - (50px + 120px));
+  }
+}
+@keyframes loading-dot {
+  0% {
+    background-color: $black;
+  }
+  50%,
+  100% {
+    background-color: #dadada;
+  }
+}

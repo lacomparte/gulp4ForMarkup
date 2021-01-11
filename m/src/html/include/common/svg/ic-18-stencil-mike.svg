@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/18/Stencil/Mike/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M5,8.5 L5,8.78571429 C5,11.118269 6.7961978,13 9,13 C11.1370203,13 12.8907652,11.2305853 12.9950904,8.99648296 L13,8.78571429 L13,8.5 L14,8.5 L14,8.78571429 C14,11.4848642 12.03119,13.7122581 9.50052355,13.9742361 L9.5,16 L8.5,16 L8.50047806,13.9743397 C6.03844275,13.7199859 4.10796437,11.6054055 4.00437616,9.00575929 L4,8.78571429 L4,8.5 L5,8.5 Z M9,2 C10.6568542,2 12,3.34314575 12,5 L12,9 C12,10.6568542 10.6568542,12 9,12 C7.34314575,12 6,10.6568542 6,9 L6,7.5 L7,7.5 L7,9 C7,10.1045695 7.8954305,11 9,11 C10.1045695,11 11,10.1045695 11,9 L11,5 C11,3.8954305 10.1045695,3 9,3 C7.8954305,3 7,3.8954305 7,5 L7,6.5 L6,6.5 L6,5 C6,3.34314575 7.34314575,2 9,2 Z" id="path-1"></path>
+    </defs>
+    <g id="Ic/18/Stencil/Mike/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Combined-Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

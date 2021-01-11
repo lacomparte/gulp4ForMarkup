@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/22/Line/Timelineview/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M19,12 L19,19 L6,19 L6,12 L19,12 Z M4,12 L4,19 L3,19 L3,12 L4,12 Z M18,13 L7,13 L7,18 L18,18 L18,13 Z M19,3 L19,10 L6,10 L6,3 L19,3 Z M4,3 L4,10 L3,10 L3,3 L4,3 Z M18,4 L7,4 L7,9 L18,9 L18,4 Z" id="path-1"></path>
+    </defs>
+    <g id="Ic/22/Line/Timelineview/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

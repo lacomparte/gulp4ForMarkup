@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+// common
+@import './include/common/import';
+@import './include/common/toast/_toast';
+@import './include/common/loading-dot';
+@import './include/common/comment/_comment';
+@import './include/common/comment/_comment-write';
+@import './include/common/comment/_comment-list__content';
+@import './include/common/comment/_comment-list__evaluate';
+@import './include/common/comment/_comment-tooltip';
+@import './include/common/layer/_layer';
+
+// snap common
+@import './include/snap/_thumbnail-unit';
+@import './include/snap/_snap-profile';
+
+// snap
+@import './include/snap/_snap-auth';
+@import './include/snap/_snap-image';
+@import './include/snap/_indicator';
+@import './include/snap/_snap-hash';
+@import './include/snap/_snap-deal';
+@import './include/snap/_snap-description';
+@import './include/snap/_snap-sub-title';
+@import './include/snap/_snap-popular';
+@import './include/snap/_snap-tag';
+@import './include/snap/_snap-hash-header';
+@import './include/snap/_snap-attention';
+
+// snap 프로필
+@import './include/mypage/main/_main-profile';
+@import './include/mypage/main/_main-profile-thumbnail';
+@import './include/mypage/main/_main-account';
+@import './include/mypage/main/_main-account-snap';
+
+// layout
+@import './include/snap/_layout';

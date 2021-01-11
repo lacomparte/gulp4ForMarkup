@@ -1,0 +1,23 @@
+<!--
+  변수
+  class: [string]
+  - --up: 상단 화살표
+  - --right: 우측 화살표
+  - --bottom: 아래 화살표
+  - --left: 좌측 화살표
+
+  close: [boolean] 닫기 버튼 노출 여부
+-->
+<div class="cm-tooltip@@class">
+  <div class="cm-tooltip__text">
+    @@text
+    @@if(close) {
+      <button type="button" class="cm-tooltip__close">
+        @@include('./common/svg/ic-14-line-close.svg', {
+          title: '툴팁 닫기',
+          class: '',
+        })
+      </button>
+    }
+  </div>
+</div>

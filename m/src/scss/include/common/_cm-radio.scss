@@ -1,0 +1,146 @@
+@charset 'utf-8';
+
+.cm-radio {
+  $this: &;
+  display: inline-block;
+  text-align: left;
+  line-height: 1;
+
+  &__label {
+    vertical-align: top;
+    position: relative;
+    display: inline-block;
+    font-size: 0;
+    cursor: pointer;
+
+    &::before {
+      vertical-align: top;
+      display: inline-block;
+      border: 1px solid $gray5;
+      border-radius: 100%;
+      box-sizing: border-box;
+      background-color: $gray3;
+      content: '';
+    }
+
+    &::after {
+      display: none;
+      position: absolute;
+      border-radius: 100%;
+      background-color: $white;
+      content: '';
+    }
+
+    > span {
+      display: inline-block;
+      line-height: 1.5;
+    }
+  }
+
+  input:checked + &__label {
+    &::before {
+      border-color: $fblue2;
+      background-color: $fblue2;
+    }
+
+    &::after {
+      display: block;
+    }
+  }
+
+  // 16 사이즈
+  &--16 {
+    @extend .cm-radio;
+
+    #{$this}__label {
+      $size: 16px;
+      &::before {
+        width: $size;
+        height: $size;
+      }
+
+      &::after {
+        top: ($size / 2) / 2;
+        left: ($size / 2) / 2;
+        width: $size / 2;
+        height: $size / 2;
+      }
+
+      > span {
+        padding-left: 4px;
+        font-size: 12px;
+      }
+    }
+
+    // 16 사이즈 disabled
+    &--disabled {
+      @extend .cm-radio--16;
+
+      #{$this}__label {
+        cursor: default;
+
+        &::before {
+          border-color: $gray4;
+          cursor: default;
+        }
+
+        > span {
+          color: $gray6;
+        }
+      }
+
+      input:checked + #{$this}__label::before {
+        border-color: $gray5;
+        background-color: $gray5;
+      }
+    }
+  }
+
+  // 20 사이즈
+  &--20 {
+    @extend .cm-radio;
+
+    #{$this}__label {
+      $size: 20px;
+      &::before {
+        width: $size;
+        height: $size;
+      }
+
+      &::after {
+        top: ($size / 2) / 2;
+        left: ($size / 2) / 2;
+        width: $size / 2;
+        height: $size / 2;
+      }
+
+      > span {
+        padding-left: 6px;
+        font-size: 14px;
+      }
+    }
+
+    // 20 사이즈 disabled
+    &--disabled {
+      @extend .cm-radio--20;
+
+      #{$this}__label {
+        cursor: default;
+
+        &::before {
+          border-color: $gray4;
+          cursor: default;
+        }
+
+        > span {
+          color: $gray6;
+        }
+      }
+
+      input:checked + #{$this}__label::before {
+        border-color: $gray5;
+        background-color: $gray5;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<!--
+  변수
+  
+-->
+<div class="score score--@@class">
+  <div class="score__wrap" aria-label="5점 만점에 n점">
+    <div class="score__unit">
+      @@for(var i = 0; i < 5; i++) {
+        <span class="score__star">
+          @@include('./common/svg/ic-solid-star-off.svg', {
+            class: '',
+            title: '별점'
+          })
+        </span>
+      }
+    </div>
+    <div class="score__unit score__unit--on score__unit--on--@@class_score">
+      @@for(var i = 0; i < 5; i++) {
+        <span class="score__star">
+          @@include('./common/svg/ic-solid-star-on.svg', {
+            class: '',
+            title: '별점'
+          })
+        </span>
+      }
+    </div>
+  </div>
+  @@if(rating) {
+    <span class="score__rate" aria-label="평가수">@@rating+</span>
+  }
+</div>

@@ -1,0 +1,12 @@
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>@@title</title>
+    <defs>
+        <path d="M11,16 C11.5522847,16 12,16.4477153 12,17 C12,17.5522847 11.5522847,18 11,18 C10.4477153,18 10,17.5522847 10,17 C10,16.4477153 10.4477153,16 11,16 Z M11,10 C11.5522847,10 12,10.4477153 12,11 C12,11.5522847 11.5522847,12 11,12 C10.4477153,12 10,11.5522847 10,11 C10,10.4477153 10.4477153,10 11,10 Z M11,4 C11.5522847,4 12,4.44771525 12,5 C12,5.55228475 11.5522847,6 11,6 C10.4477153,6 10,5.55228475 10,5 C10,4.44771525 10.4477153,4 11,4 Z" id="ic22SolidMore"></path>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask fill="white">
+            <use xlink:href="#ic22SolidMore"></use>
+        </mask>
+        <use fill="#aaa" xlink:href="#ic22SolidMore"></use>
+    </g>
+</svg>

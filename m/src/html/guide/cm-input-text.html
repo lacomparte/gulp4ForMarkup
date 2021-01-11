@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./common/layout/head.html', {
+    title: '가이드',
+    id: '',
+    css: 'guide',
+  })
+</head>
+<body class="page-guide">
+  <!-- Container -->
+  <main class="container">
+    <!-- Header -->
+    @@include('./common/layout/header.html', {
+      title: '가이드',
+      id: '',
+      title_sub: 'cm-input-text',
+      title_sub_class: '',
+      class: '',
+      util: '',
+      button_left: [
+        {
+          svg: 'ic-30-line-arrow-left',
+          title: '이전 페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '',
+        },
+      ],
+      button_right: [
+        {
+          svg: 'ic-30-stencil-musinsa',
+          title: '메인 페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '',
+        },
+      ],
+    })
+    <section class="guide">
+      <ul class="guide__notice">
+        <li>
+          <mark>cm-input-text</mark> 의 추가 클래스는 임의로 정함(자유롭게 사용가능)
+        </li>
+        <li>
+          <mark>cm-input-text</mark> 의 높이는 부모 DOM 의 명시적인 높이값을(px) 상속받음
+        </li>
+      </ul>
+      <h1 class="guide__title">Input Text Field</h1>
+      <div class="guide__content">
+
+        <!-- Singleline - 50 Size -->
+        <h2 class="guide__title-second">Singleline - 50 Size</h2>
+        <div class="guide__input--singleline--50">
+          <div class="guide__area">
+            <div class="guide__items column1">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disable
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--disabled',
+                    id: '',
+                    label_text: '',
+                    wrap_class: '',
+                    value: '',
+                    placeholder: '가이드 텍스트',
+                    attribute: 'disabled',
+                    button_text: '',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Normal & Focus
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '',
+                    id: '',
+                    label_text: '',
+                    wrap_class: '',
+                    value: '',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Read Only
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '',
+                    id: '',
+                    label_text: '',
+                    wrap_class: '',
+                    value: '인풋 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: 'readonly',
+                    button_text: '',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Error
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--error',
+                    id: '',
+                    label_text: '',
+                    wrap_class: '',
+                    value: '오류 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '',
+                    button_class: '',
+                    text_notice: '오류 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Positive Message
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--positive',
+                    id: '',
+                    label_text: '',
+                    wrap_class: '',
+                    value: '인풋 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: 'readonly',
+                    button_text: '',
+                    button_class: '',
+                    text_notice: '긍정 텍스트',
+                  })
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Singleline - 40 Size -->
+        <h2 class="guide__title-second">Singleline - 40 Size</h2>
+        <div class="guide__input--singleline--40">
+          <div class="guide__area">
+            <div class="guide__items column1">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disable
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--disabled',
+                    id: '',
+                    label_text: '',
+                    wrap_class: '',
+                    value: '',
+                    placeholder: '가이드 텍스트',
+                    attribute: 'disabled',
+                    button_text: '',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Normal & Focus
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '',
+                    id: '',
+                    label_text: '',
+                    wrap_class: '',
+                    value: '',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Read Only
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '',
+                    id: '',
+                    label_text: '',
+                    wrap_class: '',
+                    value: '인풋 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: 'readonly',
+                    button_text: '',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Error
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--error',
+                    id: '',
+                    label_text: '',
+                    wrap_class: '',
+                    value: '오류 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '',
+                    button_class: '',
+                    text_notice: '오류 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Positive Message
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--positive',
+                    id: '',
+                    label_text: '',
+                    wrap_class: '',
+                    value: '인풋 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '',
+                    button_class: '',
+                    text_notice: '긍정 텍스트',
+                  })
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- buttons1 - 50 Size -->
+        <h2 class="guide__title-second">Buttons1 - 50 Size</h2>
+        <div class="guide__input--buttons1--50">
+          <div class="guide__area">
+            <div class="guide__items column1">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disable
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--disabled',
+                    id: '',
+                    label_text: '',
+                    wrap_class: '',
+                    value: '',
+                    placeholder: '가이드 텍스트',
+                    attribute: 'disabled',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Normal & Focus
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '',
+                    id: '',
+                    label_text: '',
+                    wrap_class: '',
+                    value: '',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Read Only
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '',
+                    id: '',
+                    label_text: '',
+                    wrap_class: '',
+                    value: '인풋 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: 'readonly',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Error
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--error',
+                    id: '',
+                    label_text: '',
+                    wrap_class: '',
+                    value: '오류 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '오류 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Positive Message
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--positive',
+                    id: '',
+                    label_text: '',
+                    wrap_class: '',
+                    value: '인풋 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '긍정 텍스트',
+                  })
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- buttons2 - 50 Size -->
+        <h2 class="guide__title-second">Buttons2 - 50 Size</h2>
+        <div class="guide__input--buttons2--50">
+          <div class="guide__area">
+            <div class="guide__items column1">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disable
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--disabled',
+                    id: '',
+                    label_text: '',
+                    wrap_class: '--indent',
+                    value: '',
+                    placeholder: '가이드 텍스트',
+                    attribute: 'disabled',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Normal & Focus
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '',
+                    id: '',
+                    label_text: '',
+                    wrap_class: '--indent',
+                    value: '',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Read Only
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '',
+                    id: '',
+                    label_text: '',
+                    wrap_class: '--indent',
+                    value: '인풋 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: 'readonly',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Error
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--error',
+                    id: '',
+                    label_text: '',
+                    wrap_class: '--indent',
+                    value: '오류 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '오류 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Positive Message
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--positive',
+                    id: '',
+                    label_text: '',
+                    wrap_class: '--indent',
+                    value: '인풋 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '긍정 텍스트',
+                  })
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Title - 50 Size -->
+        <h2 class="guide__title-second">title - 50 Size</h2>
+        <div class="guide__input--title--50">
+          <div class="guide__area">
+            <div class="guide__items column1">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disable
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--disabled',
+                    id: 'input01',
+                    label_text: '타이틀',
+                    wrap_class: '',
+                    value: '',
+                    placeholder: '가이드 텍스트',
+                    attribute: 'disabled',
+                    button_text: '',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Normal & Focus
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '',
+                    id: 'input02',
+                    label_text: '타이틀',
+                    wrap_class: '',
+                    value: '',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Read Only
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '',
+                    id: 'input03',
+                    label_text: '타이틀',
+                    wrap_class: '',
+                    value: '인풋 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: 'readonly',
+                    button_text: '',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Error
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--error',
+                    id: 'input04',
+                    label_text: '타이틀',
+                    wrap_class: '',
+                    value: '오류 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '',
+                    button_class: '',
+                    text_notice: '오류 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Positive Message
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--positive',
+                    id: 'input05',
+                    label_text: '타이틀',
+                    wrap_class: '',
+                    value: '인풋 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '',
+                    button_class: '',
+                    text_notice: '긍정 텍스트',
+                  })
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Title - 40 Size -->
+        <h2 class="guide__title-second">title - 40 Size</h2>
+        <div class="guide__input--title--40">
+          <div class="guide__area">
+            <div class="guide__items column1">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disable
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--disabled',
+                    id: 'inputTitle01',
+                    label_text: '타이틀',
+                    wrap_class: '',
+                    value: '',
+                    placeholder: '가이드 텍스트',
+                    attribute: 'disabled',
+                    button_text: '',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Normal & Focus
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '',
+                    id: 'inputTitle02',
+                    label_text: '타이틀',
+                    wrap_class: '',
+                    value: '',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Read Only
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '',
+                    id: 'inputTitle03',
+                    label_text: '타이틀',
+                    wrap_class: '',
+                    value: '인풋 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: 'readonly',
+                    button_text: '',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Error
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--error',
+                    id: 'inputTitle04',
+                    label_text: '타이틀',
+                    wrap_class: '',
+                    value: '오류 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '',
+                    button_class: '',
+                    text_notice: '오류 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Positive Message
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--positive',
+                    id: 'inputTitle05',
+                    label_text: '타이틀',
+                    wrap_class: '',
+                    value: '인풋 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '',
+                    button_class: '',
+                    text_notice: '긍정 텍스트',
+                  })
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Title-button1 - 50 Size -->
+        <h2 class="guide__title-second">title-button1 - 50 Size</h2>
+        <div class="guide__input--title-button1--50">
+          <div class="guide__area">
+            <div class="guide__items column1">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disable
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--disabled',
+                    id: 'inputTitleButton0101',
+                    label_text: '타이틀',
+                    wrap_class: '',
+                    value: '',
+                    placeholder: '가이드 텍스트',
+                    attribute: 'disabled',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Normal & Focus
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '',
+                    id: 'inputTitleButton0102',
+                    label_text: '타이틀',
+                    wrap_class: '',
+                    value: '',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Read Only
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '',
+                    id: 'inputTitleButton0103',
+                    label_text: '타이틀',
+                    wrap_class: '',
+                    value: '인풋 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: 'readonly',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Error
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--error',
+                    id: 'inputTitleButton0104',
+                    label_text: '타이틀',
+                    wrap_class: '',
+                    value: '오류 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '오류 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Positive Message
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--positive',
+                    id: 'inputTitleButton0105',
+                    label_text: '타이틀',
+                    wrap_class: '',
+                    value: '인풋 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '긍정 텍스트',
+                  })
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Title-button1 - 40 Size -->
+        <h2 class="guide__title-second">title-button1 - 40 Size</h2>
+        <div class="guide__input--title-button1--40">
+          <div class="guide__area">
+            <div class="guide__items column1">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disable
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--disabled',
+                    id: 'inputTitleButton0101',
+                    label_text: '타이틀',
+                    wrap_class: '',
+                    value: '',
+                    placeholder: '가이드 텍스트',
+                    attribute: 'disabled',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Normal & Focus
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '',
+                    id: 'inputTitleButton0102',
+                    label_text: '타이틀',
+                    wrap_class: '',
+                    value: '',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Read Only
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '',
+                    id: 'inputTitleButton0103',
+                    label_text: '타이틀',
+                    wrap_class: '',
+                    value: '인풋 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: 'readonly',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Error
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--error',
+                    id: 'inputTitleButton0104',
+                    label_text: '타이틀',
+                    wrap_class: '',
+                    value: '오류 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '오류 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Positive Message
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--positive',
+                    id: 'inputTitleButton0105',
+                    label_text: '타이틀',
+                    wrap_class: '',
+                    value: '인풋 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '긍정 텍스트',
+                  })
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Title-button2 - 50 Size -->
+        <h2 class="guide__title-second">title-button2 - 50 Size</h2>
+        <div class="guide__input--title-button2--50">
+          <div class="guide__area">
+            <div class="guide__items column1">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disable
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--disabled',
+                    id: 'inputTitleButton0101',
+                    label_text: '타이틀',
+                    wrap_class: '--indent',
+                    value: '',
+                    placeholder: '가이드 텍스트',
+                    attribute: 'disabled',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Normal & Focus
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '',
+                    id: 'inputTitleButton0102',
+                    label_text: '타이틀',
+                    wrap_class: '--indent',
+                    value: '',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Read Only
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '',
+                    id: 'inputTitleButton0103',
+                    label_text: '타이틀',
+                    wrap_class: '--indent',
+                    value: '인풋 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: 'readonly',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '헬퍼 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Error
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--error',
+                    id: 'inputTitleButton0104',
+                    label_text: '타이틀',
+                    wrap_class: '--indent',
+                    value: '오류 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '오류 텍스트',
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Positive Message
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-input-text.html', {
+                    class: '--positive',
+                    id: 'inputTitleButton0105',
+                    label_text: '타이틀',
+                    wrap_class: '--indent',
+                    value: '인풋 텍스트',
+                    placeholder: '가이드 텍스트',
+                    attribute: '',
+                    button_text: '버튼명',
+                    button_class: '',
+                    text_notice: '긍정 텍스트',
+                  })
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+</body>
+</html>

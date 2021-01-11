@@ -1,0 +1,47 @@
+@charset 'utf-8';
+
+.ranking {
+  &-title {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    font-family: $font-default;
+
+    &__text {
+      font-size: 14px;
+      font-weight: bold;
+      color: $black;
+    }
+
+    &__desc {
+      margin-left: 4px;
+      font-size: 11px;
+      line-height: 18px;
+      color: $gray6;
+      transform: translateY(1px);
+    }
+  }
+
+  &-wrap {
+    margin: 10px 15px 0;
+  }
+
+  // 더보기 버튼
+  &-more {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 15px 0 14px;
+    margin: 20px 0 50px;
+    background: $gray1;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+  }
+
+  &-lists {
+    counter-reset: rank;
+  }
+}

@@ -1,0 +1,37 @@
+@charset 'utf-8';
+
+.cm-filter__button {
+  @include button(
+    $display: inline-block,
+    $height: 40px,
+    $fontWeight: normal,
+    $backgroundColor: $gray4,
+    $color: $gray6,
+  );
+
+  margin-left: 5px;
+  vertical-align: middle;
+  transition: background .3s ease-in-out;
+
+  &:disabled {
+    color: $gray6;
+  }
+
+  &--active {
+    background-color: $gray6;
+    color: $white;
+    transition: background .3s ease-in-out;
+  }
+
+  @at-root {
+    // 가격 필터에서 사용
+    .cm-filter__price & {
+      width: calc(100% - (37.97% + 37.97% + 5.2% + 5px));
+    }
+
+    // 등록일 필터에서 사용
+    .cm-filter__period & {
+      width: calc(21.76% - 15px);
+    }
+  }
+}

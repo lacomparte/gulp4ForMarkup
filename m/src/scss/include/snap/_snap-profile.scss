@@ -1,0 +1,130 @@
+@charset 'utf-8';
+
+.snap-profile {
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: $white;
+
+  &__lists {
+    @include blindScroll;
+
+    overflow: hidden;
+    overflow-x: auto;
+    padding: 4px 0 0px 16px;
+    white-space: nowrap;
+  }
+
+  &__list {
+    vertical-align: top;
+    position: relative;
+    display: inline-block;
+
+    & + & {
+      margin-left: 12px;
+    }
+  }
+
+  &__button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+    box-sizing: border-box;
+    background-color: $gray3;
+    z-index: 10;
+
+    > svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .svg-color {
+      fill: $white;
+    }
+
+    &::before {
+      @include position(absolute, -3px, -3px);
+      width: 71px;
+      height: 71px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: $gray2;
+      border-radius: 100%;
+      box-sizing: border-box;
+      content: '';
+    }
+
+    &::after {
+      @include position(absolute, 0);
+      width: 65px;
+      height: 65px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgba(0, 0, 0, .1);
+      border-radius: 100%;
+      box-sizing: border-box;
+      content: '';
+    }
+
+    &--profile {
+      &::before {
+        border-color: $black;
+      }
+    }
+
+    &--register {
+      border-color: $gray5;
+      background-color: $white;
+
+      &::after {
+        border-color: $gray5;
+      }
+
+      > svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    &--empty {
+      &::after {
+        border: 0;
+      }
+    }
+  }
+
+  &__name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+    text-align: center;
+    font-size: 11px;
+    white-space: nowrap;
+    color: $black;
+    line-height: 13px;
+  }
+
+  &__total {
+    display: inline-block;
+    margin-left: 0;
+  }
+
+  &__link {
+    margin: 22px 30px 0 30px;
+    font-size: 13px;
+    line-height: 1.69;
+    color: $black;
+	}
+
+  @at-root {
+    .snap & {
+      padding-top: 7px;
+      margin-bottom: 10px;
+    }
+	}
+}

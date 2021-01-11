@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+$SPRITE_RATIO: sprite-ratio();
+
+$imgsize-map-{{mapname}}: (
+{{#each imgsize}}
+    '{{name}}': (width: {{width}}px, height: {{height}}px, type: {{type}}),
+{{/each}}
+);
+
+@function get-imgsize-{{mapname}}-map($filename) {
+    @if map-has-key($imgsize-map-{{mapname}}, $filename) {
+        @return map-get($imgsize-map-{{mapname}}, $filename);
+    }
+
+    $error_message: "{{mapname}}에서 이미지 파일 #{$filename}을 찾을 수 없습니다.";
+    @error $error_message;
+}
+
+@function imgsize-{{mapname}}-width($filename) {
+    $dimension-map: get-imgsize-{{mapname}}-map($filename);
+    $width: map-get($dimension-map, width);
+
+    @if ($width % $SPRITE_RATIO != 0) {
+        $error_message: "{{mapname}}/#{$filename}의 width가 #{$width}로 이미지 background-size 비율(#{$SPRITE_RATIO})과 맞지 않습니다. 크기를 확인해주세요.";
+        @error $error_message;
+    }
+
+    @return $width/$SPRITE_RATIO;
+}
+
+@function imgsize-{{mapname}}-height($filename) {
+    $dimension-map: get-imgsize-{{mapname}}-map($filename);
+    $height: map-get($dimension-map, height);
+
+    @if ($height % $SPRITE_RATIO != 0) {
+        $error_message: "{{mapname}}/#{$filename}의 height가 #{$height}로 이미지 background-size 비율(#{$SPRITE_RATIO})과 맞지 않습니다. 크기를 확인해주세요.";
+        @error $error_message;
+    }
+
+    @return map-get($dimension-map, height)/$SPRITE_RATIO;
+}
+
+@mixin imgsize-{{mapname}}-bg($filename, $offset: 0 0, $repeat: no-repeat) {
+    background: url('../im/{{mapname}}/#{$filename}?v=#{timestamp()}') $offset $repeat;
+    @if ($SPRITE_RATIO != 1) {
+        background-size: imgsize-{{mapname}}-width($filename) imgsize-{{mapname}}-height($filename);
+    }
+}
+
+@mixin imgsize-{{mapname}}-width($filename) {
+    width: imgsize-{{mapname}}-width($filename);
+}
+
+@mixin imgsize-{{mapname}}-height($filename) {
+    height: imgsize-{{mapname}}-height($filename);
+}
+
+@mixin imgsize-{{mapname}}($filename, $offset: 0 0, $repeat: no-repeat) {
+    @include imgsize-{{mapname}}-width($filename);
+    @include imgsize-{{mapname}}-height($filename);
+    @include imgsize-{{mapname}}-bg($filename, $offset, $repeat);
+}
+
+@each $filename, $dimension-map in $imgsize-map-{{mapname}} {
+    $width: map-get($dimension-map, width);
+    $height: map-get($dimension-map, height);
+
+    @if ($width % $SPRITE_RATIO != 0) {
+        $error_message: "{{mapname}}/#{$filename}의 width가 #{$width}로 이미지 background-size 비율(#{$SPRITE_RATIO})과 맞지 않습니다. 크기를 확인해주세요.";
+        @error $error_message;
+    }
+
+    @if ($height % $SPRITE_RATIO != 0) {
+        $error_message: "{{mapname}}/#{$filename}의 height가 #{$height}로 이미지 background-size 비율(#{$SPRITE_RATIO})과 맞지 않습니다. 크기를 확인해주세요.";
+        @error $error_message;
+    }
+}

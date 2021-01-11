@@ -1,0 +1,70 @@
+.popup-app {
+  display: none;
+  position: fixed;
+  left: 0;
+  @include safearea(bottom, 0px);
+  z-index: 9999;
+  width: 100%;
+  padding: 50px 0 35px 0;
+  background-color: $white;
+  &.active {
+    display: block;
+  }
+  &__area {
+    position: relative;
+    width: 325px;
+    margin: 0 auto;
+		@media(max-width:325px){
+			width: 270px;
+		}
+  }
+  &__text {
+    font-family: $font-musinsa;
+    color: $gray6;
+    line-height: 16px;
+  }
+  &__push {
+    display: block;
+    margin-top: 2px;
+    font-family: $font-musinsa;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 29px;
+    @media(max-width:325px){
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+  &__icon {
+    position: absolute;
+    right: 0;
+    top: 4px;
+    width: 70px;
+    height: 70px;
+  }
+  &__button {
+    @include button(
+      $height: 45px,
+      $fontWeight: normal,
+      $color: $white,
+    );
+    margin-top: 35px;
+    font-family: $font-musinsa;
+  }
+  &__close {
+    position: absolute;
+    right: 13px;
+    top: -30px;
+    color: $gray5;
+    line-height: 16px;
+    > svg {
+      width: 14px;
+      height: 14px;
+      margin-left: 2px;
+      vertical-align: top;
+      .svg-color {
+        fill: $gray5;
+      }
+    }
+  }
+}

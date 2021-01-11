@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./common/layout/head.html', {
+    title: '가이드',
+    css: 'guide',
+  })
+</head>
+<body class="page-guide">
+  <!-- Container -->
+  <main class="container">
+    <!-- Header -->
+    @@include('./common/layout/header.html', {
+      title: '가이드',
+      title_sub: 'Coupon',
+      title_sub_class: '',
+      class: '',
+      util: '',
+      button_left: [
+        {
+          svg: 'ic-30-line-arrow-left',
+          title: '이전 페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '',
+        },
+      ],
+      button_right: [
+        {
+          svg: 'ic-30-stencil-musinsa',
+          title: '메인 페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '',
+        },
+      ],
+    })
+    <section class="guide">
+      <ul class="guide__notice">
+        <li>
+          <mark>Coupon</mark> 의 추가 클래스는 임의로 정함 (자유롭게 사용가능)
+        </li>
+        <li>
+          단, <mark>cm-coupon-big</mark> 은 module 로 사용 가능. (사이즈 변경 x)
+        </li>
+      </ul>
+      <h1 class="guide__title">Coupon</h1>
+      <div class="guide__content">
+
+        <!-- coupon -->
+        <h2 class="guide__title-second">Coupon모음(label.html 과 일부 중복)</h2>
+        <div class="guide__label--coupon">
+          <div class="guide__area">
+            <div class="guide__items column2">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Coupon
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type01',
+                  icon: '',
+                  text: '쿠폰',
+                  text_rank: '',
+                  text_coupon: '888,888원',
+                })
+                @@include('./common/_label.html', {
+                  class: 'label-type01-1',
+                  icon: '',
+                  text: '쿠폰',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Coupon
+                </h2>
+                @@include('./common/_label.html', {
+                  class: 'label-type01',
+                  icon: '',
+                  text: 'COUPON',
+                  text_rank: '',
+                  text_coupon: '888,888원',
+                })
+                @@include('./common/_label.html', {
+                  class: 'label-type01-1',
+                  icon: '',
+                  text: '쿠폰',
+                  text_rank: '',
+                  text_coupon: '',
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Coupon
+                </h2>
+                <button type="button" class="label-coupon">
+                  @@include('./common/_label.html', {
+                    class: 'label-coupon--type02',
+                    icon: '',
+                    text: '￦12,060원',
+                    text_rank: '',
+                    text_coupon: '',
+                  })
+                  @@include('./common/_label.html', {
+                    class: 'label-coupon--type03',
+                    class_svg: '',
+                    title_svg: '쿠폰 받기',
+                    icon: 'ic-18-line-download',
+                    text: '쿠폰받기',
+                    text_rank: '',
+                    text_coupon: '',
+                  })
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- coupon2 -->
+        <h2 class="guide__title-second">Coupon BIIIIIG!</h2>
+        <div class="guide__label--coupon-big">
+          <div class="guide__area">
+            <div class="guide__items column1">
+              <div class="guide__item">
+                @@include('./common/_cm-coupon--big.html', {
+                  title: 'App 전용 쿠폰 + 적립금 3,000원',
+                  rate: '15',
+                })
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

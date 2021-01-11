@@ -1,0 +1,164 @@
+@charset 'UTF-8';
+
+.cm-input-text {
+  $this: &;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  text-align: left;
+
+  &__label {
+    flex: 0 0 80px;
+    margin-right: 10px;
+    font-size: 14px;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    flex: 1 1 100%;
+    height: 100%;
+
+    &--indent {
+      @extend .cm-input-text__wrap;
+
+      & + #{$this}__button {
+        @include position(absolute, 50%, 10px);
+        width: 100px;
+        height: calc(100% - 20px);
+        margin-left: 10px;
+        background-color: $gray2;
+        font-weight: normal;
+        color: $black;
+        transform: translateY(-50%);
+
+        &::before {
+          @include position(absolute, -10px, -10px, -10px, -10px);
+          background-color: transparent;
+          cursor: default;
+          content: '';
+          z-index: -1;
+        }
+      }
+
+      #{$this}__input {
+        padding: 0 120px 0 10px;
+      }
+    }
+  }
+
+  &__button {
+    @include button (
+      $display: block,
+      $width: auto,
+      $backgroundColor: $black,
+    );
+
+    flex: 0 0 100px;
+    white-space: nowrap;
+  }
+
+  &__input {
+    flex: 1 1 100%;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $gray5;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-family: $font-default;
+    font-size: 1em;
+    color: $black;
+
+    &::placeholder {
+      color: $gray6;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $gray6;
+    }
+
+    &:-ms-input-placeholder {
+      color: $gray6;
+    }
+
+    // focus
+    &:not(:read-only):focus {
+      border-color: $gray6;
+    }
+
+    // read-only
+    &:read-only {
+      cursor: default;
+    }
+  }
+
+  &__notice {
+    @include position(absolute, calc(100% + 7px), null, null, 0);
+    font-size: 12px;
+    color: $gray6;
+  }
+
+  // disabled
+  &--disabled {
+    @extend .cm-input-text;
+
+    #{$this}__input {
+      border-color: $gray4;
+      background-color: $white;
+      color: $gray5;
+
+      &::placeholder {
+        color: $gray5;
+      }
+
+      &::-webkit-input-placeholder {
+        color: $gray5;
+      }
+
+      &:-ms-input-placeholder {
+        color: $gray5;
+      }
+    }
+
+    #{$this}__notice {
+      color: $gray5;
+    }
+  }
+
+  // error
+  &--error {
+    @extend .cm-input-text;
+
+    // error 일때 input의 오른쪽 보더가 안보여야 하므로
+    // 버튼의 margin-left 를 왼쪽으로 -1px 만큼 땡긴다.
+    #{$this}__wrap + #{$this}__button {
+      margin-left: -1px;
+    }
+
+    #{$this}__input {
+      border-color: $fred1;
+
+      &:focus {
+        border-color: $fred1;
+      }
+    }
+
+    #{$this}__notice {
+      color: $fred1;
+    }
+  }
+
+  // positive
+  &--positive {
+    @extend .cm-input-text;
+
+    #{$this}__notice {
+      color: $fblue1;
+    }
+  }
+}

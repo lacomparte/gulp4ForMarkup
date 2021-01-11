@@ -1,0 +1,65 @@
+.layer-notice {
+  display: none;
+  min-width: 260px;
+  max-width: 400px;
+  @include position(fixed, 60px, 30px, null, 30px);
+  z-index: 9000;
+  padding-top: 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border: 1px solid $black;
+  background-color: $white;
+  font-size: 14px;
+  line-height: 21px;
+  word-break: keep-all;
+	&.active {
+    display: block;
+  }
+  &__text {
+    overflow: auto;
+    max-height: 365px;
+    padding: 0 15px;
+    > strong {
+      color: #ff0000;
+      font-weight: normal;
+    }
+  }
+  &__title {
+    display: block;
+    margin-bottom: 10px;
+    font-family: $font-musinsa;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 28px;
+  }
+  &__button {
+    display: flex;
+    overflow: hidden;
+    padding: 15px 15px 11px 15px;
+    margin-top: 15px;
+    border-top: 1px solid $gray2;
+  }
+  &__today,
+  &__close {
+    display: block;
+    font-size: 14px;
+    color: $gray7;
+  }
+  &__close {
+    margin-left: auto;
+  }
+}
+
+/*
+.n-layer-notice{display:none;min-width:260px;max-width:400px;box-sizing:border-box;border:1px solid $black;background-color:$white;padding-top:15px;font-size:14px;line-height:21px;word-break:keep-all;position:fixed;left:30px;right:30px;top:60px;z-index:2020;margin:0 auto;
+	&.is-active{display:block}
+	.tit{display:block;@include font-mss;font-size:20px;line-height:28px;font-weight:normal;margin-bottom:10px}
+	strong{color:#ff0000;font-weight:normal}
+	> div{max-height:365px;padding:0 15px;overflow:auto}
+	.close{margin-top:15px;padding:15px 15px 11px 15px;border-top:1px solid $border;overflow:hidden;
+		.btn{display:block;font-size:14px;line-height:21px;color:$default}
+		.btn.btn-today{float:left}
+		.btn.btn-close{float:right}
+	}
+}
+*/

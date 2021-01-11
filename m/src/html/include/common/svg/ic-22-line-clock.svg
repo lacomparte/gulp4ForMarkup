@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/22/Line/Clock/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M11,3 C15.418278,3 19,6.581722 19,11 C19,15.418278 15.418278,19 11,19 C6.581722,19 3,15.418278 3,11 C3,6.581722 6.581722,3 11,3 Z M11,4 C7.13400675,4 4,7.13400675 4,11 C4,14.8659932 7.13400675,18 11,18 C14.8659932,18 18,14.8659932 18,11 C18,7.13400675 14.8659932,4 11,4 Z M11.5055807,6 L11.5055807,10.5 L16,10.5 L16,11.5 L10.5055807,11.5 L10.5055807,6 L11.5055807,6 Z" id="path-1"></path>
+    </defs>
+    <g id="Ic/22/Line/Clock/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

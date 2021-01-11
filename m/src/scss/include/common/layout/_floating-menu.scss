@@ -1,0 +1,66 @@
+.floating-menu {
+	&__left,
+	&__right {
+		position: fixed;
+    @include safearea(bottom, 80px);
+		z-index: 500;
+  }
+  
+	&__left {
+		left: 10px;
+  }
+  
+	&__right {
+		right: 10px;
+  }
+  
+	&__button {
+		display: block;
+		width: 40px;
+		height: 40px;
+		padding: 5px;
+		box-sizing: border-box;
+		background-color: rgba(0, 0, 0, .4);
+		border-radius: 100%;
+		margin-top: 14px;
+
+		svg * {
+			fill: $white;
+		}
+
+		&--recent {
+      @extend .floating-menu__button; // UI개선 배포 후 삭제
+			overflow: hidden;
+			position: relative;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 50% 50%;
+			text-indent: -9999px;
+			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+
+			&:before {
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 1;
+				width: 100%;
+				height: 100%;
+				border-radius: 100%;
+				background-color: rgba(0, 0, 0, .1);
+				content: "";
+			}
+		}
+	}
+
+  @media(max-height:470px) { // input 활성화 시 숨김
+    & {
+      display: none;
+    }
+  }
+  @media(max-width:359px) { // 359px 이하 화면에서 노출
+    & {
+      display: block;
+    }
+  }
+}

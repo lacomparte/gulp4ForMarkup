@@ -1,0 +1,202 @@
+@charset 'utf-8';
+
+.cm-filter__lists {
+  $this: &;
+
+  &__button {
+    display: inline-block;
+    width: calc(50% - 5px);
+    padding: 7px 0px 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: left;
+    vertical-align: top;
+
+    &:nth-child(2n) {
+      margin-left: 10px;
+    }
+
+    &--active {
+      color: $fblue2;
+    }
+
+    @at-root {
+      // 사이즈 필터 일때
+      .cm-filter__lists--3column & {
+        width: calc((100% - 20px) / 3);
+        height: 40px;
+        padding: 0;
+        margin-top: 10px;
+        border: 1px solid #e5e5e5;
+        background-color: $white;
+        font-size: 14px;
+        color: $gray6;
+        text-align: center;
+
+        &:nth-of-type(2n) {
+          margin: 10px 0 0 0;
+        }
+
+        &:nth-of-type(3n-1) {
+          margin: 10px 10px 0;
+        }
+
+        // 처음 3개는 margin-top 을 주지 않는다.
+        &:nth-child(-n + 3) {
+          margin-top: 0;
+        }
+
+        &--active {
+          border-color: $fblue2;
+          color: $fblue2;
+        }
+
+        #{$this}__unit {
+          float: none;
+        }
+      }
+
+      // 색상 필터 일때
+      .cm-filter__lists--6column & {
+        width: calc(100% / 6);
+        padding: 0;
+        text-align: center;
+
+        &:nth-of-type(2n) {
+          margin: 0;
+        }
+
+        &:nth-child(-n+6) {
+          margin-top: 7px;
+        }
+
+        &--active {
+          #{$this}__desc {
+            position: relative;
+            color: $fblue2;
+
+            &::after {
+              @include position(absolute, 6px, 50%);
+
+              width: 6px;
+              height: 12px;
+              border-bottom: 1px solid $white;
+              border-right: 1px solid $white;
+              transform: translateX(50%) rotate(45deg);
+              content: '';
+            }
+
+            // color, pattern swatch 에 대한 추가적인 scss
+            &--white::after {
+              border-color: $black;
+            }
+
+            &--ivory {
+              &::before {
+                border: 1px solid #e5e5e5;
+              }
+              &::after {
+                border-color: $black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__unit {
+    overflow: hidden;
+    float: left;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    vertical-align: top;
+  }
+
+  &__index {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__flag {
+    float: right;
+    height: 15px;
+    padding: 2px 3px 2px;
+    margin: 2px 0 0 5px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    background-color: #18a286;
+    font-size: 9px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 10px;
+    color: $white;
+    white-space: nowrap;
+  }
+
+  &__desc {
+    @mixin colorChip() {
+      width: 54px;
+      height: 72px;
+      margin: 0 auto;
+      line-height: 12px;
+      text-align: center;
+      white-space: initial;
+      word-break: keep-all;
+    }
+
+    display: block;
+    overflow: hidden;
+    clear: both;
+    font-size: 12px;
+    color: $gray6;
+    text-overflow: ellipsis;
+    text-align: left;
+    white-space: nowrap;
+
+
+    // $colors 변수의 정의는 common/filter/variables 에 있음
+    // color swatch
+    @each $name, $color in $colors {
+      &--#{$name} {
+        @include colorChip();
+
+        &::before {
+          display: block;
+          width: 30px;
+          height: 30px;
+          margin: 0px auto 8px;
+          border-radius: 100%;
+          box-sizing: border-box;
+          background-color: #{$color};
+          content: '';
+        }
+      }
+    }
+
+    // color, pattern swatch 에 대한 추가적인 scss
+    &--white:before {
+      border: 1px solid #e5e5e5;
+    }
+
+    // $patterns 변수의 정의는 common/filter/variables 에 있음
+    // pattern swatch
+    @each $name, $pattern in $patterns {
+      &--#{$name} {
+        @include colorChip();
+
+        &::before {
+          // @include sp-filter(#{$pattern});
+
+          display: block;
+          margin: 0px auto 8px;
+          border-radius: 100%;
+          box-sizing: border-box;
+          content: '';
+        }
+      }
+    }
+  }
+}

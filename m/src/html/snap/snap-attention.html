@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./common/layout/head.html', {
+    title: '마이페이지',
+    css: 'snap',
+  })
+</head>
+<body>
+  <main class="snap snap-attention">
+    <header class="snap-attention__header">
+      <h1 class="snap-attention__title">유의사항</h1>
+      <button class="snap-attention__close" aria-label="유의사항 닫기"></button>
+    </header>
+    <section class="snap-attention__contents">
+      <!-- [D] admin에서 입력한 값 -->
+      <article class="snap-attention__article">
+        본 파일은
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        ...
+        &lt;/html&gt;
+        까지 template 화 되어 s3 서버에 올라감
+        css 는 snap.css 와 동일
+
+        유의사항이 노출되는 단계를 살펴보면
+        1. 관리자가 snap admin 에서 유의사항 작성 후 등록
+        2. 본 파일의 article.snap-attention__article 안에 내용이 채워져 s3 서버에 저장됨
+        3. 사용자가 snap 등록화면에서 '유의사항' 클릭시 저장된 s3 경로를 노출시킴.
+      </article>
+    </section>
+  </main>
+</body>

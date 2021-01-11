@@ -1,0 +1,39 @@
+@charset 'utf-8';
+
+.toast {
+  @include position(fixed, null, 0, 82px, 0);
+  padding: constant(safe-area-inset-bottom);
+  padding: env(safe-area-inset-bottom);
+  background: transparent;
+  transform: translateY(500px);
+  transition: transform.3s ease-in-out;
+  &.active {
+    transform: translateY(0);
+    transition: transform.3s ease-in-out;
+    z-index: 9999;
+  }
+  &__content {
+    @include position(absolute, null, 15px, 0px, 15px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 15px;
+    border-radius: 4px;
+    background-color: #383838;
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+  &__text {
+    flex: 1 1 100%;
+    word-break: break-all;
+    color: $white;
+  }
+  &__button {
+    margin-left: 10px;
+    white-space: nowrap;
+    color: $fblue2;
+  }
+}

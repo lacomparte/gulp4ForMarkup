@@ -1,0 +1,64 @@
+@charset 'utf-8';
+
+.comment-list__evaluate {
+  overflow: hidden;
+
+  &-button {
+    $this: &;
+
+    vertical-align: top;
+    display: inline-block;
+    color: $gray6;
+
+    & + & {
+      margin-left: 22px;
+    }
+
+    &__icon {
+      vertical-align: middle;
+      &--thumb {
+        &-up {
+          width: 13px;
+          path {
+            fill: $fblue2;
+            &:first-child {
+              fill: $white;
+              stroke: $fblue2;
+            }
+          }
+        }
+        &-down {
+          transform: scaleY(-1);
+          path {
+            fill: $fred2;
+            &:first-child {
+              fill: $white;
+              stroke: $fred2;
+            }
+          }
+        }
+      }
+    }
+    &--thumb {
+      &-up,
+      &-down {
+        vertical-align: middle;
+        font-size: 12px;
+      }
+    }
+    &.active {
+      #{$this}__icon--thumb-up path:first-child {
+        fill: $fblue2;
+      }
+      #{$this}--thumb-up {
+        color: $fblue2;
+      }
+      #{$this}__icon--thumb-down path:first-child {
+        fill: $fred2;
+      }
+      #{$this}--thumb-down {
+        color: $fred2;
+      }
+    }
+  }
+}

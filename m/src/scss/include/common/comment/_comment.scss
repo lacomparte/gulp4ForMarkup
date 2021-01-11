@@ -1,0 +1,84 @@
+@charset 'utf-8';
+
+.comment {
+  padding: 26px 15px calc(constant(safe-area-inset-bottom) + 60px) 15px;
+  padding: 26px 15px calc(env(safe-area-inset-bottom) + 60px) 15px;
+
+  &-count {
+    display: block;
+    margin-bottom: 13px;
+    font-size: 15px;
+  }
+
+  &-wrap {
+    overflow: visible;
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $gray5;
+
+    &__button {
+      font-weight: bold;
+      font-size: 15px;
+      color: $gray6;
+
+      & + & {
+        margin-left: 12px;
+      }
+
+      &.active {
+        color: $black;
+      }
+    }
+  }
+
+  &-notice {
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: $gray6;
+    &__link {
+      font-weight: bold;;
+      text-decoration: underline;
+      color: $black;
+      & + & {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  // 댓글
+  &-list {
+    $this: &;
+
+    &__empty {
+      padding: 5px 0 40px 0;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+    }
+
+    &__items {
+      padding-left: 42px;
+      &--depth {
+        margin-top: 22px;
+        padding-left: 19px;
+      }
+    }
+
+    &__item {
+      & + & {
+        margin-top: 24px;
+      }
+
+      // 댓글에 답글
+      &.comment-list__depth #{$this}__content {
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

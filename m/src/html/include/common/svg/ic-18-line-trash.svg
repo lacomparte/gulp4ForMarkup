@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/18/Line/Trash/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12,2 L12,4 L16,4 L16,5 L14,5 L14,16 L4,16 L4,5 L2,5 L2,4 L6,4 L6,2 L12,2 Z M13,5 L5,5 L5,15 L13,15 L13,5 Z M11,8 L11,12 L10,12 L10,8 L11,8 Z M8,8 L8,12 L7,12 L7,8 L8,8 Z M11,3 L7,3 L7,4 L11,4 L11,3 Z" id="path-1"></path>
+    </defs>
+    <g id="Ic/18/Line/Trash/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

@@ -1,0 +1,22 @@
+<!--
+  include
+  guide/page.html
+
+  css
+  include/common/layer/_coupon.scss
+
+  [D] 활성화 시 클래스 active 추가
+-->
+
+<div class="layer layer-coupon @@class">
+  <a href="#" class="layer-coupon__link">
+      <img src="//image.msscdn.net/images/raffle/mobile_list_img/2020041417544400000046576.jpg" alt="">
+      <div><strong>이벤트 문구 두줄 케이스 추가<br> <span>최대 50% 할인</span></strong><br>상세 문구</div>
+  </a>
+  <button type="button" class="layer-coupon__close">
+    @@include('./common/svg/ic-22-line-close.svg', {
+      class: '',
+      title: '랜덤쿠폰 레이어 닫기',
+    })
+  </button>
+</div>

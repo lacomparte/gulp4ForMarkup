@@ -1,0 +1,48 @@
+@charset 'utf-8';
+
+.layer {
+  position: relative;
+  z-index: 9999;
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &-list {
+    @include position(fixed, null, 0, 0, 0);
+    padding: 0 15px constant(safe-area-inset-bottom) 15px;
+    padding: 0 15px env(safe-area-inset-bottom) 15px;
+    transform: translateY(calc(100% + 40px));
+    transition: transform .3s ease-in-out;
+    background-color: $white;
+
+    &.active {
+      transform: translateY(0%);
+      transition: transform .3s ease-in-out;
+    }
+
+    &__lists {
+      border-bottom: 1px solid $gray2;
+    }
+
+    &__button,
+    &__cancel {
+      display: block;
+      width: 100%;
+    }
+
+    &__button {
+      height: 54px;
+      text-align: left;
+      font-size: 15px;
+      line-height: 54px;
+    }
+
+    &__cancel {
+      height: 60px;
+      font-size: 16px;
+      line-height: 60px;
+      text-align: center;
+    }
+  }
+}

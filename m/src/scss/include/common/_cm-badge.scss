@@ -1,0 +1,24 @@
+.cm-badge {
+	display: inline-block;
+  min-width: 8px;
+  height: 14px;
+  padding: 4px 5px 0 5px;
+	border-radius: 18px;
+	color: #ffffff;
+	font-family: $font-musinsa;
+  font-size: 11px;
+  line-height: 13px;
+	text-align: center;
+  vertical-align: middle;
+  background-color: $gray6;
+
+  &--new {
+    background-color: $fblue2;
+  }
+
+  @at-root {
+    .header__button & {
+      @include position(absolute, 20px, 2px);
+    }
+  }
+}

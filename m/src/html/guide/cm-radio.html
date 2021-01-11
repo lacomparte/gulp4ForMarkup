@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./common/layout/head.html', {
+    title: '가이드',
+    id: '',
+    css: 'guide',
+  })
+</head>
+<body class="page-guide">
+  <!-- Container -->
+  <main class="container">
+    <!-- Header -->
+    @@include('./common/layout/header.html', {
+      title: '가이드',
+      id: '',
+      title_sub: 'cm-radio',
+      title_sub_class: '',
+      class: '',
+      util: '',
+      button_left: [
+        {
+          svg: 'ic-30-line-arrow-left',
+          title: '이전 페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '',
+        },
+      ],
+      button_right: [
+        {
+          svg: 'ic-30-stencil-musinsa',
+          title: '메인 페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '',
+        },
+      ],
+    })
+    <section class="guide">
+      <ul class="guide__notice">
+        <li>
+          <mark>cm-radio</mark> 의 추가 클래스 --16, --20, --16--disabled, --20--disabled
+        </li>
+      </ul>
+      <h1 class="guide__title">select</h1>
+      <div class="guide__content">
+
+        <!-- radio - 20 Size -->
+        <h2 class="guide__title-second">radio - 20 Size</h2>
+        <div class="guide__radio--20">
+          <h3 class="guide__title-third">Circle</h3>
+          <div class="guide__area">
+            <div class="guide__items column2">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Unselected
+                </h2>
+                @@include('./common/_cm-radio.html', {
+                  class: '--20',
+                  attribute: '',
+                  text: '',
+                  id: 'inputRadiobox20_01'
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Selected
+                </h2>
+                @@include('./common/_cm-radio.html', {
+                  class: '--20',
+                  attribute: 'checked',
+                  text: '',
+                  id: 'inputRadiobox20_02'
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disabled
+                </h2>
+                @@include('./common/_cm-radio.html', {
+                  class: '--20--disabled',
+                  attribute: 'disabled',
+                  text: '',
+                  id: 'inputRadiobox20_03'
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disabled Selected
+                </h2>
+                @@include('./common/_cm-radio.html', {
+                  class: '--20--disabled',
+                  attribute: 'checked disabled',
+                  text: '',
+                  id: 'inputRadiobox20_04'
+                })
+              </div>
+            </div>
+          </div>
+
+          <h3 class="guide__title-third">Text</h3>
+          <div class="guide__area">
+            <div class="guide__items column2">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Unselected
+                </h2>
+                @@include('./common/_cm-radio.html', {
+                  class: '--20',
+                  attribute: '',
+                  text: '텍스트 라벨',
+                  id: 'inputCheRadioText20_01'
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Selected
+                </h2>
+                @@include('./common/_cm-radio.html', {
+                  class: '--20',
+                  attribute: 'checked',
+                  text: '텍스트 라벨',
+                  id: 'inputCheRadioText20_02'
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disabled
+                </h2>
+                @@include('./common/_cm-radio.html', {
+                  class: '--20--disabled',
+                  attribute: 'disabled',
+                  text: '텍스트 라벨',
+                  id: 'inputCheRadioText20_03'
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disabled Selected
+                </h2>
+                @@include('./common/_cm-radio.html', {
+                  class: '--20--disabled',
+                  attribute: 'checked disabled',
+                  text: '텍스트 라벨',
+                  id: 'inputCheRadioText20_04'
+                })
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- radio - 16 Size -->
+        <h2 class="guide__title-second">radio - 16 Size</h2>
+        <div class="guide__radio--16">
+          <h3 class="guide__title-third">Circle</h3>
+          <div class="guide__area">
+            <div class="guide__items column2">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Unselected
+                </h2>
+                @@include('./common/_cm-radio.html', {
+                  class: '--16',
+                  attribute: '',
+                  text: '',
+                  id: 'inputRadiobox16_01'
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Selected
+                </h2>
+                @@include('./common/_cm-radio.html', {
+                  class: '--16',
+                  attribute: 'checked',
+                  text: '',
+                  id: 'inputRadiobox16_02'
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disabled
+                </h2>
+                @@include('./common/_cm-radio.html', {
+                  class: '--16--disabled',
+                  attribute: 'disabled',
+                  text: '',
+                  id: 'inputRadiobox16_03'
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disabled Selected
+                </h2>
+                @@include('./common/_cm-radio.html', {
+                  class: '--16--disabled',
+                  attribute: 'checked disabled',
+                  text: '',
+                  id: 'inputRadiobox16_04'
+                })
+              </div>
+            </div>
+          </div>
+
+          <h3 class="guide__title-third">Text</h3>
+          <div class="guide__area">
+            <div class="guide__items column2">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Unselected
+                </h2>
+                @@include('./common/_cm-radio.html', {
+                  class: '--16',
+                  attribute: '',
+                  text: '텍스트 라벨',
+                  id: 'inputCheRadioText16_01'
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Selected
+                </h2>
+                @@include('./common/_cm-radio.html', {
+                  class: '--16',
+                  attribute: 'checked',
+                  text: '텍스트 라벨',
+                  id: 'inputCheRadioText16_02'
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disabled
+                </h2>
+                @@include('./common/_cm-radio.html', {
+                  class: '--16--disabled',
+                  attribute: 'disabled',
+                  text: '텍스트 라벨',
+                  id: 'inputCheRadioText16_03'
+                })
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disabled Selected
+                </h2>
+                @@include('./common/_cm-radio.html', {
+                  class: '--16--disabled',
+                  attribute: 'checked disabled',
+                  text: '텍스트 라벨',
+                  id: 'inputCheRadioText16_04'
+                })
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

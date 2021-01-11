@@ -1,0 +1,22 @@
+<!--
+  include
+  mypage/user_snap/layer/_layer.html
+
+  변수
+  class: [string]
+  - active: 노출 유무
+  - toast--multi: 멀티라인
+  text: [string]
+  button_text: [string]
+-->
+<!-- [D] active class 추가시 노출 -->
+<div class="toast @@class">
+  <div class="toast__content">
+    <p class="toast__text">@@text</p>
+    @@if(button_text) {
+      <button type="button" class="toast__button">
+        @@button_text
+      </button>
+    }
+  </div>
+</div>

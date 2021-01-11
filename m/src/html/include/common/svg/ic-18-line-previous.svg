@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/18/Line/Previous/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M7.64619408,4.4 L8.35330086,5.10710678 L4.961,8.499 L15,8.5 L15,9.5 L4.967,9.499 L8.35330086,12.8852814 L7.64619408,13.5923882 L3.05,8.99619408 L7.64619408,4.4 Z" id="path-1"></path>
+    </defs>
+    <g id="Ic/18/Line/Previous/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

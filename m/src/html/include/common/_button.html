@@ -1,0 +1,41 @@
+@@if(false) {
+<!--
+  include
+  guide/button.html
+
+  변수
+  type: [string]
+    - button 이면 type 을 명시(button, submit 등)
+    - a 면 href 를 명시(#, #none, http://~~~ 등)
+  text: [string],
+  class: [string],
+  icon: [string] left / right || false,
+  icon_name: [string],
+  attribute: [string],
+  title_svg: [string] svg 용도
+
+  상태
+  attribute: [string] disabled
+
+  기타
+  * icon 을 로드하지 않는 다면 icon, icon_name, class_svg, title_svg 는 '' 으로 할당.
+  * svg 와 span class 는 button 의 class + __text, __svg 로 자동 할당
+-->
+}
+<@@if(type){button type="@@type"}@@if(href){a href="@@href"} class="@@class" @@attribute>
+  @@if(icon === 'left') {
+    @@include('./common/svg/@@icon_name.svg', {
+      class: '@@class_svg',
+      title: '@@title_svg',
+    })
+  }
+  @@if(text) {
+    <span>@@text</span>
+  }
+  @@if(icon === 'right') {
+    @@include('./common/svg/@@icon_name.svg', {
+      class: '@@class_svg',
+      title: '@@title_svg',
+    })
+  }
+</@@if(type){button}@@if(href){a}>

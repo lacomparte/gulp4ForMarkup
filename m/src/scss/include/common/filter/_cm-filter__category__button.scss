@@ -1,0 +1,66 @@
+@charset 'utf-8';
+
+.cm-filter__category {
+  $this: &;
+
+  scroll-behavior: smooth;
+
+  &__button {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    color: $black;
+    vertical-align: top;
+
+    & + & {
+      margin-left: 10px;
+    }
+
+    &--active {
+      color: $fblue2;
+
+      &::before {
+        @include position(absolute, 0, 0);
+
+        display: block;
+        width: 65px;
+        height: 65px;
+        border: 1px solid $fblue2;
+        border-radius: 100%;
+        box-sizing: border-box;
+        content: '';
+      }
+    }
+  }
+
+  &__content {
+    width: 65px;
+  }
+
+  &__image {
+    overflow: hidden;
+    position: relative;
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+    background-color: $gray3;
+    mix-blend-mode: multiply;
+
+    > img {
+      @include position(absolute, 50%, 50%);
+
+      display: block;
+      width: 100%;
+      transform: translate(50%, -50%);
+      mix-blend-mode: multiply;
+    }
+  }
+
+  &__desc {
+    @include ellipsis(2);
+
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: normal;
+  }
+}

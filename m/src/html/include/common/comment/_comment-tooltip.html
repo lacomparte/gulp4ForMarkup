@@ -1,0 +1,19 @@
+<!--
+  include
+  common/comment/_comment-list__item.html
+
+  변수
+  class: [string]
+  - active: 활성화
+  button: [arr]
+  - class: [string]
+  - text: [string]
+-->
+<!-- [D] active add class 시 활성화 -->
+<div class="comment-tooltip @@class">
+  @@for(var i = 0; i < button.length; i++) {
+    <button type="button" class="comment-tooltip__button @@class">
+      `+ button[i].text +`
+    </button>
+  }
+</div>

@@ -1,0 +1,9 @@
+@charset 'utf-8';
+
+// common
+@import './include/common/import';
+@import './include/common/_guide-link';
+
+// ranking
+@import './include/ranking/_ranking-list';
+@import './include/ranking/_layout';

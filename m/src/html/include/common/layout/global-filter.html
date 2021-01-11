@@ -1,0 +1,34 @@
+<!--
+  include
+  include/common/layout/floating-menu.html
+
+  css
+  include/common/list/_global-filter.scss
+
+  use
+  1. 필터 선택 시 클래스 global-filter--hide 삭제
+  2. '남성' 선택 시 클래스 global-filter--mensinsa 추가
+  3. '여성' 선택 시 클래스 global-filter--wusinsa 추가
+-->
+
+<div class="global-filter-v2 global-filter-v2--hide">
+  <button type="button" class="global-filter-v2__button global-filter-v2__button--all">
+    <span>전체</span>
+  </button>
+
+  <button type="button" class="global-filter-v2__button global-filter-v2__button--mensinsa">
+    @@include('./common/svg/ic-14-line-close.svg', {
+      class: '',
+      title: '',
+    })
+    <span>남성</span>
+  </button>
+
+  <button type="button" class="global-filter-v2__button global-filter-v2__button--wusinsa">
+    <span>여성</span>
+    @@include('./common/svg/ic-14-line-close.svg', {
+      class: '',
+      title: '',
+    })
+  </button>
+</div>

@@ -1,0 +1,73 @@
+<!--
+  include
+  includ./common/list/_cm-util.html
+
+  css
+  include/common/list/_cm-option.scss
+
+  use type
+  기본 버튼 사용 시 type 설정값 없음
+  check : 좌측 체크 아이콘이 있는 토글 버튼
+  layer : 클릭 시 옵션 레이어가 열리는 토글 버튼
+  direct : 바로가기 링크 삽입 시 사용
+  icon : 상품 목록의 view 설정 버튼 - 클릭 시 상품목록의 클래스 제어하여 view 타입(총 4가지) 변경
+-->
+
+<div class="cm-util-option">
+  <button type="button" class="cm-util-option__button @@class" @@attribute>
+    @@if(type === 'check') {
+      @@include('./common/svg/@@icon.svg', {
+        class: '',
+        title: '',
+      })
+    }
+    
+    @@if(type !== 'icon') {
+      @@button
+    }
+
+    @@if(type === 'layer') {
+      @@include('./common/svg/@@icon.svg', {
+        class: '',
+        title: '',
+      })
+    }
+
+    @@if(type === 'direct') {
+      @@include('./common/svg/@@icon.svg', {
+        class: '',
+        title: '',
+      })
+    }
+
+    @@if(type === 'icon') {
+      @@include('./common/svg/@@icon.svg', {
+        class: '',
+        title: '@@button',
+      })
+    }
+  </button>
+
+  @@if(type === 'layer') {
+    <div class="cm-util-option__layer">
+      <button type="button" class="active">무신사 추천순</button>
+      <button type="button">신상품순</button>
+      <button type="button">낮은 가격순</button>
+      <button type="button">높은 가격순</button>
+      <button type="button">할인율순</button>
+      <button type="button">리뷰순</button>
+      <button type="button" data-toggle="active">
+        판매순
+        @@include('./common/svg/ic-18-line-arrow-bottom.svg', {
+          class: '',
+          title: '',
+        })
+      </button>
+      <div class="cm-util-option__layer cm-util-option__layer--add">
+        <button type="button">1개월</button>
+        <button type="button">3개월</button>
+        <button type="button">전체</button>
+      </div>
+    </div>
+  }
+</div>

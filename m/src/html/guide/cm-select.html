@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./common/layout/head.html', {
+    title: '가이드',
+    id: '',
+    css: 'guide',
+  })
+</head>
+<body class="page-guide">
+  <!-- Container -->
+  <main class="container">
+    <!-- Header -->
+    @@include('./common/layout/header.html', {
+      title: '가이드',
+      id: '',
+      title_sub: 'cm-select',
+      title_sub_class: '',
+      class: '',
+      util: '',
+      button_left: [
+        {
+          svg: 'ic-30-line-arrow-left',
+          title: '이전 페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '',
+        },
+      ],
+      button_right: [
+        {
+          svg: 'ic-30-stencil-musinsa',
+          title: '메인 페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '',
+        },
+      ],
+    })
+    <section class="guide">
+      <ul class="guide__notice">
+        <li>
+          <mark>cm-select</mark> 의 추가 클래스는 임의로 정함(자유롭게 사용가능)
+        </li>
+        <li>
+          <mark>cm-select</mark> 의 height는 부모 DOM 의 명시적인 높이값을(px) 상속받음
+        </li>
+        <li>
+          <mark>cm-select</mark> 의 font-size는 부모 DOM 의 명시적인 font-size(px)를 상속받음
+        </li>
+      </ul>
+      <h1 class="guide__title">select</h1>
+      <div class="guide__content">
+
+        <!-- select - 50 Size -->
+        <h2 class="guide__title-second">select - 50 Size</h2>
+        <div class="guide__select--50">
+          <div class="guide__area">
+            <div class="guide__items column2">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disable
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-select.html', {
+                    class: '--disabled',
+                    attribute: 'disabled',
+                    arr: [
+                      {attribute: '', text: '더미텍스트더미텍스트더미텍스트더미텍스트'},
+                      {attribute: 'selected', text: '더미텍스트'},
+                      {attribute: '', text: '더미텍스트더미텍스트더미텍스트더미텍스트'},
+                      {attribute: '', text: '더미텍스트더미텍스트더미텍스트더미텍스트'},
+                    ]
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Normal
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-select.html', {
+                    class: '',
+                    attribute: '',
+                    arr: [
+                      {attribute: '', text: '더미텍스트더미텍스트더미텍스트더미텍스트'},
+                      {attribute: 'selected', text: '더미텍스트'},
+                      {attribute: '', text: '더미텍스트더미텍스트더미텍스트더미텍스트'},
+                      {attribute: '', text: '더미텍스트더미텍스트더미텍스트더미텍스트'},
+                    ]
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Error
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-select.html', {
+                    class: '--error',
+                    attribute: '',
+                    arr: [
+                      {attribute: '', text: '더미텍스트더미텍스트더미텍스트더미텍스트'},
+                      {attribute: 'selected', text: '더미텍스트'},
+                      {attribute: '', text: '더미텍스트더미텍스트더미텍스트더미텍스트'},
+                      {attribute: '', text: '더미텍스트더미텍스트더미텍스트더미텍스트'},
+                    ]
+                  })
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- select - 40 Size -->
+        <h2 class="guide__title-second">select - 40 Size</h2>
+        <div class="guide__select--40">
+          <div class="guide__area">
+            <div class="guide__items column2">
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Disable
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-select.html', {
+                    class: '--disabled',
+                    attribute: 'disabled',
+                    arr: [
+                      {attribute: '', text: '더미텍스트더미텍스트더미텍스트더미텍스트'},
+                      {attribute: 'selected', text: '더미텍스트'},
+                      {attribute: '', text: '더미텍스트더미텍스트더미텍스트더미텍스트'},
+                      {attribute: '', text: '더미텍스트더미텍스트더미텍스트더미텍스트'},
+                    ]
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Normal
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-select.html', {
+                    class: '',
+                    attribute: '',
+                    arr: [
+                      {attribute: '', text: '더미텍스트더미텍스트더미텍스트더미텍스트'},
+                      {attribute: 'selected', text: '더미텍스트'},
+                      {attribute: '', text: '더미텍스트더미텍스트더미텍스트더미텍스트'},
+                      {attribute: '', text: '더미텍스트더미텍스트더미텍스트더미텍스트'},
+                    ]
+                  })
+                </div>
+              </div>
+              <div class="guide__item">
+                <h2 class="guide__title-fourth">
+                  Error
+                </h2>
+                <div class="guide_box">
+                  @@include('./common/_cm-select.html', {
+                    class: '--error',
+                    attribute: '',
+                    arr: [
+                      {attribute: '', text: '더미텍스트더미텍스트더미텍스트더미텍스트'},
+                      {attribute: 'selected', text: '더미텍스트'},
+                      {attribute: '', text: '더미텍스트더미텍스트더미텍스트더미텍스트'},
+                      {attribute: '', text: '더미텍스트더미텍스트더미텍스트더미텍스트'},
+                    ]
+                  })
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

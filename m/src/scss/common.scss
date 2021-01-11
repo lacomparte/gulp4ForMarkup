@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+// common.css
+@import './include/common/import';
+@import './include/common/mixins/_channel';
+
+// common
+@import './include/common/_common';
+@import './include/common/_reset';
+@import './include/common/_cm-badge';
+@import './include/common/_cm-new';
+@import './include/common/_cm-line';
+@import './include/common/_cm-loading';
+@import './include/common/filter/cm-filter';
+
+// layout
+@import './include/common/layout/_header'; // 헤더
+@import './include/common/layout/_container'; // 컨텐츠
+@import './include/common/layout/footer'; // 푸터
+@import './include/common/layout/footer-info'; // 푸터 정보
+@import './include/common/layout/_navigation-bar'; // 네비게이션 바
+@import './include/common/layout/_floating-menu'; // 하단 프로팅 메뉴
+@import './include/common/layout/_global-filter'; // 전역 성별 필터
+
+// module
+@import './include/common/list/_cm-util'; // 목록 유틸
+@import './include/common/list/_cm-util-option'; // 목록 옵션
+@import './include/common/list/_cm-pagination'; // 목록 페이지네이션
+
+// popup
+@import './include/common/popup/_dim'; // popup dim
+@import './include/common/popup/_app'; // 앱 푸시 메인 팝업
+@import './include/common/popup/_gate'; // 메인 게이트
+@import './include/common/popup/_share'; // 공유하기 팝업
+
+// layer
+@import './include/common/layer/_app'; // 앱 푸시 서브 레이어
+@import './include/common/layer/_coupon'; // 랜덤 쿠폰 레이어
+@import './include/common/layer/_notice'; // 공지사항 팝업

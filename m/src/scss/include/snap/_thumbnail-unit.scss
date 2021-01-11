@@ -1,0 +1,94 @@
+@charset 'uft-8';
+
+.thumbnail {
+  &-unit {
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+
+    @at-root {
+      // 스냅 큰 썸네일
+      .snap-image__list &,
+      // 태그 모아보기
+      .snap-hash-list__list & {
+        width: 100%;
+      }
+
+      // 구매목록
+      .snap-deal__link & {
+        width: 55px;
+        height: 100%;
+      }
+
+      // 인기스냅
+      .snap-popular__list > & {
+        width: 210px;
+        height: 280px;
+      }
+
+      .snap-popular__figure & {
+        width: 65px;
+        height: 65px;
+        border-radius: 100%;
+
+        &::before {
+          @include position(absolute, 0, 0, 0, 0);
+
+          border: 1px solid $gray4;
+          border-radius: 100%;
+          background-color: transparent;
+          content: '';
+        }
+      }
+
+      // 스냅 최상단
+      .snap-profile & {
+        width: 65px;
+        height: 65px;
+        border-radius: 100%;
+        box-sizing: border-box;
+      }
+
+      // 스냅 리스트 사용자 프로필
+      .snap-auth & {
+        flex: 0 0 32px;
+      }
+    }
+    &__image {
+      width: 100%;
+
+      @at-root {
+        // 스냅 최상단
+        .snap-profile__button & {
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        // 스냅 리스트 사용자 프로필
+        .snap-auth & {
+          width: 32px;
+          height: 32px;
+          border-radius: 100%;
+        }
+
+        // 스냅 구매목록
+        .snap-deal__link & {
+          @include position(absolute, 50%, 50%);
+
+          width: auto;
+          max-width: 67px;
+          min-height: 100%;
+          transform: translate(50%, -50%);
+        }
+
+        .snap-popular__figure & {
+          @include position(absolute, 50%, 50%);
+
+          transform: translate(50%, -50%);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+.cm-coupon {
+  position: relative;
+  width: 315px;
+  height: 140px;
+  font-size: 0;
+  background-color: $black;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, .3);
+
+  &::before {
+    content: '';
+    @include position(absolute, 50%, null, null, -11px);
+    width: 21px;
+    height: 21px;
+    border-radius: 21px;
+    background: $white;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    content: '';
+    @include position(absolute, 50%, 0px);
+    width: 10px;
+    height: 21px;
+    border-radius: 10px 0 0 10px;
+    background: #fff;
+    transform: translateY(-50%);
+    box-shadow: inset 6px 0px 7px 3px rgba(0,0,0,0.37);
+  }
+
+  &__info,
+  &__ticket {
+    vertical-align: top;
+    display: inline-block;
+    height: 100%;
+  }
+
+  &__info {
+    width: 247px;
+    padding: 25px 0 0 30px;
+    box-sizing: border-box;
+
+    &__title {
+      font-family: $font-musinsa;
+      font-size: 14px;
+      font-weight: 300;
+      color: $white;
+    }
+
+    &__rate {
+      display: flex;
+      align-items: flex-end;
+      padding-top: 5px;
+      font-family: $font-musinsa-stencil;
+    }
+
+    &__number,
+    &__unit {
+      font-weight: 300;
+      color: $white;
+    }
+
+    &__number {
+      font-size: 80px;
+      line-height: 80px;
+    }
+
+    &__unit {
+      margin-left: 8px;
+      font-size: 35px;
+    }
+  }
+
+  &__ticket {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 68px;
+
+    &::before {
+      content: '';
+      @include position(absolute, 0, null, 0, 0);
+      width: 1px;
+      background-image: linear-gradient(0deg, #6c6c6c 30.77%, #000 30.77%, #000 50%, #6c6c6c 50%, #6c6c6c 80.77%, #000 80.77%, #000 100%);
+      background-size: 27px 27px;
+    }
+
+    &__text {
+      display: block;
+      font-family: $font-musinsa;
+      font-size: 12px;
+      font-weight: 400;
+      color: $white;
+      transform: rotate(270deg);
+      transform-origin: center;
+    }
+  }
+
+  // big 사이즈 쿠폰
+  &--big {
+    @extend .cm-coupon;
+  }
+}

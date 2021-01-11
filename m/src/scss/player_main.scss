@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+// common
+@import "./include/common/import";
+@import "./include/common/layout/_navigation-bar";
+
+// main
+@import "./include/player/main/_main-layout";
+@import "./include/player/main/_main-visual";
+@import "./include/player/main/_main-title";
+@import "./include/player/main/_main-big-image";
+@import "./include/player/main/_main-event-information";
+@import "./include/player/main/_main-slide-product";
+@import "./include/player/main/_main-slide-contents";

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/22/Stencil/Check/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M14.645,7.3522063 L15.352,8.0602063 L8.45031308,14.9620028 L4.75,11.2616897 L5.45710678,10.5545829 L8.45031308,13.5477892 L14.645,7.3522063 Z M16.384896,5.6132063 L17.0920028,6.32031308 L16.059,7.3532063 L15.352,6.6452063 L16.384896,5.6132063 Z" id="path-1"></path>
+    </defs>
+    <g id="Ic/22/Stencil/Check/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Combined-Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

@@ -1,0 +1,39 @@
+<!--
+  include
+	mypage/mypage-main.html
+-->
+
+<div class="main-account-snap">
+  @@if(snap_enroll) {
+    @@include('./snap/_snap-profile.html', {
+      profile: false,
+      total: '더 보기',
+    })
+  }
+
+  @@if(snap_empty) {
+    <button type="button" class="main-account-snap__button">
+      <strong class="main-account-snap__text">
+        @@include('./common/svg/beta.svg', {
+          class: '',
+          title: 'Beta',
+        })
+        나의 스타일을 스냅에 등록해 보세요.</strong>
+      <span class="main-account-snap__tag">#ootd #지금_무신사_인플로언서_도전</span>
+      <span class="main-account-snap__enroll">
+        @@include('./common/svg/ic-18-line-plus.svg', {
+          class: '',
+          title: '스냅 등록하러 가기',
+        })
+      </span>
+    </button>
+  }
+
+  <a href="#" class="main-account-snap__link">
+    @@link
+    @@include('./common/svg/ic-14-line-arrow-right.svg', {
+      class: '',
+      title: '',
+    })
+  </a>
+</div>

@@ -1,0 +1,19 @@
+<!--
+  include
+  mypage/user_snap/layer/_layer.html
+
+  변수
+  class: [string]
+  - active
+-->
+<!-- [D] active class 추가시 노출 -->
+<article class="layer-list @@class" data-popup="layer">
+  <ul class="layer-list__lists">
+    @@for(var i = 0; i < 3; i++) {
+      <li>
+        <button type="button" class="layer-list__button">공유하기</button>
+      </li>
+    }
+  </ul>
+  <button type="button" class="layer-list__cancel _popupClose">취소</button>
+</article>

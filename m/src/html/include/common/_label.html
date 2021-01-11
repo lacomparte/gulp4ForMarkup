@@ -1,0 +1,32 @@
+<!--
+  변수
+  text: [string]
+  class: [string]
+  class_svg: [string]
+  title_svg: [string]
+  icon: [string] svg 이름
+  class_rank: [string]
+  - up 이면 class 마지막이 up 으로 끝나게 해주세요 (ex. abcd_up, adww-up, adcbe--up)
+  - down 이면 class 마지막이 down 으로 끝나게 해주세요 (ex. abcd_down, adww-down, adcbe--down)
+  - stay 면 class 마지막이 stay 로 끝나게 해주세요 (ex. abcd_stay, adww-stay, adcbe--stay)
+
+  text_rank: [string]
+-->
+
+<span class="@@class">
+  @@if(icon) {
+    @@include('./common/svg/@@icon.svg', {
+      class: '@@class_svg',
+      title: '@@title_svg'
+    })
+  }
+  @@if(text) {
+    @@text
+  }
+  @@if(text_rank) {
+    <span class="@@class__rank--@@if(class_rank){@@class_rank}">@@text_rank</span>
+  }
+  @@if(text_coupon) {
+    <span class="@@class__coupon">@@text_coupon</span>
+  }
+</span>

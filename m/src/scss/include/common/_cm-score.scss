@@ -1,0 +1,29 @@
+@charset 'utf-8';
+
+.cm-score {
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  text-align: left;
+  &__wrap {
+    position: relative;
+    height: 100%;
+  }
+  &__unit {
+    overflow: hidden;
+    height: 100%;
+    svg {
+      height: 100%;
+    }
+    &--on {
+      @extend .cm-score__unit;
+      @include position(absolute, 0, null, null, 0);
+    }
+  }
+  &__rate {
+    font-family: $font-musinsa;
+    color: $fyellow1;
+  }
+}

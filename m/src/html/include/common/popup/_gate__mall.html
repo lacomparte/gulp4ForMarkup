@@ -1,0 +1,28 @@
+<!--
+  include
+  popup/_gate.html
+
+  변수
+  svg: [string],
+  text: [string],
+  badge: [string],
+  type: [string]
+-->
+
+<div class="popup-gate__mall__button">
+  <a href="#">
+    @@if(badge === 'new') {
+      <strong class="popup-gate__mall__new">NEW</strong>
+    }
+    @@include('./common/svg/@@svg.svg', {
+      class: '',
+      title: '',
+    })
+    <span class="popup-gate__mall__text">
+      @@text
+      @@if(type === 'app') {
+        <span class="popup-gate__mall__app">APP</span>
+      }
+    </span>
+  </a>
+</div>

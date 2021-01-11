@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" class="@@class">
+  <title>@@title</title>
+  <g fill="none" fill-rule="evenodd">
+    <path d="M0 0H30V30H0z" transform="translate(.6)"/>
+    <g>
+      <path class="svg-color" d="M12.311 5H5.606L5.4 7.299h1.383l-.84 9.36h2.641l.377-4.197h2.68c2.985 0 4.557-1.649 4.744-3.73C16.572 6.648 14.95 5 12.311 5zm-3.144 5.164l.257-2.865h2.644c.905 0 1.721.499 1.637 1.432-.083.932-1.096 1.432-2.035 1.432H9.167z" transform="translate(.6) translate(4 4)"/>
+      <path class="svg-color" fill-rule="nonzero" d="M0 4c0-2.21 1.79-4 4-4h14c2.21 0 4 1.79 4 4v14c0 2.21-1.79 4-4 4H4c-2.21 0-4-1.79-4-4v-6.5h1V18c0 1.598 1.249 2.904 2.824 2.995L4 21h14c1.598 0 2.904-1.249 2.995-2.824L21 18V4c0-1.598-1.249-2.904-2.824-2.995L18 1H4C2.402 1 1.096 2.249 1.005 3.824L1 4v6.5H0V4z" transform="translate(.6) translate(4 4)"/>
+    </g>
+  </g>
+</svg>

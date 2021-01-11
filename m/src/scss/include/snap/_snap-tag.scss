@@ -1,0 +1,49 @@
+@charset 'uft-8';
+
+.snap-tag {
+  overflow: hidden;
+  height: 50px;
+  padding-top: 15px;
+  border-top: 1px solid $gray2;
+  box-sizing: border-box;
+  background-color: $white;
+
+  &__title {
+    font-weight: normal;
+    font-size: 14px;
+    color: $gray7;
+    line-height: 21px;
+    white-space: nowrap;
+  }
+
+  &__wrap {
+    @include blindScroll;
+
+    overflow: hidden;
+    overflow-x: auto;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  &__lists {
+    width: auto;
+    font-size: 0;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+  }
+
+  &__list {
+    display: inline-block;
+    vertical-align: top;
+    scroll-snap-align: center;
+
+    & + & {
+      margin-left: 20px;
+    }
+
+    &:last-child {
+      margin-right: 15px;
+    }
+  }
+}

@@ -1,0 +1,133 @@
+@charset 'utf-8';
+
+.comment-write {
+  $this: &;
+  margin-bottom: 8px;
+  @at-root {
+    // 댓글 답글에 나오는 코멘트 작성 폼
+    .comment-list__item & {
+      margin: 15px 0 22px;
+    }
+  }
+  // 댓글이 수정될 경우 viewport width 전부 댓글 입력창이 가져가야 하기때문에
+  // .comment-write DOM 의 부모인 .comment-list__items 의 padding-left: 42px 을 상쇄할 용도로 작성함.
+  &.active {
+    margin-left: -42px;
+  }
+  &__content {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    height: 50px;
+    margin-bottom: 8px;
+    padding-right: 10px;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    &:focus-within {
+      border-color: $black;
+    }
+    &.active {
+      flex-direction: column;
+      height: auto;
+      padding: 0;
+      #{$this}__box {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 10px 10px 12px;
+        box-sizing: border-box;
+        text-align: left;
+        transform: translateY(0px);
+      }
+      #{$this}__controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 40px;
+      }
+      #{$this}__icons {
+        transform: translateY(0);
+      }
+      #{$this}__buttons {
+        display: block;
+      }
+      #{$this}__textarea {
+        width: 100%;
+        min-height: 90px;
+        height: 90px;
+        padding-right: 0;
+        resize: vertical;
+      }
+      #{$this}__icon-register {
+        path,
+        rect {
+          fill: $black;
+        }
+      }
+    }
+  }
+  &__controls {
+    padding-left: 10px;
+  }
+  &__icons {
+    transform: translateY(10px);
+  }
+  &__icon {
+    vertical-align: top;
+    display: inline-block;
+    line-height: 0;
+    &-register {
+      path,
+      rect {
+        fill: $gray5;
+      }
+    }
+  }
+  &__buttons {
+    display: none;
+  }
+  &__button {
+    padding: 10px 15px 12px 15px;
+    font-weight: bold;
+    color: $gray6;
+    & + & {
+      color: $black;
+    }
+  }
+  &__box {
+    overflow: hidden;
+    vertical-align: top;
+    display: inline-block;
+    height: 21px;
+    text-align: right;
+    resize: none;
+    transform: translateY(15px);
+  }
+  &__placeholder {
+    color: $gray6;
+  }
+  &__textarea {
+    appearance: none;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    padding-right: 10px;
+    background-color: $white;
+    &::-webkit-input-placeholder {
+      color: $gray6;
+    }
+    &:-moz-placeholder {
+      color: $gray6;
+    }
+    &::-moz-placeholder {
+      color: $gray6;
+    }
+    &:-ms-input-placeholder {
+      color: $gray6;
+    }
+    &::placeholder {
+      color: $gray6;
+    }
+  }
+}

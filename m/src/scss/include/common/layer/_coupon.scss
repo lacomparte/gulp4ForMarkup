@@ -1,0 +1,77 @@
+.layer-coupon {
+  min-width: 320px;
+  @include position(fixed, null, 10px, 80px, 10px);
+	bottom: calc(env(safe-area-inset-bottom) + 80px);
+	bottom: calc(constant(safe-area-inset-bottom) + 80px);
+  z-index: 530;
+  opacity: 0;
+  transform: translateY(calc(100% + 120px));
+  transition: transform .15s ease-in-out, opacity .15s ease-in-out;
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__link {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    height: 80px;
+    padding-left: 92px;
+    background-color: #383838;
+    border-radius: 4px;
+
+    &:after {
+      display: inline-block;
+      width: 0;
+      height: 100%;
+      vertical-align: middle;
+      content: "";
+    }
+
+		> img {
+      @include position(absolute, 0, null, null, 0);
+      width: 80px;
+      height: 80px;
+    }
+    
+		> div {
+      display: inline-block;
+      width: calc(100% - 42px);
+      padding-bottom: 3px;
+      font-size: 12px;
+      color: $gray6;
+      vertical-align: middle;
+			> strong {
+        font-size: 14px;
+        color: $white;
+        word-break: keep-all;
+				> span {
+          color: $fblue1;
+          white-space: nowrap;
+        }
+			}
+		}
+  }
+
+	&__close {
+    @include position(absolute, 5px, 5px);
+    padding: 5px;
+    > svg {
+      fill: $gray7;
+      vertical-align: top;
+    }
+  }
+
+  @media(max-height:470px) { // input 활성화 시 숨김
+    & {
+      display: none;
+    }
+  }
+  @media(max-width:359px) { // 359px 이하 화면에서 노출
+    & {
+      display: block;
+    }
+  }
+}

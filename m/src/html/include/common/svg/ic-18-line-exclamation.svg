@@ -1,0 +1,8 @@
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="@@class">
+  <title>@@title</title>
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <path d="M9,15 C12.3137085,15 15,12.3137085 15,9 C15,5.6862915 12.3137085,3 9,3 C5.6862915,3 3,5.6862915 3,9 C3,12.3137085 5.6862915,15 9,15 Z M9,14 C6.23857625,14 4,11.7614237 4,9 C4,6.23857625 6.23857625,4 9,4 C11.7614237,4 14,6.23857625 14,9 C14,11.7614237 11.7614237,14 9,14 Z" class="svg-color" fill-rule="nonzero"></path>
+    <rect class="svg-color" fill-rule="nonzero" x="8.5" y="11.4" width="1" height="1"></rect>
+    <rect class="svg-color" fill-rule="nonzero" x="8.5" y="5.7" width="1" height="4.9"></rect>
+  </g>
+</svg>

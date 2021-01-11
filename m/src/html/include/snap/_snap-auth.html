@@ -1,0 +1,33 @@
+<!--
+  include
+  snap/snap-main.html
+
+  변수
+  thumb: [boolean] thumb 유무
+  withdraw: [boolean] 회원 탈퇴 유무
+  title: [string] 사용자 이름
+-->
+<div class="snap-auth">
+  <button type="button" class="snap-auth__box">
+    <div class="snap-auth__thumb">
+      @@if(thumb) {
+        @@include('./snap/_thumbnail-unit.html', {
+          class: '',
+        })
+      }
+      @@if(!thumb) {
+        @@include('./common/svg/ic-solid-user.svg', {
+          class: '',
+          title: '프로필 사진 없음',
+        })
+      }
+    </div>
+  </button>
+  <button type="button" class="snap-auth__area">
+    <p class="snap-auth__title">@@title</p>
+    @@if(!withdraw) {
+      <!-- [D] 휴면회원, 탈퇴회원일 경우 snap-auth__text 는 랜더링되지 않는다. -->
+      <span class="snap-auth__text">LV.6</span>
+    }
+  </button>
+</div>

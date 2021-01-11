@@ -1,0 +1,37 @@
+@charset 'utf-8';
+
+.indicator {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  width: auto;
+  padding: 9px 5px 7px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  font-family: 'Apple SD Gothic Neo', $font-default;
+  line-height: 1;
+  color: $gray6;
+  text-align: center;
+
+  @at-root {
+    // 스냅 큰 썸네일 인디케이터
+    .snap-list__image & {
+      @include position(absolute, 15px, 15px, initial, initial);
+    }
+  }
+
+  &__current,
+  &__total {
+    padding: 0 4px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1;
+  }
+
+  &__current {
+    font-weight: normal;
+    color: $white;
+  }
+}

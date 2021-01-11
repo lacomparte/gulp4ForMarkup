@@ -1,0 +1,1648 @@
+<article class="cm-filter">
+  <!-- [D] 브랜드 샵에서 노출 -->
+  <section class="cm-filter__category">
+    @@loop('./common/filter/_cm-filter__category__button.html', [
+      {class: '', text: '#모자모자모자모자모자모자모자모자모자모자모자'},
+      {class: '', text: '#트레이닝/조거팬츠'},
+      {class: '', text: '모자모자모자모자모자모자모자모자모자모자모자'},
+      {class: '', text: '트레이닝/조거팬츠'},
+      {class: '', text: '#모자'},
+      {class: '', text: '#모자'},
+      {class: '', text: '#모자'},
+      {class: '', text: '#모자'},
+      {class: 'cm-filter__category__button--active', text: '#모자'},
+    ])
+  </section>
+  <section class="cm-filter__contents" data-filter="main_category">
+    <!-- [D] 전략카테고리 필터에 3depth 가 있다면 노출 -->
+    @@include('./common/filter/_cm-filter__navigation.html')
+    <div class="cm-filter__swiper">
+      <div class="cm-filter__inner swiper-wrapper">
+        @@for(var i = 0; i < 4; i++) {
+          <div class="cm-filter__lists swiper-slide">
+            <!-- plain list -->
+            @@loop('./common/filter/_cm-filter__lists__button.html', [
+              {
+                class: '',
+                attribute: 'data-filter-period="period_1"',
+                index: '일간',
+                color: '',
+                flag: '',
+                desc: ''
+              },
+              {
+                class: '',
+                attribute: 'data-filter-period="period_2"',
+                index: '이간',
+                color: '',
+                flag: '',
+                desc: ''
+              },
+              {
+                class: '',
+                attribute: 'data-filter-period="period_3"',
+                index: '삼간',
+                color: '',
+                flag: '',
+                desc: ''
+              },
+              {
+                class: '',
+                attribute: 'data-filter-period="period_4"',
+                index: '사간',
+                color: '',
+                flag: '',
+                desc: ''
+              },
+              {
+                class: '',
+                attribute: 'data-filter-period="period_5"',
+                index: '오간',
+                color: '',
+                flag: '',
+                desc: ''
+              },
+              {
+                class: '',
+                attribute: 'data-filter-period="period_6"',
+                index: '육간',
+                color: '',
+                flag: '',
+                desc: ''
+              },
+            ])
+          </div>
+        }
+      </div>
+      <!-- pagination -->
+      @@include('./common/filter/_cm-filter__pagination.html')
+    </div>
+  </section>
+  <!-- [D] 높이 10px 짜리 회색 라인이 필요하면 아래 div.cm-line 을 넣어주세요 -->
+  <div class="cm-line"></div>
+  <section class="cm-filter__tag" aria-label="태그">
+    @@loop('./common/filter/_cm-filter__chip.html', [
+      {
+        class: 'cm-filter__chip--tag',
+        attribute: 'data-hash-tag="newera"',
+        text: '#뉴에라'
+      },
+      {
+        class: 'cm-filter__chip--tag',
+        attribute: 'data-hash-tag="thisisneverthatxgramicci"',
+        text: '#디스이즈네버넷 X 그라미치'
+      },
+      {
+        class: 'cm-filter__chip--tag',
+        attribute: 'data-hash-tag="goreforcetrackhydra"',
+        text: '#고어포스트렉하이드라'
+      },
+      {
+        class: 'cm-filter__chip--tag',
+        attribute: 'data-hash-tag="musinsa"',
+        text: '#무신사'
+      },
+      {
+        class: 'cm-filter__chip--tag',
+        attribute: 'data-hash-tag="nike"',
+        text: '#나이키'
+      },
+      {
+        class: 'cm-filter__chip--tag',
+        attribute: 'data-hash-tag="ioio"',
+        text: '#iOiO오아이오아이'
+      },
+      {
+        class: 'cm-filter__chip--tag',
+        attribute: 'data-hash-tag="garment"',
+        text: '#가먼트'
+      },
+      {
+        class: 'cm-filter__chip--tag',
+        attribute: 'data-hash-tag="covernat"',
+        text: '#커버낫'
+      },
+    ])
+  </section>
+  <!-- /////////////// 상단 -->
+  <section class="cm-filter__header">
+    <div class="cm-filter__header__content">
+      @@loop('./common/filter/_cm-filter__item.html', [
+        {
+          class: 'cm-filter__item--campaign',
+          attribute: 'data-tab="default" data-multi="true" aria-selected="false"',
+          text: '블랙프라이데이',
+          svg: '',
+          svg_title: '',
+          svg_class: ''
+        },
+        {
+          class: '',
+          attribute: 'data-tab="default" aria-selected="false"',
+          text: '기본',
+          svg: '',
+          svg_title: '',
+          svg_class: ''
+        },
+        {
+          class: '',
+          attribute: 'data-tab="period" aria-selected="false"',
+          text: '기간 구분',
+          svg: 'ic-18-line-arrow-bottom',
+          svg_title: '기간',
+          svg_class: 'cm-filter__item__arrow'
+        },
+        {
+          class: '',
+          attribute: 'data-tab="search" aria-selected="false"',
+          text: '검색',
+          svg: 'ic-18-stencil-search',
+          svg_title: '검색',
+          svg_class: ''
+        },
+        {
+          class: '',
+          attribute: 'data-tab="price" aria-selected="false"',
+          text: '가격',
+          svg: 'ic-18-line-arrow-bottom',
+          svg_title: '가격',
+          svg_class: 'cm-filter__item__arrow'
+        },
+        {
+          class: '',
+          attribute: 'data-tab="category" aria-selected="false"',
+          text: '카테고리',
+          svg: 'ic-18-line-arrow-bottom',
+          svg_title: '필터 열림',
+          svg_class: 'cm-filter__item__arrow'
+        },
+        {
+          class: '',
+          attribute: 'data-tab="brand" aria-selected="false"',
+          text: '브랜드',
+          svg: 'ic-18-line-arrow-bottom',
+          svg_title: '필터 열림',
+          svg_class: 'cm-filter__item__arrow'
+        },
+        {
+          class: '',
+          attribute: 'data-tab="size" aria-selected="false"',
+          text: '사이즈',
+          svg: 'ic-18-line-arrow-bottom',
+          svg_title: '필터 열림',
+          svg_class: 'cm-filter__item__arrow'
+        },
+        {
+          class: '',
+          attribute: 'data-tab="color" aria-selected="false"',
+          text: '색상',
+          svg: 'ic-18-line-arrow-bottom',
+          svg_title: '필터 열림',
+          svg_class: 'cm-filter__item__arrow'
+        },
+        {
+          class: '',
+          attribute: 'data-tab="date" aria-selected="false"',
+          text: '등록일',
+          svg: 'ic-18-line-arrow-bottom',
+          svg_title: '필터 열림',
+          svg_class: 'cm-filter__item__arrow'
+        },
+        {
+          class: 'cm-filter__item--campaign01',
+          attribute: 'data-tab="campaign01" data-multi="true" aria-selected="false"',
+          text: '캠페인1',
+          svg: '',
+          svg_title: '',
+          svg_class: ''
+        },
+        {
+          class: 'cm-filter__item--campaign02',
+          attribute: 'data-tab="campaign02" data-multi="true" aria-selected="false"',
+          text: '캠페인2',
+          svg: '',
+          svg_title: '',
+          svg_class: ''
+        },
+        {
+          class: 'cm-filter__item--campaign03',
+          attribute: 'data-tab="campaign03" data-multi="true" aria-selected="false"',
+          text: '캠페인3',
+          svg: '',
+          svg_title: '',
+          svg_class: ''
+        },
+        {
+          class: 'cm-filter__item--campaign04',
+          attribute: 'data-tab="campaign04" data-multi="true" aria-selected="false"',
+          text: '캠페인4',
+          svg: '',
+          svg_title: '',
+          svg_class: ''
+        },
+        {
+          class: 'cm-filter__item--campaign05',
+          attribute: 'data-tab="campaign05" data-multi="true" aria-selected="false"',
+          text: '캠페인5',
+          svg: '',
+          svg_title: '',
+          svg_class: ''
+        },
+      ])
+    </div>
+    <!-- [D] 3초 후 cm-filter__tooltip--active 클래스 삭제 -->
+    <div class="cm-filter__tooltip cm-filter__tooltip--active">
+      <p class="cm-filter__tooltip__text">좌우로 스크롤 해보세요.</p>
+    </div>
+  </section>
+
+  <div class="cm-filter_body">
+    <!-- /////////////// 중단 -->
+    <!-- [D]
+      기본필터 형태
+      * 할인율, 구미금액, 좋아요, 진행상태, 스타일, 출시년도, 국가, 지역, 직업 필터
+    -->
+    <section class="cm-filter__contents" data-filter="period" aria-label="기본 필터">
+      <div class="cm-filter__swiper">
+        <div class="cm-filter__inner swiper-wrapper">
+          @@for(var i = 0; i < 4; i++) {
+            <div class="cm-filter__lists swiper-slide">
+              <!-- plain list -->
+              @@loop('./common/filter/_cm-filter__lists__button.html', [
+                {
+                  class: '',
+                  attribute: 'data-filter-period="period_1"',
+                  index: '일간',
+                  color: '',
+                  flag: '',
+                  desc: ''
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-period="period_2"',
+                  index: '이간',
+                  color: '',
+                  flag: '',
+                  desc: ''
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-period="period_3"',
+                  index: '삼간',
+                  color: '',
+                  flag: '',
+                  desc: ''
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-period="period_4"',
+                  index: '사간',
+                  color: '',
+                  flag: '',
+                  desc: ''
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-period="period_5"',
+                  index: '오간',
+                  color: '',
+                  flag: '',
+                  desc: ''
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-period="period_6"',
+                  index: '육간',
+                  color: '',
+                  flag: '',
+                  desc: ''
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-period="period_7"',
+                  index: '칠간',
+                  color: '',
+                  flag: '',
+                  desc: ''
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-period="period_8"',
+                  index: '팔간',
+                  color: '',
+                  flag: '',
+                  desc: ''
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-period="period_9"',
+                  index: '구간',
+                  color: '',
+                  flag: '',
+                  desc: ''
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-period="period_10"',
+                  index: '십간',
+                  color: '',
+                  flag: '',
+                  desc: ''
+                },
+              ])
+            </div>
+          }
+        </div>
+        <!-- pagination -->
+        @@include('./common/filter/_cm-filter__pagination.html')
+      </div>
+    </section>
+
+    <!-- [D] 검색 필터 일때 -->
+    <section class="cm-filter__contents" data-filter="search" aria-label="검색 필터">
+      <div class="cm-filter__search" role="search">
+        @@include('./common/filter/_cm-filter__input.html', {
+          class: '',
+          attribute: '',
+          svg: 'ic-22-stencil-search',
+          svg_title: '검색',
+          svg_class: 'cm-filter__input__svg',
+          placeholder: '검색어를 입력해주세요',
+          button: true,
+        })
+      </div>
+    </section>
+
+    <!-- [D] 가격 필터 일때 -->
+    <section class="cm-filter__contents" data-filter="price" aria-label="가격 필터">
+      <div class="cm-filter__swiper">
+        <div class="cm-filter__inner swiper-wrapper">
+          <div class="cm-filter__lists swiper-slide">
+            <!-- plain list -->
+            @@loop('./common/filter/_cm-filter__lists__button.html', [
+              {
+                class: '',
+                attribute: 'data-filter-price="40000"',
+                index: '4만원 이하',
+                color: '',
+                flag: '',
+                desc: ''
+              },
+              {
+                class: '',
+                attribute: 'data-filter-price="100000,200000"',
+                index: '10만원 ~ 20만원',
+                color: '',
+                flag: '',
+                desc: ''
+              },
+              {
+                class: '',
+                attribute: 'data-filter-price="200000,300000"',
+                index: '20만원 ~ 30만원',
+                color: '',
+                flag: '',
+                desc: ''
+              },
+            ])
+          </div>
+        </div>
+      </div>
+      <div class="cm-filter__price">
+        @@include('./common/filter/_cm-filter__input.html', {
+          class: '',
+          attribute: '',
+          svg: '',
+          svg_title: '',
+          svg_class: '',
+          placeholder: '0',
+          button: false,
+        })
+        <span class="cm-filter__price__unit">-</span>
+        @@include('./common/filter/_cm-filter__input.html', {
+          class: '',
+          attribute: '',
+          svg: '',
+          svg_title: '',
+          svg_class: '',
+          placeholder: '0',
+          button: false,
+        })
+        @@include('./common/filter/_cm-filter__button.html', {
+          text: '적용',
+          class: '',
+          attribute: '',
+        })
+      </div>
+    </section>
+
+    <!-- [D] 카테고리 필터 일때 -->
+    <section class="cm-filter__contents" data-filter="category" aria-label="카테고리 필터">
+      <!-- [D] 카테고리 필터 일때 선택된 카테고리가 있다면 -->
+      @@include('./common/filter/_cm-filter__navigation.html')
+      <div class="cm-filter__swiper">
+        <div class="cm-filter__inner swiper-wrapper">
+          @@for(var i = 0; i < 3; i++) {
+            <div class="cm-filter__lists swiper-slide">
+              <!-- plain list -->
+              @@loop('./common/filter/_cm-filter__lists__button.html', [
+                {
+                  class: '',
+                  attribute: 'data-filter-category="total"',
+                  index: '전체',
+                  color: '',
+                  flag: '',
+                  desc: ''
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-category="top"',
+                  index: '상의',
+                  color: '',
+                  flag: '',
+                  desc: ''
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-category="outer"',
+                  index: '아우터',
+                  color: '',
+                  flag: '',
+                  desc: ''
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-category="outer"',
+                  index: '아우터',
+                  color: '',
+                  flag: '',
+                  desc: ''
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-category="outer"',
+                  index: '아우터',
+                  color: '',
+                  flag: '',
+                  desc: ''
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-category="outer"',
+                  index: '아우터',
+                  color: '',
+                  flag: '',
+                  desc: ''
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-category="outer"',
+                  index: '아우터',
+                  color: '',
+                  flag: '',
+                  desc: ''
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-category="outer"',
+                  index: '아우터',
+                  color: '',
+                  flag: '',
+                  desc: ''
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-category="outer"',
+                  index: '아우터',
+                  color: '',
+                  flag: '',
+                  desc: ''
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-category="outer"',
+                  index: '아우터',
+                  color: '',
+                  flag: '',
+                  desc: ''
+                },
+              ])
+            </div>
+          }
+        </div>
+        <!-- pagination -->
+        @@include('./common/filter/_cm-filter__pagination.html')
+      </div>
+    </section>
+
+    <!-- [D] 브랜드 필터 일때 -->
+    <section class="cm-filter__contents" data-filter="brand" aria-label="브랜드 필터">
+      <!-- brand search -->
+      <div class="cm-filter__search" role="search">
+        @@include('./common/filter/_cm-filter__input.html', {
+          class: '',
+          attribute: '',
+          svg: 'ic-22-stencil-search',
+          svg_title: '검색',
+          svg_class: 'cm-filter__input__svg',
+          placeholder: '브랜드를 입력해주세요',
+          button: true,
+        })
+      </div>
+
+      <!-- brand tabs -->
+      <div class="cm-filter__tabs">
+        <div class="cm-filter__tabs__translation">
+          @@loop('./common/filter/_cm-filter__sort.html', [
+            {
+              class: 'cm-filter__sort--active',
+              attribute: 'aria-label="알파뱃순서" aria-selected="true" data-lang="eng"',
+              text: 'ABC',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'aria-label="가나다순서" data-lang="kor"',
+              text: 'ㄱㄴㄷ',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+          ])
+        </div>
+        <div class="cm-filter__tabs__contents" data-lang="eng">
+          @@loop('./common/filter/_cm-filter__sort.html', [
+            {
+              class: 'cm-filter__sort--active',
+              attribute: 'data-filter-sort="all" aria-selected="true"',
+              text: 'All',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: 'cm-filter__sort--best',
+              attribute: 'data-filter-sort="best"',
+              text: 'Best',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: 'cm-filter__sort--like',
+              attribute: 'data-filter-sort="like"',
+              text: '',
+              svg: 'ic-heart',
+              svg_title: '좋아요',
+              svg_class: 'cm-filter__sort--like__icon'
+            },
+            {
+              class: 'cm-filter__sort--extra',
+              attribute: 'data-filter-sort="sole"',
+              text: '단독',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="a"',
+              text: 'A',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="b"',
+              text: 'B',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="c"',
+              text: 'C',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="d"',
+              text: 'D',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="e"',
+              text: 'E',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="f"',
+              text: 'F',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="g"',
+              text: 'G',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="h"',
+              text: 'H',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="i"',
+              text: 'I',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="j"',
+              text: 'J',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="k"',
+              text: 'K',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="l"',
+              text: 'L',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="m"',
+              text: 'M',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="n"',
+              text: 'N',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="o"',
+              text: 'O',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="p"',
+              text: 'P',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="q"',
+              text: 'Q',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="r"',
+              text: 'R',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="s"',
+              text: 'S',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="t"',
+              text: 'T',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="u"',
+              text: 'U',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="v"',
+              text: 'V',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="w"',
+              text: 'W',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="x"',
+              text: 'X',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="y"',
+              text: 'Y',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+            {
+              class: '',
+              attribute: 'data-filter-sort="z"',
+              text: 'Z',
+              svg: '',
+              svg_title: '',
+              svg_class: ''
+            },
+          ])
+        </div>
+      </div>
+
+      <div class="cm-filter__swiper">
+        <div class="cm-filter__inner swiper-wrapper">
+          @@for(var i = 0; i < 4; i++) {
+            <!-- brand filter -->
+            <div class="cm-filter__lists swiper-slide">
+              <!-- brand list -->
+              @@loop('./common/filter/_cm-filter__lists__button.html', [
+                {
+                  class: '',
+                  attribute: 'data-filter-brand="1.SOFT"',
+                  index: '1.SOFT',
+                  color: '',
+                  flag: '단독',
+                  desc: '원소프트'
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-brand="1000V"',
+                  index: '1000V',
+                  color: '',
+                  flag: '',
+                  desc: '천볼트'
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-brand="1159STUDIO"',
+                  index: '1159STUDIO',
+                  color: '',
+                  flag: '',
+                  desc: '일일오구스튜디오'
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-brand="13MONTH"',
+                  index: '13MONTH',
+                  color: '',
+                  flag: '',
+                  desc: '써틴먼스'
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-brand="14STUDIO"',
+                  index: '14 STUDIO',
+                  color: '',
+                  flag: '',
+                  desc: '14 스튜디오'
+                },
+                {
+                  class: '',
+                  attribute: 'data-filter-brand="14STUDIO"',
+                  index: '14 STUDIO',
+                  color: '',
+                  flag: '',
+                  desc: '14 스튜디오'
+                },
+              ])
+            </div>
+          }
+        </div>
+        <!-- pagination -->
+        @@include('./common/filter/_cm-filter__pagination.html')
+      </div>
+
+
+      <!-- 브랜드 검색 결과 없을때 -->
+      <div class="cm-filter__empty">
+        등록된 관심 브랜드가 없습니다.
+      </div>
+
+      <!-- 로그인 하지 않았을때 -->
+      <div class="cm-filter__empty">
+        로그인 하시면 관심 브랜드 상품을<br>모아 보실 수 있습니다.
+      </div>
+
+      <!-- 브랜드 검색결과 없을때 -->
+      <div class="cm-filter__empty">
+        검색된 브랜드가 없습니다.
+      </div>
+    </section>
+
+    <!-- [D] 사이즈 필터 일때 -->
+    <section class="cm-filter__contents" data-filter="size" aria-label="사이즈 필터">
+      <div class="cm-filter__swiper">
+        <div class="cm-filter__inner swiper-wrapper">
+          <div class="cm-filter__lists cm-filter__lists--3column swiper-slide">
+            <!-- box list -->
+            @@loop('./common/filter/_cm-filter__lists__button.html', [
+              {
+                class: '',
+                attribute: 'data-filter-size="220"',
+                index: '220mm 이하',
+                color: '',
+                flag: '',
+                desc: ''
+              },
+              {
+                class: '',
+                attribute: 'data-filter-size="225"',
+                index: '225mm',
+                color: '',
+                flag: '',
+                desc: ''
+              },
+              {
+                class: '',
+                attribute: 'data-filter-size="230"',
+                index: '230mm',
+                color: '',
+                flag: '',
+                desc: ''
+              },
+              {
+                class: '',
+                attribute: 'data-filter-size="235"',
+                index: '235mm',
+                color: '',
+                flag: '',
+                desc: ''
+              },
+              {
+                class: '',
+                attribute: 'data-filter-size="240"',
+                index: '240mm',
+                color: '',
+                flag: '',
+                desc: ''
+              },
+              {
+                class: '',
+                attribute: 'data-filter-size="245"',
+                index: '245mm',
+                color: '',
+                flag: '',
+                desc: ''
+              },
+            ])
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- [D] 색상 필터 일때 -->
+    <section class="cm-filter__contents" data-filter="color" aria-label="색상 필터">
+      <div class="cm-filter__swiper">
+        <div class="cm-filter__inner swiper-wrapper">
+          <div class="cm-filter__lists cm-filter__lists--6column swiper-slide">
+            <!-- color list -->
+            @@loop('./common/filter/_cm-filter__lists__button.html', [
+              {
+                class: '',
+                attribute: 'data-filter-color="white"',
+                index: '',
+                color: 'cm-filter__lists__desc--white',
+                flag: '',
+                desc: '화이트'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="silver"',
+                index: '',
+                color: 'cm-filter__lists__desc--silver',
+                flag: '',
+                desc: '실버'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="lightgrey"',
+                index: '',
+                color: 'cm-filter__lists__desc--lightgrey',
+                flag: '',
+                desc: '라이트 그레이'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="gray"',
+                index: '',
+                color: 'cm-filter__lists__desc--gray',
+                flag: '',
+                desc: '그레이'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="darkgrey"',
+                index: '',
+                color: 'cm-filter__lists__desc--darkgrey',
+                flag: '',
+                desc: '다크 그레이'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="black"',
+                index: '',
+                color: 'cm-filter__lists__desc--black',
+                flag: '',
+                desc: '블랙'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="deepred"',
+                index: '',
+                color: 'cm-filter__lists__desc--deepred',
+                flag: '',
+                desc: '딥레드'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="red"',
+                index: '',
+                color: 'cm-filter__lists__desc--red',
+                flag: '',
+                desc: '레드'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="raspberry"',
+                index: '',
+                color: 'cm-filter__lists__desc--raspberry',
+                flag: '',
+                desc: '라즈베리'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="neonpink"',
+                index: '',
+                color: 'cm-filter__lists__desc--neonpink',
+                flag: '',
+                desc: '네온 핑크'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="pink"',
+                index: '',
+                color: 'cm-filter__lists__desc--pink',
+                flag: '',
+                desc: '핑크'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="lightpink"',
+                index: '',
+                color: 'cm-filter__lists__desc--lightpink',
+                flag: '',
+                desc: '라이트 핑크'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="palepink"',
+                index: '',
+                color: 'cm-filter__lists__desc--palepink',
+                flag: '',
+                desc: '페일 핑크'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="peach"',
+                index: '',
+                color: 'cm-filter__lists__desc--peach',
+                flag: '',
+                desc: '피치'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="coral"',
+                index: '',
+                color: 'cm-filter__lists__desc--coral',
+                flag: '',
+                desc: '코랄'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="lightorange"',
+                index: '',
+                color: 'cm-filter__lists__desc--lightorange',
+                flag: '',
+                desc: '라이트 오렌지'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="neonorange"',
+                index: '',
+                color: 'cm-filter__lists__desc--neonorange',
+                flag: '',
+                desc: '네온 오렌지'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="orangepink"',
+                index: '',
+                color: 'cm-filter__lists__desc--orangepink',
+                flag: '',
+                desc: '오렌지 핑크'
+              },
+            ])
+          </div>
+          <div class="cm-filter__lists cm-filter__lists--6column swiper-slide">
+            <!-- color list -->
+            @@loop('./common/filter/_cm-filter__lists__button.html', [
+              {
+                class: '',
+                attribute: 'data-filter-color="orange"',
+                index: '',
+                color: 'cm-filter__lists__desc--orange',
+                flag: '',
+                desc: '오렌지'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="ivory"',
+                index: '',
+                color: 'cm-filter__lists__desc--ivory',
+                flag: '',
+                desc: '아이보리'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="lightyellow"',
+                index: '',
+                color: 'cm-filter__lists__desc--lightyellow',
+                flag: '',
+                desc: '라이트 옐로우'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="yellow"',
+                index: '',
+                color: 'cm-filter__lists__desc--yellow',
+                flag: '',
+                desc: '옐로우'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="mustard"',
+                index: '',
+                color: 'cm-filter__lists__desc--mustard',
+                flag: '',
+                desc: '머스타드'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="gold"',
+                index: '',
+                color: 'cm-filter__lists__desc--gold',
+                flag: '',
+                desc: '골드'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="neongreen"',
+                index: '',
+                color: 'cm-filter__lists__desc--neongreen',
+                flag: '',
+                desc: '네온 그린'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="lightgreen"',
+                index: '',
+                color: 'cm-filter__lists__desc--lightgreen',
+                flag: '',
+                desc: '라이트 그린'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="mint"',
+                index: '',
+                color: 'cm-filter__lists__desc--mint',
+                flag: '',
+                desc: '민트'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="green"',
+                index: '',
+                color: 'cm-filter__lists__desc--green',
+                flag: '',
+                desc: '그린'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="olivegreen"',
+                index: '',
+                color: 'cm-filter__lists__desc--olivegreen',
+                flag: '',
+                desc: '올리브 그린'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="khaki"',
+                index: '',
+                color: 'cm-filter__lists__desc--khaki',
+                flag: '',
+                desc: '카키'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="darkgreen"',
+                index: '',
+                color: 'cm-filter__lists__desc--darkgreen',
+                flag: '',
+                desc: '다크 그린'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="skyblue"',
+                index: '',
+                color: 'cm-filter__lists__desc--skyblue',
+                flag: '',
+                desc: '스카이 블루'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="neonblue"',
+                index: '',
+                color: 'cm-filter__lists__desc--neonblue',
+                flag: '',
+                desc: '네온 블루'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="blue"',
+                index: '',
+                color: 'cm-filter__lists__desc--blue',
+                flag: '',
+                desc: '블루'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="navy"',
+                index: '',
+                color: 'cm-filter__lists__desc--navy',
+                flag: '',
+                desc: '네이비'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="reddishpurple"',
+                index: '',
+                color: 'cm-filter__lists__desc--reddishpurple',
+                flag: '',
+                desc: '자주'
+              },
+            ])
+          </div>
+          <div class="cm-filter__lists cm-filter__lists--6column swiper-slide">
+            <!-- color list -->
+            @@loop('./common/filter/_cm-filter__lists__button.html', [
+              {
+                class: '',
+                attribute: 'data-filter-color="lavender"',
+                index: '',
+                color: 'cm-filter__lists__desc--lavender',
+                flag: '',
+                desc: '라벤더'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="purple"',
+                index: '',
+                color: 'cm-filter__lists__desc--purple',
+                flag: '',
+                desc: '퍼플'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="darkviolet"',
+                index: '',
+                color: 'cm-filter__lists__desc--darkviolet',
+                flag: '',
+                desc: '다크 바이올렛'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="burgundy"',
+                index: '',
+                color: 'cm-filter__lists__desc--burgundy',
+                flag: '',
+                desc: '버건디'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="brown"',
+                index: '',
+                color: 'cm-filter__lists__desc--brown',
+                flag: '',
+                desc: '브라운'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="rosegold"',
+                index: '',
+                color: 'cm-filter__lists__desc--rosegold',
+                flag: '',
+                desc: '로즈골드'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="redbrown"',
+                index: '',
+                color: 'cm-filter__lists__desc--redbrown',
+                flag: '',
+                desc: '레드 브라운'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="khakibeige"',
+                index: '',
+                color: 'cm-filter__lists__desc--khakibeige',
+                flag: '',
+                desc: '카키 베이지'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="camel"',
+                index: '',
+                color: 'cm-filter__lists__desc--camel',
+                flag: '',
+                desc: '카멜'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="sand"',
+                index: '',
+                color: 'cm-filter__lists__desc--sand',
+                flag: '',
+                desc: '샌드'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="beige"',
+                index: '',
+                color: 'cm-filter__lists__desc--beige',
+                flag: '',
+                desc: '베이지'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="denim"',
+                index: '',
+                color: 'cm-filter__lists__desc--denim',
+                flag: '',
+                desc: '데님'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="lightbluedenim"',
+                index: '',
+                color: 'cm-filter__lists__desc--lightbluedenim',
+                flag: '',
+                desc: '연청'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="mediumbluedenim"',
+                index: '',
+                color: 'cm-filter__lists__desc--mediumbluedenim',
+                flag: '',
+                desc: '중청'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="darkbluedenim"',
+                index: '',
+                color: 'cm-filter__lists__desc--darkbluedenim',
+                flag: '',
+                desc: '진청'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="blackdenim"',
+                index: '',
+                color: 'cm-filter__lists__desc--blackdenim',
+                flag: '',
+                desc: '흑청'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="stripe"',
+                index: '',
+                color: 'cm-filter__lists__desc--stripe',
+                flag: '',
+                desc: '스트라이프'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="dot"',
+                index: '',
+                color: 'cm-filter__lists__desc--dot',
+                flag: '',
+                desc: '도트'
+              },
+            ])
+          </div>
+          <div class="cm-filter__lists cm-filter__lists--6column swiper-slide">
+            <!-- color list -->
+            @@loop('./common/filter/_cm-filter__lists__button.html', [
+              {
+                class: '',
+                attribute: 'data-filter-color="check"',
+                index: '',
+                color: 'cm-filter__lists__desc--check',
+                flag: '',
+                desc: '체크'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="glencheck"',
+                index: '',
+                color: 'cm-filter__lists__desc--glencheck',
+                flag: '',
+                desc: '글렌 체크'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="tartancheck"',
+                index: '',
+                color: 'cm-filter__lists__desc--tartancheck',
+                flag: '',
+                desc: '타탄 체크'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="ginghamcheck"',
+                index: '',
+                color: 'cm-filter__lists__desc--ginghamcheck',
+                flag: '',
+                desc: '깅엄 체크'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="hombrecheck"',
+                index: '',
+                color: 'cm-filter__lists__desc--hombrecheck',
+                flag: '',
+                desc: '옴브레 체크'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="windowpanecheck"',
+                index: '',
+                color: 'cm-filter__lists__desc--windowpanecheck',
+                flag: '',
+                desc: '윈도우 페인'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="herringbone"',
+                index: '',
+                color: 'cm-filter__lists__desc--herringbone',
+                flag: '',
+                desc: '헤링본'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="houndtoothcheck"',
+                index: '',
+                color: 'cm-filter__lists__desc--houndtoothcheck',
+                flag: '',
+                desc: '하운드 투스'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="paisley"',
+                index: '',
+                color: 'cm-filter__lists__desc--paisley',
+                flag: '',
+                desc: '페이즐리'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="flower"',
+                index: '',
+                color: 'cm-filter__lists__desc--flower',
+                flag: '',
+                desc: '플라워'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="tropical"',
+                index: '',
+                color: 'cm-filter__lists__desc--tropical',
+                flag: '',
+                desc: '트로피컬'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="camo"',
+                index: '',
+                color: 'cm-filter__lists__desc--camo',
+                flag: '',
+                desc: '카모'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="animal"',
+                index: '',
+                color: 'cm-filter__lists__desc--animal',
+                flag: '',
+                desc: '애니멀'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="patchwork"',
+                index: '',
+                color: 'cm-filter__lists__desc--patchwork',
+                flag: '',
+                desc: '패치워크'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="pattern"',
+                index: '',
+                color: 'cm-filter__lists__desc--pattern',
+                flag: '',
+                desc: '기타패턴'
+              },
+              {
+                class: '',
+                attribute: 'data-filter-color="etc"',
+                index: '',
+                color: 'cm-filter__lists__desc--etc',
+                flag: '',
+                desc: '기타'
+              },
+            ])
+          </div>
+        </div>
+        @@include('./common/filter/_cm-filter__pagination.html')
+      </div>
+    </section>
+
+    <!-- [D] 등록일 필터 일때 -->
+    <section class="cm-filter__contents" data-filter="date" aria-label="등록일 필터">
+      <div class="cm-filter__period">
+        @@loop('./common/_cm-select.html', [
+          {
+            class: 'cm-select--disabled',
+            attribute: 'aria-label="년도 선택박스" disabled',
+            arr: [
+              {text: '2019', attribute: ''},
+              {text: '2018', attribute: ''},
+              {text: '2017', attribute: ''},
+            ]
+          },
+          {
+            class: '',
+            attribute: 'aria-label="월 선택박스"',
+            arr: [
+              {text: '01', attribute: ''},
+              {text: '02', attribute: ''},
+              {text: '03', attribute: ''},
+            ]
+          },
+        ])
+        @@include('./common/filter/_cm-filter__button.html', {
+          text: '적용',
+          class: 'cm-filter__button--active',
+          attribute: '',
+        })
+      </div>
+    </section>
+
+    <!-- /////////////// 필터 결과값 -->
+    <section class="cm-filter__result" aria-label="선택한 필터 값">
+      <div class="cm-filter__result__contents">
+        @@loop('./common/filter/_cm-filter__chip.html', [
+          {
+            class: 'cm-filter__chip--campaign',
+            attribute: 'data-filter-result=""',
+            text: '블랙프라이데이'
+          },
+          {
+            class: '',
+            attribute: 'data-filter-result=""',
+            text: '카테고리1'
+          },
+          {
+            class: 'cm-filter__chip--white',
+            attribute: 'data-filter-result="" aria-label="하얀색"',
+            text: ''
+          },
+          {
+            class: 'cm-filter__chip--ivory',
+            attribute: 'data-filter-result="" aria-label="아이보리색"',
+            text: ''
+          },
+          {
+            class: 'cm-filter__chip--animal',
+            attribute: 'data-filter-result="" aria-label="동물무늬"',
+            text: ''
+          },
+          {
+            class: 'cm-filter__chip--campaign01',
+            attribute: 'data-filter-result=""',
+            text: '캠페인1'
+          },
+          {
+            class: 'cm-filter__chip--campaign02',
+            attribute: 'data-filter-result=""',
+            text: '캠페인2'
+          },
+          {
+            class: 'cm-filter__chip--campaign03',
+            attribute: 'data-filter-result=""',
+            text: '캠페인3'
+          },
+          {
+            class: 'cm-filter__chip--campaign04',
+            attribute: 'data-filter-result=""',
+            text: '캠페인4'
+          },
+          {
+            class: 'cm-filter__chip--campaign05',
+            attribute: 'data-filter-result=""',
+            text: '캠페인5'
+          },
+        ])
+      </div>
+      <button type="button" class="cm-filter__result__button">
+        @@include('./common/svg/ic-22-line-refresh.svg', {
+          title: '선택 초기화',
+          class: '',
+        })
+      </button>
+    </section>
+  </div>
+  <!-- [D] 높이 10px 짜리 회색 라인이 필요하면 아래 div.cm-line 을 넣어주세요 -->
+  <div class="cm-line"></div>
+</article>

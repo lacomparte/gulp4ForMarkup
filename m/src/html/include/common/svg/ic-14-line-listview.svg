@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/14/Line/Listview/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Ic/14/Line/Listview/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M2,2 L6.5,2 L6.5,6.5 L2,6.5 L2,2 Z M3,5.5 L5.5,5.5 L5.5,3 L3,3 L3,5.5 Z" id="Rectangle" fill="#000000" fill-rule="nonzero"></path>
+        <path d="M2,7.5 L6.5,7.5 L6.5,12 L2,12 L2,7.5 Z M3,8.5 L3,11 L5.5,11 L5.5,8.5 L3,8.5 Z" id="Rectangle-" fill="#000000" fill-rule="nonzero"></path>
+        <polygon id="Line-8" fill="#000000" fill-rule="nonzero" points="7.5 3 12 3 12 2 7.5 2"></polygon>
+        <polygon id="Line-8--4" fill="#000000" fill-rule="nonzero" points="7.5 6 12 6 12 5 7.5 5"></polygon>
+        <polygon id="Line-8--5" fill="#000000" fill-rule="nonzero" points="7.5 9 12 9 12 8 7.5 8"></polygon>
+        <polygon id="Line-8--6" fill="#000000" fill-rule="nonzero" points="7.5 12 12 12 12 11 7.5 11"></polygon>
+    </g>
+</svg>

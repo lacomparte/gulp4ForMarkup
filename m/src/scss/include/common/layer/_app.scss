@@ -1,0 +1,59 @@
+.layer-app {
+  position: fixed;
+  left: 0;
+  right: 0;
+  @include safearea(bottom, 60px);
+  z-index: 540;
+  background-color: $white;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateY(calc(100% + 60px));
+  transition: transform .15s ease-in-out, opacity .15s ease-in-out;
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__link {
+    display: block;
+    padding: 8px calc((100% - 300px) / 2);
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  &__icon {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-right: 14px;
+  }
+
+  &__text {
+    display: block;
+    margin: 4px 0 1px 0;
+  }
+
+  &__close {
+    display: block;
+    @include position(absolute, 2px, 2px);
+    padding: 6px;
+    > svg {
+      vertical-align: top;
+      * {
+        fill: $gray5;
+      }
+    }
+  }
+
+  @media(max-height:470px) { // input 활성화 시 숨김
+    & {
+      display: none;
+    }
+  }
+  @media(max-width:359px) { // 359px 이하 화면에서 노출
+    & {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+@charset 'utf-8';
+
+.cm-filter__chip {
+  $this: &;
+
+  flex: 0 0 auto;
+  overflow: hidden;
+  border-radius: 3px;
+  font-size: 12px;
+  color: $white;
+
+  &__text {
+    display: block;
+    position: relative;
+    padding: 5px 26px 3px 10px;
+    background-color: $fblue2;
+    font-family: $font-default;
+    line-height: 1.5;
+
+    &::before,
+    &::after {
+      @include position(absolute, 50%, 14px);
+
+      display: block;
+      width: 1px;
+      height: 10px;
+      background-color: $white;
+      content: '';
+    }
+
+    &::before {
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+
+  & + & {
+    margin-left: 5px;
+  }
+
+  &--campaign {
+    // $campaigns 변수의 정의는 common/filter/variables 에 있음
+    @each $idx, $color in $campaigns {
+      &#{$idx} #{$this}__text {
+        background-color: #{$color};
+      }
+    }
+  }
+
+  // $colors 변수의 정의는 common/filter/variables 에 있음
+  // color swatch
+  @each $name, $color in $colors {
+    &--#{$name} #{$this}__text {
+      width: 26px;
+      height: 26px;
+      padding: 0;
+      border-radius: 100%;
+      background-color: #{$color};
+
+      &::before,
+      &::after {
+        right: 12px;
+      }
+    }
+  }
+  // 흰색, 아이보리 분기 처리
+  &--white #{$this}__text,
+  &--ivory #{$this}__text {
+    box-shadow: inset 0px 0px 0px 1px #eee;
+
+    &::before,
+    &::after {
+      background-color: $black;
+    }
+  }
+
+  // $patterns 변수의 정의는 common/filter/variables 에 있음
+  // pattern swatch
+  @each $name, $pattern in $patterns {
+    &--#{$name} {
+      position: relative;
+      width: 26px;
+      height: 26px;
+      border-radius: 100%;
+
+      &::before {
+        @include position(absolute, 50%, 50%);
+        // @include sp-filter(#{$pattern});
+        transform: translate(50%, -50%);
+        content: '';
+      }
+
+      #{$this}__text {
+        overflow: hidden;
+        width: 26px;
+        height: 26px;
+        padding: 0;
+        background-color: transparent;
+
+        &::before,
+        &::after {
+          right: 12px;
+        }
+      }
+    }
+  }
+
+  // tag 영역에 사용
+  &--tag {
+    font-size: 14px;
+    color: $gray7;
+
+    #{$this}__text {
+      padding: 5px 10px 4px;
+      background-color: $gray3;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    &#{$this}--active {
+      color: $fblue2;
+    }
+  }
+}

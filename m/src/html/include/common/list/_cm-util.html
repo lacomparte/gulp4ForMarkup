@@ -1,0 +1,70 @@
+<!--
+  include
+  guide/cm-util.html
+
+  css
+  include/common/cm-util.scss
+
+  use
+  구성요소 : cm-util__left, cm-util__center, cm-util__right
+  cm-util__left type : 목록 타이틀(title), 목록 개수(count), 탭(tab)
+  cm-util__center type : 캠페인 토글 버튼(campaign) - 공통 필터 배포 후 삭제 예정
+  cm-util__right boolean : 목록에 대한 설정 변경이 필요할때만 사용 
+  - ex) 상품 목록 뷰 변경, 옵션 변경, 목록 순서 변경 등 > _cm-util-option.html 에서 사용 설명
+-->
+
+<div class="cm-util">
+  @@if(type.length) {
+    @@if(type !== 'campaign') {
+      <div class="cm-util__left">
+        @@if(type === 'title') {
+          <h2 class="cm-util__title">@@title_text</h2>
+        }
+        @@if(type === 'count') {
+          <div class="cm-util__count">
+            @@count_text
+            <strong>@@count_num</strong>
+            @@count_unit
+            @@if(count_refresh) {
+              <span>@@count_time</span>
+            }
+          </div>
+        }
+        @@if(type === 'tab') {
+          @@for(var i = 0; i < tab_button.length; i++) {
+            <button type="button" class="cm-util__tab `+ tab_button[i].tab_class +`">
+              `+ tab_button[i].tab_text +`
+            </button>
+          }
+        }
+      </div>
+    }
+
+    @@if(type === 'campaign') {
+      <div class="cm-util__center">
+        <button type="button" class="cm-util__campaign" data-toggle="active">
+          @@include('./common/svg/ic-22-line-check.svg', {
+            class: '',
+            title: '',
+          })
+          <strong>@@campaign_text</strong>
+          상품 보기
+        </button>
+      </div>
+    }
+  }
+
+  @@if(util) {
+    <div class="cm-util__right">
+      @@for(var i = 0; i < util_option.length; i++) {
+        @@include('./common/list/_cm-util-option.html', {
+          class: '`+ util_option[i].option_class +`',
+          attribute: '`+ util_option[i].option_attribute +`',
+          type: '`+ util_option[i].option_type +`',
+          button: '`+ util_option[i].option_button +`',
+          icon: '`+ util_option[i].option_icon +`',
+        })
+      }
+    </div>
+  }
+</div>

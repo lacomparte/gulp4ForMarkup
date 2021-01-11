@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/30/Line/Timelineview/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Ic/30/Line/Timelineview/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M7,4 L26,4 L26,14 L7,14 L7,4 Z M8,5 L8,13 L25,13 L25,5 L8,5 Z" id="Rectangle" fill="#000000" fill-rule="nonzero"></path>
+        <path d="M7,16 L26,16 L26,26 L7,26 L7,16 Z M8,17 L8,25 L25,25 L25,17 L8,17 Z" id="Rectangle" fill="#000000" fill-rule="nonzero"></path>
+        <polygon id="Line" fill="#000000" fill-rule="nonzero" points="4 4 4 14 5 14 5 4"></polygon>
+        <polygon id="Line-" fill="#000000" fill-rule="nonzero" points="4 16 4 26 5 26 5 16"></polygon>
+    </g>
+</svg>

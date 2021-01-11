@@ -1,0 +1,531 @@
+@charset 'utf-8';
+
+.guide__label {
+  &--state {
+    &__36 {
+      .label {
+        &-type01 {
+          @include label(
+            $backgroundColor: $fred1,
+          );
+        }
+        &-type02 {
+          @include label(
+            $backgroundColor: #ff9500,
+          );
+          font-family: $font-musinsa;
+        }
+        &-type03 {
+          @include label(
+            $backgroundColor: #cc4e63,
+          );
+        }
+        &-type04 {
+          @include label(
+            $backgroundColor: #ff797a,
+          );
+        }
+        &-type05 {
+          @include label(
+            $backgroundColor: #18a286,
+          );
+        }
+        &-type06 {
+          @include label(
+            $backgroundColor: #1b8cb0,
+          );
+        }
+        &-type07,
+        &-type08 {
+          @include label(
+            $backgroundColor: $black,
+          );
+        }
+        &-type09 {
+          @include label(
+            $backgroundColor: #7d9fc3,
+          );
+        }
+        &-type10 {
+          @include label(
+            $backgroundColor: #6c89a8,
+          );
+        }
+        &-type11 {
+          @include label(
+            $backgroundColor: #440099,
+          );
+        }
+        &-type12 {
+          @include label(
+            $backgroundColor: #0095dc,
+          );
+        }
+        &-type13 {
+          @include label(
+            $backgroundColor: #cf0004,
+          );
+        }
+        &-type14 {
+          @include label(
+            $padding: 0 7px,
+            $backgroundColor: #ffc800,
+          );
+          &__svg {
+            margin-top: 7px;
+          }
+        }
+      }
+    }
+    &__26 {
+      .label {
+        &-type01 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: $fred1,
+          );
+        }
+        &-type02 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $lineHeight: 28px,
+            $backgroundColor: #ff9500,
+          );
+          &-1 {
+            @include label(
+              $height: 26px,
+              $padding: 0 6px,
+              $fontSize: 11px,
+              $lineHeight: 28px,
+              $backgroundColor: #ff9500,
+            );
+            font-family: $font-musinsa;
+          }
+          font-family: $font-musinsa;
+        }
+        &-type03 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: #cc4e63,
+          );
+          &-1 {
+            @include label(
+              $height: 26px,
+              $padding: 0 6px,
+              $fontSize: 11px,
+              $backgroundColor: #cc4e63,
+            );
+          }
+        }
+        &-type04 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: #ff797a,
+          );
+        }
+        &-type05 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: #18a286,
+          );
+          &-1 {
+            @include label(
+              $height: 26px,
+              $padding: 0 6px,
+              $fontSize: 11px,
+              $backgroundColor: #18a286,
+            );
+          }
+        }
+        &-type06 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: #1b8cb0,
+          );
+          &-1 {
+            @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: #1b8cb0,
+          );
+          }
+        }
+        &-type07,
+        &-type08 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: $black,
+          );
+          &-1 {
+            @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: $black,
+          );
+          }
+        }
+        &-type09 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: #7d9fc3,
+          );
+          &-1 {
+            @include label(
+              $height: 26px,
+              $padding: 0 6px,
+              $fontSize: 11px,
+              $backgroundColor: #7d9fc3,
+            );
+          }
+        }
+        &-type10 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: #6c89a8,
+          );
+          &-1 {
+            @include label(
+              $height: 26px,
+              $padding: 0 6px,
+              $fontSize: 11px,
+              $backgroundColor: #6c89a8,
+            );
+          }
+        }
+        &-type11 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: #440099,
+          );
+          &-1 {
+            @include label(
+              $height: 26px,
+              $padding: 0 6px,
+              $fontSize: 11px,
+              $backgroundColor: #440099,
+            );
+          }
+        }
+        &-type12 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: #8a4fbb,
+          );
+        }
+        &-type13 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: $fblue2,
+          );
+          &-1 {
+            @include label(
+              $height: 26px,
+              $padding: 0 6px,
+              $fontSize: 11px,
+              $backgroundColor: $fblue2,
+            );
+          }
+        }
+        &-type14 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: $gray5,
+          );
+        }
+        &-type15 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $lineHeight: 28px,
+            $backgroundColor: $gray5,
+          );
+          font-family: $font-musinsa;
+          &-1 {
+            @include label(
+              $height: 26px,
+              $padding: 0 6px,
+              $fontSize: 11px,
+              $backgroundColor: $gray5,
+            );
+          }
+        }
+        &-type16 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: #ff5d00,
+          );
+        }
+        &-type17 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $lineHeight: 28px,
+            $backgroundColor: #2930ff,
+          );
+          font-family: $font-musinsa;
+        }
+        &-type18 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: #999,
+          );
+          font-family: $font-musinsa;
+        }
+        &-type19 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: $fblue2,
+          );
+        }
+        &-type20 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: $gray6,
+          );
+        }
+        &-type21 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: #ed0060,
+          );
+        }
+        &-type22 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: #00d47b,
+          );
+        }
+        &-type23 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: #5800ff,
+          );
+        }
+        &-type24 {
+          @include label(
+            $height: 26px,
+            $padding: 0 2px,
+            $fontSize: 11px,
+            $backgroundColor: #ffc800,
+          );
+          &__svg {
+            margin-top: 2px;
+          }
+        }
+      }
+    }
+    &__18 {
+      .label {
+        &-type01 {
+          @include label(
+            $height: 18px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $lineHeight: 20px,
+            $backgroundColor: $fred1,
+          );
+          font-family: $font-musinsa;
+        }
+      }
+    }
+  }
+
+  &--outline {
+    &__21 {
+      .label {
+        &-type01 {
+          @include label(
+            $height: 21px,
+            $padding: 0 9px,
+            $borderColor: $fred1,
+            $fontSize: 11px,
+            $color: $fred1,
+          );
+        }
+        &-type02 {
+          @include label(
+            $height: 21px,
+            $padding: 0 9px,
+            $borderColor: $fblue2,
+            $fontSize: 11px,
+            $color: $fblue2,
+          );
+        }
+      }
+    }
+  }
+
+  &--coupon {
+    &__20 {
+      .label {
+        &-type01 {
+          @include label(
+            $display: inline-flex,
+            $height: 20px,
+            $padding: 0 0 0 5px,
+            $borderColor: #4162c9,
+            $fontSize: 11px,
+            $lineHeight: 18px,
+            $backgroundColor: #4162c9,
+          );
+          &-1 {
+            @include label(
+              $display: inline-flex,
+              $height: 20px,
+              $padding: 0 4px,
+              $borderColor: #4162c9,
+              $fontSize: 11px,
+              $lineHeight: 18px,
+              $backgroundColor: #4162c9,
+            );
+          }
+        }
+      }
+    }
+  }
+
+  &--rank {
+    &__20 {
+      .label {
+        &-type01 {
+          @include label(
+            $display: inline-flex,
+            $height: 26px,
+            $padding: 0 0 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: $white,
+            $color: $black,
+          );
+          font-family: $font-musinsa;
+        }
+      }
+    }
+  }
+
+  &--timesale {
+    &__20 {
+      .label {
+        &-type01 {
+          @include label(
+            $height: 26px,
+            $padding: 0 6px,
+            $fontSize: 11px,
+            $backgroundColor: $white,
+            $color: $black,
+          );
+        }
+      }
+    }
+  }
+
+  &--radius {
+    &__16 {
+      .label {
+        &-type01 {
+          @include label(
+            $height: 13px,
+            $padding: 1px 4px 0 4px,
+            $borderColor: #fff,
+            $borderRadius: 9px,
+            $fontSize: 9px,
+            $lineHeight: 1.5,
+            $backgroundColor: $white,
+          );
+          box-sizing: content-box;
+          font-family: $font-musinsa;
+          @at-root {
+            // 해당 가이드 파일에서는 mixin/_channel.scss 에 아래 코드를 추가 할 수 없으므로(불필요 코드 추가)
+            // 별도로 $color 를 accent 가 아닌 _color.scss 에서 선언된 변수를 사용함.
+            // 실 사용시 $blue2, $fpurple2 는 accent 로 치환하여 사용바람. (아래 주석 코드 참고)
+            // @include channelColor(mensinsa, border-color, accent);
+            // @include channelColor(mensinsa, color, accent);
+            // @include channelColor(wusinsa, border-color, accent);
+            // @include channelColor(wusinsa, color, accent);
+
+            @include channelColor(mensinsa, border-color, $fblue2);
+            @include channelColor(mensinsa, color, $fblue2);
+            @include channelColor(wusinsa, border-color, $fpurple2);
+            @include channelColor(wusinsa, color, $fpurple2);
+          }
+        }
+      }
+    }
+  }
+
+  &--around {
+    &__20 {
+      .label {
+        &-type01 {
+          @include label(
+            $height: 20px,
+            $padding: 0,
+          );
+        }
+      }
+    }
+    &__28 {
+      .label {
+        &-type01 {
+          @include label(
+            $height: 28px,
+            $padding: 0,
+          );
+        }
+      }
+    }
+    &__40 {
+      .label {
+        &-type01 {
+          @include label(
+            $height: 40px,
+            $padding: 0,
+          );
+        }
+      }
+    }
+  }
+}

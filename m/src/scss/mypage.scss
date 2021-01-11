@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+@import './include/common/import';
+
+// mypage main
+@import './include/mypage/main/_main-layout';
+@import './include/mypage/main/_main-profile';
+@import './include/mypage/main/_main-profile-thumbnail';
+@import './include/mypage/main/_main-account';
+@import './include/mypage/main/_main-account-snap';
+@import './include/mypage/main/_main-menu';
+@import './include/mypage/main/_main-title';
+@import './include/mypage/main/_main-shopping';
+@import './include/mypage/main/_main-status';
+
+// snap list
+@import './include/snap/_snap-profile';
+@import './include/snap/_thumbnail-unit';

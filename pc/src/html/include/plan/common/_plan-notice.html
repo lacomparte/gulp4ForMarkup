@@ -1,0 +1,13 @@
+<!--
+  include
+  plan/experience.html
+-->
+
+<div class="plan-notice">
+  <button type="button" class="plan-notice__button" data-toggle="active">@@button</button>
+  <ul class="plan-notice__text">
+    @@for(var i = 0; i < comment.length; i++) {
+    <li>`+ comment[i].text +`</li>
+    }
+  </ul>
+</div>

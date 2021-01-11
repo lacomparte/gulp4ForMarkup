@@ -1,0 +1,28 @@
+<!--
+  include
+  snap/snap-main.html
+
+  변수
+  title: [string] 제품명
+  price: [string] 제품가격
+  discount: [string] 할인율
+
+  기타
+  swiper- 로 시작하는 class 는 vue-awesome-swiper 에서 자동으로 생성
+-->
+<div class="snap-deal">
+  <div class="snap-deal__lists">
+    @@for(var i = 0; i < arr.length; i++) {
+      <div class="snap-deal__list">
+        <a href="###" title="" class="snap-deal__link">
+          @@include('./snap/_thumbnail-unit.html')
+          <div class="snap-deal__information">
+            <p class="snap-deal__title">` + arr[i].title + `</p>
+            <span class="snap-deal__price" aria-label="할인 후 가격">` + arr[i].price + `원</span>
+            <span class="snap-deal__discount" aria-label="할인율">` + arr[i].discount + `%</span>
+          </div>
+        </a>
+      </div>
+    }
+  </div>
+</div>

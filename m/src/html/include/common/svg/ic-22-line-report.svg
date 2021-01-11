@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Ic/22/Line/Report/Black</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Ic/22/Line/Report/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M19,15 L19,19 L3,19 L3,15 L19,15 Z M18,16 L4,16 L4,18 L18,18 L18,16 Z" id="Rectangle" fill="#000000" fill-rule="nonzero"></path>
+        <path d="M11,5 C14.2383969,5 16.8775718,7.56557489 16.9958615,10.7750617 L17,11 L17,16 L5,16 L5,11 L5.00413847,10.7750617 C5.12242824,7.56557489 7.76160306,5 11,5 Z M11,6 C8.3832749,6 6.22521034,8.01427966 6.01700545,10.572852 L6.00396927,10.7934569 L6,11 L6,15 L16,15 L16.0001692,11.0183951 L15.99654,10.811893 C15.8977332,8.13102566 13.6914887,6 11,6 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+        <polygon id="Path-2" fill="#000000" fill-rule="nonzero" points="11.5 2 11.5 4 10.5 4 10.5 2"></polygon>
+        <polygon id="Path-2" fill="#000000" fill-rule="nonzero" transform="translate(5.343146, 5.343146) rotate(-45.000000) translate(-5.343146, -5.343146) " points="5.84314575 4.34314575 5.84314575 6.34314575 4.84314575 6.34314575 4.84314575 4.34314575"></polygon>
+        <polygon id="Path-2" fill="#000000" fill-rule="nonzero" transform="translate(16.656854, 5.343146) rotate(-315.000000) translate(-16.656854, -5.343146) " points="17.1568542 4.34314575 17.1568542 6.34314575 16.1568542 6.34314575 16.1568542 4.34314575"></polygon>
+        <polygon id="Path-2" fill="#000000" fill-rule="nonzero" points="8.00189209 11 8.00189209 13 7.00189209 13 7.00189209 11"></polygon>
+        <path d="M11,7.00189209 L11,8.00189209 C9.40332677,8.00189209 8.09817045,9.25002436 8.00698157,10.8238384 L8.00189209,11 L7.00189209,11 C7.00189209,8.85881791 8.68506401,7.11076169 10.8004541,7.00678508 L11,7.00189209 Z" id="Oval" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

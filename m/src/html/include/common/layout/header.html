@@ -1,0 +1,58 @@
+<!--
+  공통 헤더
+  header Modify: header--static 클래스 추가 시 position: relative 속성 추가
+  header Modify: header--ex 클래스 추가 시 헤더 배경색상 적용
+-->
+
+<header class="header @@class">
+	<h1 class="blind">@@title</h1>
+  <div class="header__area">
+    <h2 class="header__title @@title_sub_class">@@title_sub</h2>
+
+    @@if(util === 'category') {
+      <button type="button" class="header__util header__util--category" aria-label="카테고리 열기" data-toggle="active">
+        @@include('./common/svg/ic-14-line-arrow-bottom.svg', {
+          class: '',
+          title: '',
+        })
+      </button>
+    }
+
+    @@if(util === 'tooltip') {
+      <button type="button" class="header__util header__util--tooltip" aria-label="상품랭킹 툴팁 열기" data-toggle="active">
+        @@include('./common/svg/ic-22-line-question.svg', {
+          class: '',
+          title: '',
+        })
+      </button>
+      <div class="header__tooltip">
+        @@tooltip_text
+      </div>
+    }
+
+    <div class="header__left">
+      @@for(var i = 0; i < button_left.length; i++) {
+        <button type="button" class="header__button `+ button_left[i].button_class +`" `+ button_left[i].attribute +`>
+          @@include('./common/svg/`+ button_left[i].svg +`.svg', {
+            class: '',
+            title: '`+ button_left[i].title +`',
+          })
+          ` + button_left[i].new + `
+          ` + button_left[i].badge + `
+        </button>
+      }
+		</div>
+    <div class="header__right">
+      @@for(var i = 0; i < button_right.length; i++) {
+        <button type="button" class="header__button `+ button_right[i].button_class +`" `+ button_right[i].attribute +`>
+          @@include('./common/svg/`+ button_right[i].svg +`.svg', {
+            class: '',
+            title: '`+ button_right[i].title +`',
+          })
+          ` + button_right[i].new + `
+          ` + button_right[i].badge + `
+        </button>
+      }
+    </div>
+  </div>
+</header>

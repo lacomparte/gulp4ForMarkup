@@ -1,0 +1,44 @@
+.list-pagination {
+	padding: 10px 65px;
+  position: relative;
+  font-size: 0;
+  text-align: center;
+  
+  &__page {
+    display: inline-block;
+    height: 22px;
+    padding: 4px 12px;
+    margin: 0 2px;
+    font-size: 14px;
+    color: $gray6;
+    box-sizing: content-box;
+    vertical-align: top;
+
+    &--active {
+      color: $black;
+    }
+  }
+
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 10px;
+    padding: 4px;
+    margin: 0;
+
+    &:disabled,
+    &--disabled {
+      .svg-color {
+        fill: #ddd;
+      }
+    }
+  }
+
+  &__prev {
+    left: 10px;
+  }
+
+  &__next {
+    right: 10px;
+  }
+}

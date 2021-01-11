@@ -1,0 +1,52 @@
+.popup-category {
+  display: none;
+  @include position(fixed, 50px, 0, 0, 0);
+  background-color: rgba(0, 0, 0, .4);
+  z-index: 9999;
+
+  &.active {
+    display: block;
+    animation: fadeIn .15s;
+  }
+
+  &__swiper {
+    position: relative;
+    background-color: $white;
+  }
+
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 0 41px 0;
+
+    > button {
+      width: 33.33%;
+      margin-top: 10px;
+      color: $gray9;
+      line-height: 30px;
+
+      &.active {
+        color: $black;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__pagination.swiper-pagination {
+    margin-bottom: 10px;
+    font-size: 0;
+    line-height: 0;
+
+    > .swiper-pagination-bullet {
+      width: 6px;
+      height: 6px;
+      margin:0 3px;
+      background-color: $gray5;
+      opacity: 1;
+
+      &.active {
+        background-color: $black;
+      }
+    }
+  }
+}

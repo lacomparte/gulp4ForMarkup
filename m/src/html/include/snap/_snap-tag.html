@@ -1,0 +1,20 @@
+<!--
+  include
+  snap/snap-main.html
+  snap/snap-tag.html
+-->
+<div class="snap-tag">
+  <div class="snap-tag__wrap">
+    <ul class="snap-tag__lists">
+      <li class="snap-tag__list snap-tag__title">인기태그</li>
+      @@for(var i = 0; i < 10; i++) {
+        <li class="snap-tag__list">
+          @@include('./snap/_snap-hash.html', {
+            class: 'color-gray6',
+            text: '#오렌지색',
+          })
+        </li>
+      }
+    </ul>
+  </div>
+</div>

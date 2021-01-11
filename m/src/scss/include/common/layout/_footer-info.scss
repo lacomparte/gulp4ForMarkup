@@ -1,0 +1,32 @@
+.footer-info {
+  display: none;
+  overflow: hidden;
+  margin: 5px 0 10px 0;
+  font-size: 12px;
+  color: $gray6;
+
+  &__block {
+    margin-top: 3px;
+    > dt,
+    > dd {
+      display: inline-block;
+    }
+    > dt {
+      color: $gray5;
+      font-weight: bold;
+    }
+  }
+  &__block--ceo {
+    @extend .footer-info__block;
+    display: inline-block;
+    margin: 0 0 0 6px;
+  }
+  &__link {
+    display: inline-block;
+    text-decoration: underline;
+  }
+  &__musinsa {
+    margin-top: 5px;
+    color: $white;
+  }
+}

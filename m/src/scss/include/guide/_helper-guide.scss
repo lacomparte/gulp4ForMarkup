@@ -1,0 +1,112 @@
+@charset 'utf-8';
+
+.common-js {
+  &__contents {
+    padding: 10px 10px 100px 10px;
+  }
+  &__title {
+    font-size: 20px;
+  }
+  &__content {
+    margin-bottom: 30px;
+    padding: 10px 0 20px;
+    border-bottom: 1px solid #eee;
+  }
+  &__desc {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #eee;
+  }
+  &__button {
+    position: relative;
+    padding: 10px;
+    font-size: 12px;
+    background-image: linear-gradient(45deg, #00bcdd 0%, #ff00ff 100%);
+    color: #fff;
+  }
+}
+
+.popup {
+  $this: &;
+
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  &--full {
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: transform .3s ease-in-out;
+    &.active {
+      transform: translateY(0%);
+      transition: transform .3s ease-in-out;
+    }
+    #{$this} {
+      &__inner {
+        height: 100%;
+      }
+      &__close {
+        top: 0;
+        right: 0;
+        border-radius: 0;
+      }
+    }
+
+  }
+  &__inner {
+    width: auto;
+    padding: 20px;
+    text-align: center;
+    white-space: nowrap;
+    background-color: rgb(65, 145, 250);
+    color: #fff;
+  }
+  &__close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    text-align: center;
+    background-color: #fff;
+  }
+  &.active {
+    display: block;
+  }
+}
+
+.layer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  background-color: rgb(65, 145, 250);
+  transform: translateY(100%);
+  transition: transform .3s ease-in-out;
+  color: #fff;
+  &__close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+  }
+  &.active {
+    transform: translateY(0%);
+    transition: transform .3s ease-in-out;
+  }
+}

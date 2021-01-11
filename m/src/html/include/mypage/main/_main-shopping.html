@@ -1,0 +1,17 @@
+<!--
+  include
+	mypage/mypage-main.html
+-->
+
+<div class="main-shopping">
+  @@for(var i = 0; i < button.length; i++) {
+  <a href="#" class="main-shopping__button">
+    @@include('./common/svg/`+ button[i].svg +`.svg', {
+      class: '',
+      title: '',
+    })
+    <span class="main-shopping__text">`+ button[i].text +`</span>
+    <strong class="main-shopping__count">`+ button[i].count +`</strong>
+  </a>
+  }
+</div>

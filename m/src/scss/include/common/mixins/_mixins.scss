@@ -1,0 +1,115 @@
+@charset 'utf-8';
+
+@mixin font-face($family, $weight, $style, $src, $svg) {
+  @font-face {
+    font-family: $family;
+    font-weight: $weight;
+    font-style: $style;
+    src: url("//image.msscdn.net/#{$src}.eot");
+    src: local("☺"), url("//image.msscdn.net/#{$src}.eot?#iefix") format("embedded-opentype"),
+      url("//image.msscdn.net/#{$src}.woff2") format("woff2"),
+      url("//image.msscdn.net/#{$src}.woff") format("woff"),
+      url("//image.msscdn.net/#{$src}.ttf") format("truetype"),
+      url("//image.msscdn.net/#{$src}.svg##{$svg}") format("svg");
+  }
+}
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin ellipsis($line: 1) {
+  @if ($line == 1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-wrap: break-word;
+    -webkit-line-clamp: $line; /* ellipsis line */
+    -webkit-box-orient: vertical;
+    /* webkit 엔진을 사용하지 않는 브라우저를 위한 속성. */
+    /* height = line-height * line = 1.2em * 3 = 3.6em  */
+    /* line-height: 1.2em;
+    height: 3.6em; */
+  }
+}
+
+@mixin safearea($attribute, $value) {
+  $attributes: (height, bottom, padding-bottom, margin-bottom);
+  #{$attribute}: $value;
+  #{$attribute}: calc(env(safe-area-inset-bottom) + #{$value});
+  #{$attribute}: calc(constant(safe-area-inset-bottom) + #{$value});
+}
+
+@mixin blindScroll {
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes roundAll {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@mixin resetFont {
+  // 스토어 코드의 reset 상쇄 필요 시에만 적용
+  font-family: $font-default;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@mixin overflowScroll($direction) {
+  overflow: hidden;
+  overflow-#{$direction}: auto;
+  white-space: nowrap;
+
+  @include blindScroll;
+}
+
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &::placeholder {
+    color: $color;
+  }
+}

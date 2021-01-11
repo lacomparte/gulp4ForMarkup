@@ -1,0 +1,84 @@
+@charset 'utf-8';
+
+.guide__button--outlined {
+  &__50 {
+    .button {
+      &-type01 {
+        @include button(
+          $height: 50px,
+          $fontWeight: normal,
+          $borderColor: $gray5,
+          $backgroundColor: $white,
+          $color: $black,
+          $activeBackground: #7c7c7c,
+          $disabledBackground: $white,
+        );
+        > svg * {
+          fill: $black;
+        }
+      }
+      &-type02 {
+        @include button(
+          $height: 50px,
+          $fontWeight: normal,
+          $borderColor: $fblue2,
+          $backgroundColor: $white,
+          $color: $fblue2,
+          $activeBackground: #7c7c7c,
+          $disabledBackground: $white,
+          $disabledBorderColor: $gray5,
+        );
+        > svg * {
+          fill: $fblue2;
+        }
+      }
+    }
+  }
+  &__26 {
+    .button {
+      &-type01 {
+        @include button(
+          $display: inline-block,
+          $width: auto,
+          $height: 26px,
+          $fontWeight: normal,
+          $borderColor: $gray5,
+          $backgroundColor: transparent,
+          $color: $black,
+          $activeBackground: #7c7c7c,
+          $disabledBackground: $white,
+        );
+        > span {
+          padding: 0 9px;
+        }
+        > svg * {
+          fill: $black;
+        }
+      }
+    }
+  }
+  &__22 {
+    .button {
+      &-type01 {
+        @include button(
+          $display: inline-block,
+          $width: auto,
+          $height: 22px,
+          $fontWeight: normal,
+          $borderColor: $gray5,
+          $borderRadius: 4px,
+          $backgroundColor: $white,
+          $color: $black,
+          $activeBackground: #7c7c7c,
+          $disabledBackground: $white,
+        );
+        > span {
+          padding: 0 9px;
+        }
+        > svg * {
+          fill: $black;
+        }
+      }
+    }
+  }
+}

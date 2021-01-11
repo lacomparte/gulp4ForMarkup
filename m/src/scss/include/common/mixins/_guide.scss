@@ -1,0 +1,148 @@
+@charset 'utf-8';
+
+// label
+@mixin label (
+  $verticalAlign: top,
+  $display: inline-block,
+  $height: 36px,
+  $padding: 0 10px,
+  $borderColor: transparent,
+  $borderRadius: null,
+  $fontSize: 14px,
+  $lineHeight: $height,
+  $backgroundColor: transparent,
+  $color: $white,
+) {
+  vertical-align: $verticalAlign;
+  display: $display;
+  height: $height;
+  @if ($borderColor != transparent) {
+    border: 1px solid;
+  }
+  border-color: $borderColor;
+  border-radius: $borderRadius;
+  padding: $padding;
+  box-sizing: border-box;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  background-color: $backgroundColor;
+  color: $color;
+  > span {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 4px;
+    background-color: $white;
+    font-family: $font-musinsa;
+    &::before {
+      content: '';
+      width: 0px;
+      height: 0px;
+      margin-right: 1px;
+      transform: translateY(-1.5px);
+    }
+    &[class$=up] {
+      color: $fred1;
+      &::before {
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        border-bottom: 5px solid $fred1;
+      }
+    }
+    &[class$=down] {
+      color: $fblue2;
+      &::before {
+        border-top: 5px solid $fblue2;
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+      }
+    }
+    &[class$=coupon] {
+      margin-left: 5px;
+      padding: 0 5px;
+      background-color: $white;
+      color: #4162c9;
+      font-family: $font-musinsa;
+    }
+  }
+}
+
+// button
+@mixin button (
+  $display: flex,
+  $width: 100%,
+  $height: 100%,
+  $border: 1px solid,
+  $borderColor: transparent,
+  $borderRadius: null,
+  $fontSize: 14px,
+  $fontWeight: bold,
+  $backgroundColor: $black,
+  $color: $white,
+  $textAlign: center,
+  $disabledColor: $gray6,
+  $disabledBackground: $gray4,
+  $disabledBorderColor: null,
+  $disabledSvgColor: $gray6,
+  $activeColor: null,
+  $activeBackground: null,
+  $disabledActive: true, // active 가 필요 없는 버튼일 경우 false 할당
+) {
+  appearance: none;
+  display: $display;
+  @if ($display == flex) {
+    align-items: center;
+    justify-content: center;
+  }
+  @if ($display == inline-flex) {
+    align-items: center;
+    justify-content: center;
+  }
+  width: $width;
+  height: $height;
+  border: $border $borderColor;
+  border-radius: $borderRadius;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  font-family: $font-default;
+  background-color: $backgroundColor;
+  color: $color;
+	box-sizing: border-box;
+  text-align: $textAlign;
+  > svg {
+    & + span {
+      margin-left: 4px;
+    }
+    vertical-align: middle;
+    display: inline-block;
+    * {
+      fill: #fff;
+    }
+  }
+  > span {
+    & + svg {
+      margin-left: 4px;
+    }
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  @if($disabledActive) {
+    &:active:not(:disabled) {
+      background-color: $activeBackground;
+      > svg,
+      > span {
+        opacity: .5;
+      }
+    }
+  }
+  &:disabled {
+    border-color: $disabledBorderColor;
+    background-color: $disabledBackground;
+    color: $disabledColor;
+    cursor: default;
+    svg * {
+      fill: $disabledSvgColor;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<!--
+  include
+  common/comment/comment.html
+
+  변수
+  class: [string] active 댓글창 오픈
+  notice: [boolean] 공지사항 노출 유무
+-->
+<div class="comment-write">
+  <!--
+    [D] 클릭시
+    1. active add class 부탁드립니다.
+    2. textarea 의 remove attribute disabled
+  -->
+  <div class="comment-write__content @@class" role="button" aria-expanded="false">
+    <div class="comment-write__box">
+      <div class="comment-write__placeholder">
+        <!-- [D] 상황에 따라 text 변경 -->
+        댓글을 남겨주세요.
+      </div>
+      <!-- [D] placeholder attribute 는 상황에 따라 FE에서 추가 -->
+      <textarea class="comment-write__textarea" disabled></textarea>
+    </div>
+    <div class="comment-write__controls">
+      <div class="comment-write__icons">
+        <span class="comment-write__icon">
+          @@include('./common/svg/ic-30-stencil-balloon.svg', {
+            title: '코멘트 등록하기',
+            class: 'comment-write__icon-register',
+          })
+        </span>
+      </div>
+      <div class="comment-write__buttons">
+        <button type="button" class="comment-write__button">
+          취소
+        </button>
+        <button type="button" class="comment-write__button">
+          등록
+        </button>
+      </div>
+    </div>
+  </div>
+  @@if(notice) {
+    <p class="comment-notice">
+      가격 및 판매 정책 비난 / 회원간 비방 / 반말 및 비아냥 / 무관한 내용 / 타 쇼핑몰, 브랜드 비교 언급 금지
+      <a href="https://m.musinsa.com/?m=forum&bid=event_notice&uid=143414" target="_self" title="댓글 운영 원칙 보러가기" class="comment-notice__link">
+        댓글 운영 원칙
+      </a>
+      <a href="https://m.musinsa.com/?m=forum&bid=hello" target="_self" title="가입인사 작성하러 가기" class="comment-notice__link">
+        가입인사
+      </a>
+    </p>
+  }
+</div>

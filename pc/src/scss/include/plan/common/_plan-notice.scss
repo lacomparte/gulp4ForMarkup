@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+.plan-notice{
+  $this: &;
+  &__text {
+    display: none;
+    color: #aaa;
+    font-size: 34px;
+    li{
+      &:before{
+        margin-right: 9px;
+        content: "-";
+      }
+      margin-bottom: 24px;
+      padding-left: 23px;
+      text-indent: -24px}
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    margin: 0 auto 60px;
+    font-size: 36px;
+    &:after{
+      display: block;
+      content: "+";
+    }
+    &.active{
+      color: red;
+      &:after{
+        content: "-";
+      }
+      & + #{$this}__text{
+        display: block;
+      }
+    }
+  }
+}

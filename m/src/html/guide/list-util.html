@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./common/layout/head.html', {
+    title: '가이드',
+    css: 'page',
+  })
+</head>
+<body class="page-name">
+  <!-- Container -->
+  <main class="container">
+    <!-- Header -->
+    @@include('./common/layout/header.html', {
+      class: '',
+      title: '가이드',
+      title_sub: '기본 페이지',
+      title_sub_class: '',
+      util: false,
+      button_left: [
+        {
+          svg: 'ic-30-line-arrow-left',
+          title: '이전 페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '',
+        },
+      ],
+      button_right: [
+        {
+          svg: 'ic-30-stencil-bag',
+          title: '장바구니 페이지로 이동',
+          attribute: '',
+          button_class: '',
+          new: '',
+          badge: '@@include(\'./common/_cm-badge.html\', {class: \'cm-badge--new\'})'
+        },
+      ],
+    })
+
+    <!-- Contents -->
+    <section class="content">
+      @@include('./common/list/_cm-util.html', {
+        type: 'title',
+        title_text: '목록 타이틀',
+        util: false,
+      })
+
+      <div class="cm-line"></div>
+
+      @@include('./common/list/_cm-util.html', {
+        type: 'count',
+        count_text: '총',
+        count_num: '51,654',
+        count_unit: '건',
+        count_refresh: false,
+        util: false,
+      })
+
+      <div class="cm-line"></div>
+
+      @@include('./common/list/_cm-util.html', {
+        type: 'count',
+        count_text: '상품',
+        count_num: ' 9,999',
+        count_unit: '건',
+        count_refresh: true,
+        count_time: '03.31 13:50 갱신',
+        util: false,
+      })
+
+      <div class="cm-line"></div>
+
+      @@include('./common/list/_cm-util.html', {
+        type: 'tab',
+        tab_button: [
+          {
+            tab_class: 'active',
+            tab_text: '랭킹',
+          },
+          {
+            tab_class: '',
+            tab_text: '단독',
+          },
+          {
+            tab_class: '',
+            tab_text: '타임세일',
+          },
+        ],
+        util: false,
+      })
+
+      <div class="cm-line"></div>
+
+      <!-- 공통 필터(cm-filter) 배포 후 삭제 예정 -->
+      @@include('./common/list/_cm-util.html', {
+        type: 'campaign',
+        campaign_text: '캠페인명',
+        util: false,
+      })
+
+      <div class="cm-line"></div>
+      
+      @@include('./common/list/_cm-util.html', {
+        type: '',
+        util: true,
+        util_option: [
+          {
+            option_type: 'icon',
+            option_class: 'cm-util-option__button--icon',
+            option_attribute: '',
+            option_button: '목록 뷰 변경',
+            option_icon: 'ic-22-line-gridview',
+          },
+          {
+            option_type: 'icon',
+            option_class: 'cm-util-option__button--icon',
+            option_attribute: '',
+            option_button: '목록 뷰 변경',
+            option_icon: 'ic-22-line-listview',
+          },
+          {
+            option_type: 'icon',
+            option_class: 'cm-util-option__button--icon',
+            option_attribute: '',
+            option_button: '목록 뷰 변경',
+            option_icon: 'ic-22-line-fullview',
+          },
+          {
+            option_type: 'icon',
+            option_class: 'cm-util-option__button--icon',
+            option_attribute: '',
+            option_button: '목록 뷰 변경',
+            option_icon: 'ic-22-line-3gridview',
+          },
+        ],
+      })
+
+      <div class="cm-line"></div>
+      
+      @@include('./common/list/_cm-util.html', {
+        type: '',
+        util: true,
+        util_option: [
+          {
+            option_type: 'button',
+            option_class: '',
+            option_attribute: '',
+            option_button: '버튼',
+            option_icon: '',
+          },
+          {
+            option_type: 'check',
+            option_class: 'cm-util-option__button--check',
+            option_attribute: 'data-toggle="active"',
+            option_button: '체크박스',
+            option_icon: 'ic-18-line-check',
+          },
+          {
+            option_type: 'layer',
+            option_class: 'cm-util-option__button--layer',
+            option_attribute: 'data-toggle="active"',
+            option_button: '레이어',
+            option_icon: 'ic-18-line-arrow-bottom',
+          },
+          {
+            option_type: 'direct',
+            option_class: 'cm-util-option__button--direct',
+            option_attribute: '',
+            option_button: '바로가기',
+            option_icon: 'ic-22-stencil-arrow-right',
+          },
+        ],
+      })
+
+      <div class="cm-line"></div>
+
+      @@include('./common/list/_cm-pagination.html')
+    </section>
+
+    <!-- Footer -->
+    @@include('./common/layout/footer.html')
+
+    <!-- Floating -->
+    @@include('./common/layout/navigation-bar.html', {
+      page: 'normal'
+    })
+    @@include('./common/layout/floating-menu.html')
+
+    <!-- Popup -->
+    @@include('./common/popup/_share.html')
+    @@include('./common/popup/_dim.html')
+
+    <!-- Layer -->
+    @@include('./common/layer/_app.html', {
+      class: '',
+    })
+    @@include('./common/layer/_coupon.html', {
+      class: '',
+    })
+    @@include('./common/layer/_notice.html', {
+      class: '',
+    })
+  </main>
+  <!-- //Container -->
+
+  <script src="../../js/helper-guide.js"></script>
+</body>

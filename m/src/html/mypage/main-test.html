@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./common/layout/head.html', {
+    title: '마이페이지',
+    css: 'mypage',
+  })
+  <style>
+    .icon-test-14 {
+      width: 14px;
+      height: 14px;
+    }
+    .icon-test-18 {
+      width: 18px;
+      height: 18px;
+    }
+    .icon-test-30 {
+      width: 30px;
+      height: 30px;
+    }
+    .main-shopping__button > svg {
+      width: 40px;
+      height: 40px;
+    }
+  </style>
+</head>
+<body class="mypage">
+  <!-- Container -->
+  <main class="container">
+    <!-- Header -->
+    <header class="header @@class">
+      <h1 class="blind">마이페이지</h1>
+      <div class="header__area">
+        <h2 class="header__title blind">마이페이지</h2>
+
+        <div class="header__right">
+          <button type="button" class="header__button">
+            @@include('./common/svg/ic-22-stencil-setting.svg', {
+              class: 'icon-test-30',
+              title: '',
+            })
+          </button>
+          <button type="button" class="header__button">
+            @@include('./common/svg/ic-22-stencil-bag.svg', {
+              class: 'icon-test-30',
+              title: '',
+            })
+            <span class="cm-badge cm-badge--new">5</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Contents -->
+    <section class="content">
+      <h2 class="blind">마이페이지 프로필</h2>
+
+    <!-- Profile -->
+    <div class="main-profile">
+
+      <a href="#" class="main-profile__name">
+        시냥이
+        @@include('./common/svg/ic-22-line-arrow-right.svg', {
+          title: '회원 정보 수정 페이지로 이동',
+          class: 'icon-test-14',
+        })
+      </a>
+      <a href="#" class="main-profile__benefit">
+        <span class="main-profile__benefit__level">LV.7</span>
+        플래티넘
+        @@include('./common/svg/ic-22-line-question.svg', {
+          title: '나의등급 혜택 보기 페이지 바로가기',
+          class: 'icon-test-18',
+        })
+      </a>
+    
+    <a href="#" class="main-profile-thumbnail main-profile-thumbnail--empty">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" class="">
+      <title>회원정보 수정 페이지로 이동</title>
+      <g>
+        <path d="M11 13.5c4.142 0 7 1.437 7 3.277 0 1.577-2.1 1.716-5.308 1.723h-1.11L11 18.498H9.308C6.1 18.494 4 18.355 4 16.778c0-1.84 2.858-3.277 7-3.277zm0-10c2.21 0 4 1.791 4 4 0 2.21-1.79 4-4 4s-4-1.79-4-4c0-2.209 1.79-4 4-4z" transform="translate(-20 -1434) translate(0 1415) translate(15 14) translate(5 5)" class="svg-color">
+      </path></g>
+    </svg>
+    
+    </a>
+      
+    </div>
+
+      <!-- Account Snap -->
+      <div class="main-account-snap">
+        <button type="button" class="main-account-snap__button">
+          <strong class="main-account-snap__text">
+            @@include('./common/svg/beta.svg', {
+              class: '',
+              title: 'Beta',
+            })
+            나의 스타일을 스냅에 등록해 보세요.</strong>
+          <span class="main-account-snap__tag">#ootd #지금_무신사_인플로언서_도전</span>
+          <span class="main-account-snap__enroll">
+            @@include('./common/svg/ic-22-line-plus.svg', {
+              class: 'icon-test-18',
+              title: '스냅 등록하러 가기',
+            })
+          </span>
+        </button>
+
+        <a href="#" class="main-account-snap__link">
+          스냅으로 가기
+          @@include('./common/svg/ic-22-line-arrow-right.svg', {
+            class: 'icon-test-14',
+            title: '',
+          })
+        </a>
+      </div>
+
+      <div class="cm-line"></div>
+
+      <!-- Shopping -->
+      <section>
+        <h3 class="blind">내 쇼핑 활동</h3>
+
+        @@include('./mypage/main/_main-shopping.html', {
+          button: [
+            {'svg': 'ic-22-stencil-smile', 'text': '적립금', 'count': '9,999,999', },
+            {'svg': 'ic-22-stencil-clock', 'text': '포인트', 'count': '999,999', },
+            {'svg': 'ic-22-stencil-coupon', 'text': '쿠폰', 'count': '20', },
+            {'svg': 'ic-22-stencil-gif', 'text': '후기작성', 'count': '56', },
+          ],
+        })
+      </section>
+
+      <div class="cm-line"></div>
+
+      <!-- Status -->
+      <section>
+        @@include('./mypage/main/_main-title.html', {
+          text: '주문/배송조회',
+          link: true,
+          link_text: '전체',
+        })
+
+        @@include('./mypage/main/_main-status.html', {
+          button: [
+            {'count': '99', 'text': '입금/결제', class: ''},
+            {'count': '99', 'text': '배송완료', class: ''},
+            {'count': '0', 'text': '배송중', class: 'main-status__count--empty'},
+            {'count': '99', 'text': '구매확정', class: ''},
+          ],
+        })
+      </section>
+
+      <section>
+        @@include('./mypage/main/_main-title.html', {
+          text: '취소/불',
+          link: true,
+          link_text: '전체',
+        })
+
+        @@include('./mypage/main/_main-status.html', {
+          button: [
+            {'count': '99', 'text': '교환', class: ''},
+            {'count': '0', 'text': '교환완료', class: 'main-status__count--empty'},
+            {'count': '99', 'text': '환불', class: ''},
+            {'count': '99', 'text': '환불완료', class: ''},
+          ],
+        })
+      </section>
+
+      <a href="#" class="main-status__link">
+        @@include('./common/svg/ic-22-stencil-question.svg', {
+          class: 'icon-test-18',
+          title: '',
+        })
+        교환/환불 방법이 궁금하신가요?
+      </a>
+
+      <div class="cm-line"></div>
+
+      <!-- Menu -->
+      @@include('./mypage/main/_main-menu.html', {
+        title: '활동정보',
+        menu: [ '마이 사이즈', '래플 응모 내역', ],
+      })
+
+      @@include('./mypage/main/_main-menu.html', {
+        title: '문의',
+        menu: [ '상품문의', '1:1문의', ],
+      })
+
+      @@include('./mypage/main/_main-menu.html', {
+        title: '매거진 & 커뮤니티',
+        menu: [ '커뮤니티', '친구', '쪽지', ],
+      })
+
+      @@include('./mypage/main/_main-menu.html', {
+        title: '고객센터',
+        menu: [ '공지사항', 'FAQ', '회원혜택', ],
+      })
+    </section>
+
+    <!-- Layout -->
+    <div class="navigation-bar">
+      <div class="navigation-bar__area">
+        <a href="#" class="navigation-bar__button">
+          @@include('./common/svg/ic-22-stencil-category.svg', {
+            class: 'icon-test-30',
+            title: '카테고리 페이지로 이동',
+          })
+        </a>
+        <a href="#" class="navigation-bar__button">
+          @@include('./common/svg/ic-22-stencil-search.svg', {
+            class: 'icon-test-30',
+            title: '검색 페이지로 이동',
+          })
+        </a>
+        <a href="#" class="navigation-bar__button">
+          @@include('./common/svg/ic-22-stencil-camera.svg', {
+            class: 'icon-test-30',
+            title: '메인 페이지로 이동',
+          })
+        </a>
+        <a href="#" class="navigation-bar__button">
+          @@include('./common/svg/ic-22-stencil-heart.svg', {
+            class: 'icon-test-30',
+            title: '좋아요 페이지로 이동',
+          })
+        </a>
+        <a href="#" class="navigation-bar__button">
+          @@include('./common/svg/ic-22-stencil-user.svg', {
+            class: 'icon-test-30',
+            title: '마이페이지로 이동',
+          })
+        </a>
+      </div>
+    </div>
+    
+    <div class="floating-menu">
+      <div class="floating-menu__left">
+        <button type="button" class="floating-menu__button" data-popup-open="share" data-dim="true">
+          @@include('./common/svg/ic-22-stencil-share.svg', {
+            class: 'icon-test-30',
+            title: '페이지 공유하기',
+          })
+        </button>
+      </div>
+    
+      <div class="floating-menu__right">
+        <a href="#" class="floating-menu__button">
+          @@include('./common/svg/ic-22-stencil-top.svg', {
+            class: 'icon-test-30',
+            title: '페이지 상단으로 이동',
+          })
+        </a>
+        <a href="#" class="floating-menu__button">
+          @@include('./common/svg/ic-22-stencil-clock.svg', {
+            class: 'icon-test-30',
+            title: '최근 본 상품 페이지로 이동',
+          })
+        </a>
+        <a href="#" class="floating-menu__button--recent" style="background-image:url(//image.msscdn.net/images/goods_img/20191024/1201038/1201038_1_180.jpg)">
+          @@include('./common/svg/ic-22-stencil-clock.svg', {
+            class: 'icon-test-30',
+            title: '최근 본 상품 페이지로 이동',
+          })
+        </a>
+      </div>
+    </div>
+
+    <!-- Popup -->
+    @@include('./common/popup/_share.html')
+    @@include('./common/popup/_dim.html')
+  </main>
+  <!-- //Container -->
+
+  <script src="../../js/mypage.js"></script>
+</body>

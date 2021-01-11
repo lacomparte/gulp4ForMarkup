@@ -1,0 +1,32 @@
+<!--
+  include
+  ./ranking/brand-ranking.html
+
+  변수
+  class: [string]
+  - ranking-list__num--up: 순위 상승
+  - ranking-list__num--down: 순위 하락
+
+  text: [string]
+    - a 의 title 값, image 의 alt 값
+    - 브랜드랭킹은 브랜드명
+    - 검색랭킹은 검색어
+
+  num: [number] 등락폭
+
+  image: [string] 브랜드랭킹일때 브랜드 이미지 명
+    - [참고] https://m.store.musinsa.com/app/usr/brand_rank
+-->
+<li class="ranking-list">
+  <a href="#none" class="ranking-list__link" title="@@text로 이동">
+    @@if(image) {
+      <div class="ranking-list__image">
+        <img src="http://image.musinsa.com/mfile_s01/_brand/free_medium/@@image.png?202010271524" alt="@@text">
+      </div>
+    }
+    <span class="ranking-list__text">@@text</span>
+    <span class="ranking-list__num @@class">
+      <span>@@num</span>
+    </span>
+  </a>
+</li>

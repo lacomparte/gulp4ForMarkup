@@ -1,0 +1,17 @@
+<!--
+  include
+  ranking/brand-ranking.html
+
+  변수
+  text: [string]
+  link: [string] 각 페이지에 맞는 링크작성
+  class: [string] 기본으로 active 있음(active 삭제시 display: none 제어)
+-->
+<!-- [D] x 버튼 클릭시 remove class guide-link--active -->
+<div class="guide-link @@class">
+  <p class="guide-link__text">@@text</p>
+  <div class="guide-link__buttons">
+    <a href="@@link" class="guide-link__link">자세히 보기</a>
+    <button type="button" class="guide-link__button" aria-label="배너 닫기"></button>
+  </div>
+</div>

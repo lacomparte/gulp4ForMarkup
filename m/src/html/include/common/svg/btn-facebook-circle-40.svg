@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40" class="@@class">
+	<title>@@title</title>
+	<defs>
+		<circle id="btnFacebookCircle40" cx="20" cy="20" r="20"/>
+	</defs>
+	<g fill="none" fill-rule="evenodd">
+		<mask id="btnFacebookCircle40--2" fill="#fff">
+			<use xlink:href="#btnFacebookCircle40"/>
+		</mask>
+		<use fill="#3767B8" fill-rule="nonzero" xlink:href="#btnFacebookCircle40"/>
+		<path fill="#FFF" d="M21.49 30v-9.123h2.95l.44-3.556h-3.39v-2.27c0-1.029.276-1.73 1.697-1.73L25 13.32v-3.18c-.314-.043-1.39-.14-2.642-.14-2.613 0-4.402 1.657-4.402 4.7v2.621H15v3.556h2.956V30h3.535z" mask="url(#btnFacebookCircle40--2)"/>
+	</g>
+</svg>

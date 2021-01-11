@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/22/Line/Camera/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M15.5,3 L15.5,5 L19,5 L19,19 L3,19 L3,5 L6.5,5 L6.5,3 L15.5,3 Z M18,6 L4,6 L4,18 L18,18 L18,6 Z M11,8.5 C12.9329966,8.5 14.5,10.0670034 14.5,12 C14.5,13.9329966 12.9329966,15.5 11,15.5 C9.06700338,15.5 7.5,13.9329966 7.5,12 C7.5,10.0670034 9.06700338,8.5 11,8.5 Z M11,9.5 C9.61928813,9.5 8.5,10.6192881 8.5,12 C8.5,13.3807119 9.61928813,14.5 11,14.5 C12.3807119,14.5 13.5,13.3807119 13.5,12 C13.5,10.6192881 12.3807119,9.5 11,9.5 Z M17,7 L17,9 L16,9 L16,7 L17,7 Z M14.5,4 L7.5,4 L7.5,5 L14.5,5 L14.5,4 Z" id="path-1"></path>
+    </defs>
+    <g id="Ic/22/Line/Camera/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

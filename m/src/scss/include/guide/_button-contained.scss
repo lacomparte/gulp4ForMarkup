@@ -1,0 +1,156 @@
+@charset 'utf-8';
+
+.guide__button--contained {
+  &__primary60 {
+    .button {
+      &-type01 {
+        @include button(
+          $height: 60px,
+          $fontWeight: normal,
+          $color: $white,
+        );
+      }
+      &-type02 {
+        @include button(
+          $height: 60px,
+          $fontWeight: normal,
+          $backgroundColor: $fblue2,
+          $color: $white,
+        );
+      }
+    }
+  }
+  &__primary50 {
+    .button {
+      &-type01 {
+        @include button(
+          $height: 50px,
+          $fontWeight: normal,
+          $color: $white,
+        );
+      }
+      &-type02 {
+        @include button(
+          $height: 50px,
+          $fontWeight: normal,
+          $backgroundColor: $fblue2,
+          $color: $white,
+        );
+      }
+    }
+  }
+  &__primary26 {
+    .button {
+      &-type01 {
+        @include button(
+          $display: inline-block,
+          $width: auto,
+          $height: 26px,
+          $fontWeight: normal,
+        );
+        > span {
+          padding: 0 9px;
+        }
+      }
+    }
+  }
+  &__secondary60 {
+    .button {
+      &-type01 {
+        @include button(
+          $height: 60px,
+          $fontWeight: normal,
+          $backgroundColor: $gray6,
+          $color: $white,
+          $activeBackground: #838383,
+        );
+      }
+    }
+  }
+  &__secondary50 {
+    .button {
+      &-type01 {
+        @include button(
+          $height: 50px,
+          $fontWeight: normal,
+          $backgroundColor: $gray6,
+          $color: $white,
+          $activeBackground: #838383,
+        );
+      }
+    }
+  }
+  &__secondary26 {
+    .button {
+      &-type01 {
+        @include button(
+          $display: inline-block,
+          $width: auto,
+          $height: 26px,
+          $fontWeight: normal,
+          $backgroundColor: $gray5,
+          $activeBackground: #5a5a5a,
+        );
+        > span {
+          padding: 0 9px;
+        }
+      }
+    }
+  }
+  &__tertiary60 {
+    .button {
+      &-type01 {
+        @include button(
+          $height: 60px,
+          $fontWeight: normal,
+          $backgroundColor: $gray1,
+          $color: $black,
+          $activeBackground: #5a5a5a,
+          $disabledBackground: $gray1,
+        );
+        > svg * {
+          fill: $black;
+        }
+      }
+    }
+  }
+  &__tertiary50 {
+    .button {
+      &-type01 {
+        @include button(
+          $height: 50px,
+          $fontWeight: normal,
+          $backgroundColor: $gray1,
+          $color: $black,
+          $activeBackground: #5a5a5a,
+          $disabledBackground: $gray1,
+        );
+        > svg * {
+          fill: $black;
+        }
+      }
+    }
+  }
+  &__tertiary26 {
+    .button {
+      &-type01 {
+        @include button(
+          $display: inline-block,
+          $width: auto,
+          $height: 26px,
+          $fontWeight: normal,
+          $backgroundColor: $gray1,
+          $color: $black,
+          $activeBackground: #5a5a5a,
+          $disabledBackground: $gray1,
+        );
+        > span {
+          padding: 0 9px;
+        }
+        > svg * {
+          fill: $black;
+        }
+      }
+    }
+  }
+}

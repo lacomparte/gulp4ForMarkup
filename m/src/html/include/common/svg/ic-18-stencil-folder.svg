@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/18/Stencil/Folder/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M3,9.5 L4,9.499 L4,13 L6,13 L6,14 L3,14 L3,9.5 Z M3,4 L9.5,4 L9.5,6 L15,6 L15,14 L7,14 L7,13 L14,13 L14,7 L8.5,7 L8.5,5 L4,5 L4,8.499 L3,8.5 L3,4 Z" id="path-1"></path>
+    </defs>
+    <g id="Ic/18/Stencil/Folder/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Combined-Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

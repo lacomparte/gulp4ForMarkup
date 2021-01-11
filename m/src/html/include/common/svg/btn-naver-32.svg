@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <title>@@title</title>
+  <g fill="none" fill-rule="evenodd">
+    <path d="M0 0H32V32H0z"></path>
+    <g class="svg-color">
+      <path d="M4.21 19.072L6.702 22.019 9.121 19.072zM0 14.717L3.165 17.955 10.528 17.955 13.6 14.718zM0 13.6h13.6V0H0v13.6zm7.582-9.373h1.972v5.146H7.922l-1.836-2.38V9.35l-2.04.023V4.227h1.927l1.609 2.335V4.227z" transform="translate(9 5)"></path>
+    </g>
+  </g>
+</svg>

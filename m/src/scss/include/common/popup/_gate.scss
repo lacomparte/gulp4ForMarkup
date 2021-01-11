@@ -1,0 +1,144 @@
+.popup-gate {
+  position: fixed;
+  left: 0;
+  @include safearea(bottom, 0px);
+  z-index: 9999;
+  width: 100%;
+  padding: 48px 0 42px 0;
+  background-color: $white;
+  border-radius: 28px 28px 0 0;
+  transform: translateY(calc(100% + 40px));
+  transition: transform .4s cubic-bezier(.38,.09,.12,1);
+  @include resetFont; // 스토어 코드의 reset 상쇄 필요 시에만 적용
+
+  &:before{
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 15px;
+    width: 60px;
+    height: 4px;
+    background-color: #d8d8d8;
+    margin-left: -30px;
+    border-radius: 2px;
+    text-indent: -9999px;
+    content: "몰 게이트 닫기";
+  }
+  &.active {
+    transform: translateY(0);
+  }
+  
+  &__mall {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-x: auto;
+    padding-left: 24px;
+    @include blindScroll;
+    &__button {
+      position: relative;
+      padding: 10px 16px 10px 0;
+      &:last-child {
+        padding-right: 24px;
+      }
+      > a {
+        display: block;
+        > svg {
+          width: 80px;
+          height: 80px;
+          vertical-align: top;
+        }
+      }
+    }
+    &__new {
+      display: block;
+      position: absolute;
+      right: 6px;
+      top: 0;
+      padding: 4px 6px 2px 6px;
+      border-radius: 10px 10px 10px 0;
+      background-color: $fred1;
+      color: $white;
+      font-family: $font-musinsa;
+      font-size: 10px;
+      line-height: 14px;
+      @at-root {
+        .popup-gate__mall__button:last-child & {
+          right: 14px;
+        }
+      }
+    }
+    &__text {
+      display: block;
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: bold;
+      text-align: center;
+    }
+    &__app {
+      display: inline-block;
+      padding: 2px 3px 1px 3px;
+      margin-top: 1px;
+      border: 1px solid #e8e8e8;
+      border-radius: 4px;
+      color: $gray6;
+      font-family: $font-musinsa;
+      font-size: 8px;
+      line-height: 9px;
+      vertical-align: top;
+    }
+  }
+  
+  &__category {
+    &__title {
+      display: block;
+      margin: 20px 20px 10px 20px;
+      font-size: 16px;
+    }
+    &__area {
+      overflow: hidden;
+      overflow-x: auto;
+      padding:0 18px;
+      white-space: nowrap;
+      font-size: 0;
+      @include blindScroll;
+    }
+    &__button {
+      display: inline-block;
+      position: relative;
+      width: 65px;
+      margin: 0 6px;
+      vertical-align: top;
+      &:before{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        height: 65px;
+        border-radius: 100%;
+        background-color: $black;
+        opacity: .05;
+        content: "";
+      }
+    }
+    &__image {
+      display: block;
+      width: 100%;
+      height: 65px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+      border-radius: 100%;
+    }
+    &__text {
+      @include ellipsis(2);
+      max-height: 33px;
+      margin-top: 10px;
+      font-size: 11px;
+      text-align: center;
+    }
+  }
+}

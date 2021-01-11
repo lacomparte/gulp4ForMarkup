@@ -1,0 +1,57 @@
+<!--
+  include
+	mypage/mypage-main.html
+	snap/snap-user-profile.html
+
+	변수
+	class: [string]
+  - thumbnail-upload: main.html 에서 사용
+
+	thumbnail_empty: [boolean] 프로필 이미지 없을때
+	thumbnail_upload: [boolean] 프로필 이미지 있을때
+	profile_me: [boolean] 내 프로필 유무
+-->
+
+<div class="main-profile">
+  @@if(profile_me) {
+    <a href="#" class="main-profile__name">
+      시냥이
+      @@include('./common/svg/ic-14-line-arrow-right.svg', {
+        title: '회원정보 수정 페이지로 이동',
+        class: '',
+      })
+    </a>
+    <a href="#" class="main-profile__benefit">
+      <span class="main-profile__benefit__level">LV.7</span>
+      플래티넘
+      @@include('./common/svg/ic-18-line-question.svg', {
+        title: '나의등급 혜택 보기 페이지 바로가기',
+        class: '',
+      })
+    </a>
+  }
+
+  @@if(!profile_me) {
+    <p class="main-profile__name">
+      시냥이
+    </p>
+    <p class="main-profile__benefit">
+      <span class="main-profile__benefit__level">LV.7</span>
+      플래티넘
+    </p>
+  }
+
+  @@if(thumbnail_upload){
+    @@include('./mypage/main/_main-profile-thumbnail.html', {
+      style: 'style="background-image:url(//image.msscdn.net/mfile_s01/_simbols/snyvvv.jpg?202003271212)"',
+      class: '',
+    })
+  }
+
+  @@if(thumbnail_empty){
+    @@include('./mypage/main/_main-profile-thumbnail.html', {
+      style: '',
+      class: 'main-profile-thumbnail--empty',
+    })
+  }
+</div>

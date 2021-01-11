@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" class="@@class">
+  <title>@@title</title>
+  <g fill="none" fill-rule="evenodd">
+    <path d="M0 0H30V30H0z" transform="translate(.2)"/>
+    <g>
+      <path class="svg-color" d="M19 21c0-4.97-4.03-9-9-9s-9 4.03-9 9v1H0v-1c0-5.523 4.477-10 10-10s10 4.477 10 10v1H2v-1h17z" transform="translate(.2) translate(5 4)"/>
+      <path class="svg-color svg-color--point" d="M10 0c2.593 0 4.725 1.973 4.975 4.5H13.97C13.723 2.527 12.04 1 10 1 7.79 1 6 2.79 6 5s1.79 4 4 4c2.04 0 3.723-1.526 3.969-3.5h1.006C14.725 8.028 12.592 10 10 10c-2.761 0-5-2.239-5-5s2.239-5 5-5z" transform="translate(.2) translate(5 4)"/>
+    </g>
+  </g>
+</svg>

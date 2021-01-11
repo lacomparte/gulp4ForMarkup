@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/40/Line/Onepiece/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M14.5,5 L14.499,8.5 L25.499,8.5 L25.5,5 L26.5,5 L26.4998823,18.460115 C29.4253023,20.0345657 31,22.5255798 31,25.5 L31,25.5 L31,34 L9,34 L9,25.5 C9,22.5283417 10.6053831,20.1250476 13.7521655,18.3291443 L13.499,18.477 L13.5,5 L14.5,5 Z M25.877,19.263 L14.1336136,19.2635426 C11.3573915,20.8822126 10,22.9485402 10,25.5 L10,25.5 L10,33 L30,33 L30,25.5 C30,22.8228055 28.5485448,20.6088299 25.7748309,19.209829 L25.877,19.263 Z M25.499,9.5 L14.499,9.5 L14.5,18.2634 L25.5,18.2634 L25.499,9.5 Z" id="path-1"></path>
+    </defs>
+    <g id="Ic/40/Line/Onepiece/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

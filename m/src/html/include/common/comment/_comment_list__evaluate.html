@@ -1,0 +1,23 @@
+<!--
+  include
+  common/comment/_comment-list__item.html
+
+  변수
+  button: [arr]
+    title: [string] svg 타이틀
+    class_color: [string]
+    - color-fblue2
+    - color-fred2
+-->
+<div class="comment-list__evaluate">
+  <!-- [D] 클릭시 active add class -->
+  @@for(var i = 0; i < button.length; i++) {
+    <button type="button" class="comment-list__evaluate-button">
+      @@include('./common/svg/ic-18-line-thumb.svg', {
+        title: '`+ button[i].title +`',
+        class: 'comment-list__evaluate-button__icon--`+ button[i].class +`',
+      })
+      <span class="comment-list__evaluate-button--`+ button[i].class +`">0</span>
+    </button>
+  }
+</div>

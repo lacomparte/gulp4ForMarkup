@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/40/Line/Underwear/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M27.5,5 L27.5,24.2040415 L18.9410816,32.9444057 C16.3765993,35.5632541 12.1746796,35.6073265 9.55583125,33.0428442 L9.53342291,33.0207969 C6.97344501,30.4900988 6.94970903,26.3632905 9.48040713,23.8033126 L9.55106137,23.7329558 C9.56154593,23.7227046 9.57416746,23.7104438 9.59309974,23.6920526 L14.398536,19.06163 L14.398536,5 L27.5,5 Z M26.499803,10.5 L15.397803,10.5 L15.398536,19.4867496 L10.286972,24.4121508 C10.2388891,24.4588594 10.2388891,24.4588594 10.1915692,24.5063407 C8.0491428,26.6735547 8.06923708,30.1672084 10.236451,32.3096348 L10.255483,32.3283602 C12.4797327,34.5064355 16.0485222,34.4690037 18.2265976,32.244754 L26.5,23.7959585 L26.499803,10.5 Z M26.5,6 L15.398536,6 L15.397803,9.5 L26.499803,9.5 L26.5,6 Z" id="path-1"></path>
+    </defs>
+    <g id="Ic/40/Line/Underwear/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

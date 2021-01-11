@@ -1,0 +1,18 @@
+<!--
+  include
+  common/filter/cm-filter.html
+
+  변수
+  class: [string]
+    - cm-filter__chip--xxx: color, pattern 클래스
+    - cm-filter__chip--campaign01 ~ 05: 캠페인별 색상
+    - cm-filter__chip--campaign: 블랙프라이데이
+  attribute: [string] 추가적인 속성들 ex) data, aria
+  text: [string] 텍스트 값
+-->
+<!-- [D] cm-filter__tag 의 자식일때 클릭하면 cm-filter__chip--tag--active 클래스 추가 -->
+<button type="button" class="cm-filter__chip @@class" @@attribute>
+  <span class="cm-filter__chip__text">
+    @@text
+  </span>
+</button>

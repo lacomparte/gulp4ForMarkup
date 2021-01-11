@@ -1,0 +1,51 @@
+@charset 'utf-8';
+
+.snap-hash-header {
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  padding: 20px 15px;
+  box-sizing: border-box;
+  background-color: $white;
+
+  &__icon {
+    display: flex;
+    flex: 0 0 65px;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 0px 1px $gray2;
+    background-color: $white;
+  }
+
+  &__content {
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100%;
+    margin-left: 10px;
+  }
+
+  &__title {
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &__link {
+    margin-top: 5px;
+    padding: 4px 8px 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: $black;
+    background-color: $gray1;
+  }
+}

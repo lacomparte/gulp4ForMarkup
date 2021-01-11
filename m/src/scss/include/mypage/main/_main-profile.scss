@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.main-profile {
+  position: relative;
+  min-height: 80px;
+  padding: 20px 110px 0 15px;
+
+  // name
+  &__name {
+    display: block;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: bold;
+    > svg {
+      margin: 11px 0 11px -3px;
+      vertical-align: top;
+    }
+  }
+
+  // benefit
+  &__benefit {
+    display: inline-block;
+    margin-left: 1px;
+    font-size: 13px;
+    line-height: 18px;
+
+    &__level {
+      color: $gray7;
+    }
+
+    > svg {
+      margin-left: -3px;
+      vertical-align:top;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<!--
+  include
+  common/filter/cm-filter.html
+
+  변수
+  class: [string]
+  text: [string] 텍스트 값
+  svg: [string] svg 파일명
+  svg_title: [string] svg 대체 텍스트
+  svg_class: [string] svg class
+  attribute: [sring] 추가적인 속성들 ex) data, aria 등
+-->
+<!-- [D]
+  클릭시 원래 클래스에 추가로 cm-filter__item--active 클래스 추가
+  선택한 값이 있을 경우 원래 클래스에 추가로 cm-filter__item--selected 클래스 추가
+  cm-filter__item--campaign ~ 05 는 클릭시 모두 cm-filter__item--selected 추가
+  예) div class="module__test" 일때
+  클릭하면 div class="module__test module__test--active"
+  선택되면 div class="module__text module__text--selected"
+-->
+<button type="button" class="cm-filter__item @@class" @@attribute>
+  <span class="cm-filter__item__text">
+    @@text
+  </span>
+  @@if(svg) {
+    <span class="cm-filter__item__svg">
+      @@include('./common/svg/@@svg.svg', {
+        title: '@@svg_title',
+        class: '@@svg_class',
+      })
+    </span>
+  }
+</button>

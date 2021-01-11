@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <link rel="stylesheet" href="../../css/plan.css">
+</head>
+<body class="plan-experience">
+  <!-- Container -->
+  <main class="container">
+    <!-- Contents -->
+    <!-- 데이터 바인딩 확인용 -->
+    <section class="content">
+      <section class="plan-experience__block plan-experience__block-visual" style="background-color:#ddd;">
+        <img src="https://image.msscdn.net/musinsaUI/plan/experience-common/img1.jpg" alt="">
+      </section>
+      <section class="plan-experience__block plan-experience__block-1">
+        <p class="block-subject">상품설명</p>
+
+        @@include('./plan/experience/_experience-product-list.html', {
+        list: [
+        {imgUrl : '상품 대표 이미지 경로' , 'productLink' : '상품 URl'},
+        ],
+        })
+        <div class="block-option">
+          <div class="block-option__tit">상품명</div>
+          <div class="block-option__info">상품 옵션 설명</div>
+          <a href="#">상품 링크 버튼명</a>
+        </div>
+      </section>
+      <section class="plan-experience__block">
+        <header>
+          <h2>체험단 필수 미션</h2>
+        </header>
+        @@include('./plan/experience/_experience-circle-list.html', {
+        list: [
+        {circle : '타이틀 1', text : '내용 1', keyColor : '#000000'},
+        {circle : '타이틀 2', text : '내용 2', keyColor : '#000000'},
+        ],
+        })
+      </section>
+      <section class="plan-experience__block">
+        <header>
+          <h2>대표 타이틀</h2>
+          <p>대표 내용<br><span>대표 부가설명</span></p>
+        </header>
+        <ul class="list-text">
+          @@loop('./plan/experience/_experience-text-list.html',[
+          {
+          'subject' : '타이틀 1',
+          'txt1' : '내용 1',
+          'txt2' : '부가설명 1',
+          'link' : '링크 URL',
+          'linkName' : '링크 레이블 ',
+          },
+          {
+          'subject' : '타이틀 2',
+          'txt1' : '내용 2',
+          'txt2' : '부가설명 2',
+          'link' : '',
+          'linkName' : '',
+          }
+          ])
+        </ul>
+
+        @@include('./plan/common/_plan-notice.html', {
+        button: '주의사항',
+        comment: [
+        {text : '내용 입력'},
+        {text : '내용 입력'}
+        ],
+        })
+      </section>
+    </section>
+    <!-- //데이터 바인딩 확인용 -->
+
+    <!-- 디자인 확인용 -->
+    <section class="content" style="display:none;">
+      <section class="plan-experience__block plan-experience__block-visual" style="background-color:#ddd;">
+        <img src="https://image.msscdn.net/musinsaUI/plan/experience-common/img1.jpg" alt="">
+      </section>
+      <section class="plan-experience__block plan-experience__block-1">
+        <p class="block-subject">트렌디한 실루엣과 다양한 기능적 요소들을 갖춰 데일리 아이템으로 활용도가 높은 흽코드 테이퍼드 히든 밴딩 슬랙스</p>
+        <ul class="block-products">
+          <li>
+            <a href="상품 URl1" style="background-image:url(https://image.msscdn.net/musinsaUI/plan/experience-common/products.jpg)"></a>
+          </li>
+          <li>
+            <a href="상품 URl1" style="background-image:url(https://image.msscdn.net/musinsaUI/plan/experience-common/products.jpg)"></a>
+          </li>
+          <li>
+            <a href="상품 URl1" style="background-image:url(https://image.msscdn.net/musinsaUI/plan/experience-common/products.jpg)"></a>
+          </li>
+        </ul>
+        <div class="block-option">
+          <div class="block-option__tit">휩코드 테이퍼드 히든 밴딩 슬랙스</div>
+          <div class="block-option__info">컬러 : 블랙<br>사이즈 : 26, 27, 28, 29, 30, 31, 32, 33, 34, 36, 38, 40, 42</div>
+          <a href="#" style="background-color:#000000;">휩코드 테이퍼드 히든 밴딩 슬랙스 자세히 보기 &gt;</a>
+        </div>
+      </section>
+      <section class="plan-experience__block">
+        <header>
+          <h2>체험단 필수 미션</h2>
+        </header>
+        <ul class="list-circle">
+          <li>
+            <span style="background-color:#000000;">200자</span>
+            200자이상 글을 써주세요
+          </li>
+        </ul>
+      </section>
+      <section class="plan-experience__block">
+        <header>
+          <h2>참여 방법</h2>
+          <p>무신사 스탠다드 슬랙스를 체험하고 싶은 ‘이유’와 ‘후기 작성 계획’을 댓글로 남겨주세요<br><span>원하시는 상품(컬러/사이즈)을 골라 함께 기재해주세요.</span></p>
+        </header>
+        <ul class="list-text">
+          <li>
+            <span>당첨 TIP1</span>
+            <div class="list-info">
+              <span class="list-info__txt1">회원님의 후기 스타일이 드러나는 본인의 SNS(블로그, 인스타, 유튜브 등) 계정의 URL 을 댓글에 함께 적어주세요.</span>
+              <span class="list-info__txt2">무신사 매거진 공지/이벤트 게시판 바표</span>
+              <a href="/app" class="list-info__link">링크 레이블1</a>
+            </div>
+          </li>
+        </ul>
+        <div class="plan-notice">
+          <button type="button" class="plan-notice__button" data-toggle="active">주의사항</button>
+          <ul class="plan-notice__text">
+            <li>휩코드 테이퍼드 히든 밴딩 슬랙스 휩코드 테이퍼드 히든 밴딩 슬랙스 휩코드 테이퍼드 히든 밴딩 슬랙스 휩코드 테이퍼드 히든 밴딩 슬랙스</li>
+            <li>휩코드 테이퍼드 히든 밴딩 슬랙스 휩코드 테이퍼드 히든 밴딩 슬랙스 휩코드 테이퍼드 히든 밴딩 슬랙스 휩코드 테이퍼드 히든 밴딩 슬랙스</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+    <!-- //디자인 확인용 -->
+  </main>
+  <!-- //Container -->
+
+  <script src="../../js/plan.js"></script>
+</body>
+</html>

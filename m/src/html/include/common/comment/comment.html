@@ -1,0 +1,111 @@
+<!--
+  include
+  mypage/user_snap/snap-comment.html
+
+  변수
+  button_orderby: [arr] 정렬 버튼
+-->
+<section class="comment">
+  <span class="comment-count">댓글 1개</span>
+  @@include('./common/comment/_comment-write.html', {
+    class: '',
+    notice: true,
+  })
+  <div class="comment-wrap">
+    <div class="comment-header">
+      <!-- [D] 클릭시 active add class 부탁드립니다. -->
+      @@for(var i = 0; i < button_orderby.length; i++) {
+        <button type="button" class="comment-header__button `+ button_orderby[i].class +`">
+          `+ button_orderby[i].text +`
+        </button>
+      }
+    </div>
+    <article class="comment-list">
+      <p class="comment-list__empty">
+        등록된 댓글이 없습니다.
+      </p>
+      <ul class="comment-list__items" aria-label="댓글 목록">
+        <li class="comment-list__item">
+          <!-- 댓글 내용 -->
+          @@include('./common/comment/_comment-list__content.html', {
+            depth1: true,
+            thumb: false,
+            reply: true,
+            new_reply: true,
+            class_write: '--auth',
+          })
+
+          <!-- 댓글 텍스트 박스 -->
+          @@include('./common/comment/_comment-write.html', {
+            class: '',
+            notice: true,
+          })
+
+          <!-- 2depth -->
+          <ul class="comment-list__items--depth">
+            <li class="comment-list__item">
+              <!-- 댓글 내용 -->
+              @@include('./common/comment/_comment-list__content.html', {
+                depth1: false,
+                thumb: false,
+                reply: false,
+                new_reply: false,
+                class_write: '',
+              })
+            </li>
+            <li class="comment-list__item">
+              <!-- 댓글 내용 -->
+              @@include('./common/comment/_comment-list__content.html', {
+                depth1: false,
+                thumb: true,
+                reply: false,
+                new_reply: false,
+                class_write: '',
+              })
+            </li>
+          </ul>
+        </li>
+        <li class="comment-list__item">
+          <!-- 댓글 내용 -->
+          @@include('./common/comment/_comment-list__content.html', {
+            depth1: true,
+            thumb: true,
+            reply: false,
+            new_reply: false,
+            class_write: '',
+          })
+
+          <!-- 댓글 텍스트 박스 -->
+          @@include('./common/comment/_comment-write.html', {
+            class: '',
+            notice: false,
+          })
+
+          <!-- 2depth -->
+          <ul class="comment-list__items--depth">
+            <li class="comment-list__item">
+              <!-- 댓글 내용 -->
+              @@include('./common/comment/_comment-list__content.html', {
+                depth1: false,
+                thumb: true,
+                reply: false,
+                new_reply: false,
+                class_write: '--auth',
+              })
+            </li>
+            <li class="comment-list__item">
+              <!-- 댓글 내용 -->
+              @@include('./common/comment/_comment-list__content.html', {
+                depth1: false,
+                thumb: true,
+                reply: false,
+                new_reply: false,
+                class_write: '',
+              })
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </div>
+</section>

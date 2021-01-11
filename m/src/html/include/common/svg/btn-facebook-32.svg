@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="@@class">
+  <title>@@title</title>
+  <g fill="none" fill-rule="evenodd">
+    <path d="M0 0H32V32H0z"></path>
+    <path class="svg-color" d="M13.215 26h4.435V15.999h2.958L21 12.553h-3.35l.004-1.726c0-.898.092-1.38 1.476-1.38h1.849V6H18.02c-3.554 0-4.805 1.672-4.805 4.483v2.07H11v3.446h2.215V26z"></path>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/22/Stencil/Vote/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M17.5454545,3 L19,7.72727273 L18.2656449,19 L3.73435509,19 L3.408,14 L4.41,14 L4.67133034,18 L17.3286697,18 L17.947,8.5 L4.052,8.5 L4.345,13 L3.343,13 L3,7.72727273 L4.45454545,3 L17.5454545,3 Z M14.7041818,9.85344915 L15.4112886,10.5605559 L10.0605559,15.9112886 L6.95710678,12.8078394 L7.66421356,12.1007327 L10.0605559,14.497075 L14.7041818,9.85344915 Z M16.8068799,4 L5.19312011,4 L4.115,7.5 L17.884,7.5 L16.8068799,4 Z M14,5.2 L14,6.2 L8,6.2 L8,5.2 L14,5.2 Z" id="path-1"></path>
+    </defs>
+    <g id="Ic/22/Stencil/Vote/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Combined-Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

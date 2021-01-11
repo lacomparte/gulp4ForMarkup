@@ -1,0 +1,38 @@
+<!--
+  include
+  guide/page-main.html
+
+  css
+  include/common/popup/_app.scss
+
+  [D] 활성화 시 popupOpen('app'); 실행
+-->
+
+<div class="popup popup-app @@class" data-popup-open="app">
+  <div class="popup-app__area">
+    <p class="popup-app__text">특가 상품 놓치기 싫다면?</p>
+    <strong class="popup-app__push">앱 푸시메시지로<br> 이벤트 소식 받아보세요!</strong>
+    @@include('./common/svg/icon-app-40.svg', {
+      class: 'popup-app__icon',
+      title: '',
+    })
+    @@include('./common/_button.html', {
+      'type': '',
+      'href': '#',
+      'class': 'popup-app__button',
+      'class_svg': '',
+      'attribute': '',
+      'text': '무신사 앱으로 보기',
+      'icon': '',
+      'icon_name': '',
+      'title_svg': '',
+    })
+  </div>
+  <button type="button" class="popup-app__close" data-popup-close="app">
+    모바일 웹으로 보기
+    @@include('./common/svg/ic-22-line-close.svg', {
+      class: '',
+      title: '',
+    })
+  </button>
+</div>

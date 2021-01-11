@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" class="@@class">
+  <title>@@title</title>
+  <g fill="none" fill-rule="evenodd">
+    <path d="M0 0H30V30H0z"/>
+    <g>
+      <path class="svg-color" d="M20 13v1H4v-1h16zm0-6.5v1H4v-1h16zM20 0v1H4V0h16z" transform="translate(5 8)"/>
+      <path class="svg-color svg-color--point" fill-rule="nonzero" d="M3 13v1H0v-1h3zm0-6.5v1H0v-1h3zM3 0v1H0V0h3z" transform="translate(5 8)"/>
+    </g>
+  </g>
+</svg>

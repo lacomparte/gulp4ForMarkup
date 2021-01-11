@@ -1,0 +1,7 @@
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="@@class">
+    <title>@@title</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M15,4 C21.0751322,4 26,8.92486775 26,15 C26,21.0751322 21.0751322,26 15,26 C9.0927785,26 4.27311582,21.3436072 4.01120686,15.5010164 L5.01233508,15.5010665 C5.27338575,20.7911215 9.64517475,25 15,25 C20.5228475,25 25,20.5228475 25,15 C25,9.4771525 20.5228475,5 15,5 C9.64483803,5 5.27283594,9.20940785 5.01228588,14.4999314 L4.01116205,14.499984 C4.27256563,8.65692439 9.09244133,4 15,4 Z"  fill="#000000" fill-rule="nonzero"></path>
+        <polygon id="Path-3" fill="#000000" fill-rule="nonzero" points="15.5 14.5 15.5 9 14.5 9 14.5 15.5 21 15.5 21 14.5"></polygon>
+    </g>
+</svg>

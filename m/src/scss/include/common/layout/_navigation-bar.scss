@@ -1,0 +1,56 @@
+.navigation-bar {
+  position: relative;
+  @include safearea(height, 60px);
+
+  &__area {
+    display: flex;
+    @include position(fixed, null, 0, 0, 0);
+    @include safearea(height, 60px);
+    background-color: $black;
+    z-index: 550;
+  }
+
+  &__button {
+    display: block;
+    width: 20%;
+    height: 60px;
+    text-align: center;
+    > svg {
+      margin: 15px 0;
+      vertical-align: top;
+    }
+    .svg-color {
+      fill: $white;
+    }
+
+    &--gate {
+      @extend .navigation-bar__button;
+      > svg {
+        position: relative;
+        z-index: 1;
+        margin: 20px 0;
+      }
+      &:before {
+        display: block;
+        width: 51px;
+        height: 51px;
+        border-radius: 12px;
+        background-image: linear-gradient(to bottom, #131313 18%, #272727);
+        @include position(absolute, 5px, null, null, 50%);
+        transform: translateX(-50%);
+        content: "";
+      }
+    }
+  }
+
+  @media(max-height:470px) { // input 활성화 시 숨김
+    & {
+      display: none;
+    }
+  }
+  @media(max-width:359px) { // 359px 이하 화면에서 노출
+    & {
+      display: block;
+    }
+  }
+}

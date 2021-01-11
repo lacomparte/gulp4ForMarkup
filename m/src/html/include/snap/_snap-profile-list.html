@@ -1,0 +1,35 @@
+<!--
+  include
+  snap/_snap-profile.html
+  snap/_thumbnail-unit.html
+
+  변수
+  profile: [boolean] 스냅 프로필 노출 유무
+  register: [boolean] 스냅 등록 버튼
+  other: [boolean] 내가 올린 스냅
+  total: [string] 전체보기/더보기 버튼
+-->
+
+<li class="snap-profile__list">
+  @@if(register) {
+    <button type="button" class="snap-profile__button @@class">
+      @@include('./common/svg/ic-22-stencil-plus.svg', {
+        title: '스냅 등록하기',
+      })
+    </button>
+  }
+  @@if(!register) {
+    <button type="button" class="snap-profile__button @@class">
+      @@if(thumb) {
+        @@include('./snap/_thumbnail-unit.html')
+      }
+      @@if(!thumb) {
+        @@include('./common/svg/ic-solid-user.svg', {
+          class: '',
+          title: '프로필 사진 없음',
+        })
+      }
+    </button>
+  }
+  <span class="snap-profile__name">@@text</span>
+</li>

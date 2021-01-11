@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/40/Stencil/Onepiece/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M14.5,5 L14.499,8.5 L25.499,8.5 L25.5,5 L26.5,5 L26.4998823,18.460115 C29.3309339,19.9837769 30.8970011,22.365823 30.9950917,25.2136765 L31,25.5 L31,34 L16,33.999 L16,32.999 L30,33 L30,25.5 C30,22.9120453 28.6436958,20.756943 26.04779,19.3524327 L25.877,19.263 L14.1336136,19.2635426 C11.4531233,20.8263964 10.0953003,22.8065672 10.0048446,25.2377849 L10,25.5 L10,33 L15,32.999 L15,33.999 L9,34 L9,25.5 C9,22.6242017 10.5034805,20.2806902 13.4524522,18.5048362 L13.499,18.477 L13.5,5 L14.5,5 Z M25.499,9.5 L14.499,9.5 L14.5,18.2634 L25.5,18.2634 L25.499,9.5 Z" id="path-1"></path>
+    </defs>
+    <g id="Ic/40/Stencil/Onepiece/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

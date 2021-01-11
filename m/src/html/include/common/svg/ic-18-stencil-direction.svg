@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Ic/18/Stencil/Direction/Black@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M10.4547576,12.5227576 L11.1617576,13.2297576 L9.01471863,15.3786797 L6.9047576,13.2687576 L7.6117576,12.5617576 L9.01471863,13.9644661 L10.4547576,12.5227576 Z M9.01471863,2.6507576 L11.1467576,4.7837576 L10.4397576,5.4907576 L9.4997576,4.5507576 L9.4997576,8.4997576 L13.4497576,8.4997576 L12.5617576,7.6117576 L13.2687576,6.9047576 L15.3786797,9.01471863 L13.2827576,11.1087576 L12.5757576,10.4017576 L13.4777576,9.4997576 L9.4997576,9.4997576 L9.5,12.5 L9,13 L8.5,12.5 L8.4997576,9.4997576 L5.5,9.5 L5,9 L5.5,8.5 L8.4997576,8.4997576 L8.4997576,4.5787576 L7.6267576,5.4517576 L6.9197576,4.7447576 L9.01471863,2.6507576 Z M4.7987576,6.8667576 L5.5057576,7.5737576 L4.06497116,9.01471863 L5.4907576,10.4407576 L4.7837576,11.1477576 L2.6507576,9.01471863 L4.7987576,6.8667576 Z" id="path-1"></path>
+    </defs>
+    <g id="Ic/18/Stencil/Direction/Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

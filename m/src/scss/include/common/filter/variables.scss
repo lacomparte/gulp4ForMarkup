@@ -1,0 +1,100 @@
+@charset 'utf-8';
+
+/*
+* 사용처
+* common/filter/_cm-filter__item
+* common/filter/_cm-filter__chip
+*/
+$campaigns: (
+  '': '#000',
+  '01': '#ed0060',
+  '02': '#00d47b',
+  '03': '#5800ff',
+  '04': '#ed00ec',
+  '05': '#0091fa'
+);
+
+/*
+* 사용처
+* common/filter/_cm-filter__lists__button
+*/
+$colors: (
+  'white': '#fff',
+  'black': '#000',
+  'gray': '#999',
+  'brown': '#663201',
+  'beige': '#e6c281',
+  'green': '#2bac15',
+  'blue': '#231ffc',
+  'purple': '#54066f',
+  'yellow': '#fbea2a',
+  'pink': '#f8119f',
+  'red': '#e70318',
+  'orange': '#f7441a',
+  'ivory': '#feffef',
+  'lightgrey': '#d9d9d7',
+  'darkgrey': '#53565b',
+  'camel': '#d79a2f',
+  'redbrown': '#be4d00',
+  'khakibeige': '#a17400',
+  'sand': '#c9b495',
+  'khaki': '#5b5a3a',
+  'lightgreen': '#8bc501',
+  'mint': '#40c1ab',
+  'neongreen': '#d4ed16',
+  'olivegreen': '#7a863c',
+  'darkgreen': '#1d4221',
+  'navy': '#001f62',
+  'skyblue': '#5bc1e7',
+  'neonblue': '#0280ee',
+  'lavender': '#a77bca',
+  'darkviolet': '#4e086c',
+  'reddishpurple': '#7d004c',
+  'neonyellow': '#f8ea49',
+  'mustard': '#f0b325',
+  'lightyellow': '#f9e17d',
+  'lightpink': '#ffa3b6',
+  'orangepink': '#e44a56',
+  'neonpink': '#df1895',
+  'palepink': '#dca69c',
+  'burgundy': '#76222f',
+  'raspberry': '#d74061',
+  'deepred': '#9c2336',
+  'coral': '#ed6859',
+  'neonorange': '#fd5c01',
+  'lightorange': '#fe7c00',
+  'peach': '#faab8d',
+  'rosegold': '#b7523e'
+);
+
+/*
+* 사용처
+* common/filter/_cm-filter__lists__button
+*/
+$patterns: (
+  'blackdenim': 'bg_filter_color_blackdenim',
+  'darkbluedenim': 'bg_filter_color_darkbluedenim',
+  'flower': 'bg_filter_color_flower',
+  'ginghamcheck': 'bg_filter_color_ginghamcheck',
+  'glencheck': 'bg_filter_color_glencheck',
+  'herringbone': 'bg_filter_color_harringbone',
+  'hombrecheck': 'bg_filter_color_ombrecheck',
+  'houndtoothcheck': 'bg_filter_color_houndtoothcheck',
+  'lightbluedenim': 'bg_filter_color_lightbluedenim',
+  'mediumbluedenim': 'bg_filter_color_mediumbluedenim',
+  'paisley': 'bg_filter_color_paisley',
+  'patchwork': 'bg_filter_color_patchwork',
+  'tartancheck': 'bg_filter_color_tartancheck',
+  'tropical': 'bg_filter_color_tropical',
+  'windowpanecheck': 'bg_filter_color_windowpanecheck',
+  'silver': 'bg_filter_color_silver',
+  'gold': 'bg_filter_color_gold',
+  'etc': 'bg_filter_color_etc',
+  'denim': 'bg_filter_color_denim',
+  'camo': 'bg_filter_color_camo',
+  'check': 'bg_filter_color_check',
+  'stripe': 'bg_filter_color_stripe',
+  'animal': 'bg_filter_color_animal',
+  'dot': 'bg_filter_color_dot',
+  'pattern': 'bg_filter_color_pattern',
+);

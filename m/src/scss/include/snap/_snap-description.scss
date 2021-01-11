@@ -1,0 +1,59 @@
+@charset 'utf-8';
+
+.snap-description {
+  $vHeight: 20px;
+
+  display: block;
+  overflow: hidden;
+  position: relative;
+  max-height: $vHeight * 2;
+  margin-bottom: 8px;
+  padding: 0 15px;
+  line-height: $vHeight;
+  text-align: left;
+  word-break: break-all;
+  will-change: height;
+
+  @mixin active() {
+    overflow: visible;
+    text-overflow: unset;
+    display: block;
+    height: auto;
+    max-height: initial;
+    -webkit-line-clamp: unset;
+  }
+
+  &__contents {
+    display: inline;
+  }
+
+  &.active {
+    @include active();
+  }
+
+  &--overflow {
+    &::after {
+      @include position(absolute, null, 15px, 0);
+      padding-left: 10px;
+      background-color: $white;
+      font-size: 12px;
+      line-height: 18px;
+      color: $gray7;
+      content: '...더보기';
+
+    }
+
+    &.active::after {
+      display: none;
+    }
+  }
+
+  @at-root {
+    // snap 댓글 리스트에서 사용
+    .snap-comment & {
+      @include active();
+
+      margin-bottom: 0;
+    }
+  }
+}
