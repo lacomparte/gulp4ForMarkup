@@ -37,28 +37,6 @@ UI개발 형상관리 Repository
   - build 실행
   - build된 결과 report를 `/dist/reports/m` 에서 html로 저장되며 브라우저에서 열어 확인 할 수 있음
 
-# 배포
-## 개발
-- 젠킨스에서 배포
-  - [개발 젠킨스](https://jenkins-frontend.dev.musinsa.io/job/devel-ui/)
-- build parameters
-  - branchName
-    - build 하고자 하는 브랜치 선택
-  - target
-    - pc 또는 m 선택
-  - project
-    - build 하고자 하는 프로젝트 선택
-    - 다중 선택할 수 없음
-    - 하드 코딩 되어있어서 수동으로 업데이트 해야함
-    - pc와 m의 설정값을 다르게 할 수 없음
-  - purge
-    - CDN purge 선택
-    - 사용하는 곳에서 모두 영향을 받을 수 있기 때문에 영향도를 파악하고 선택해야함
-    - CSS만 purge 시킴
-- build 가 완료되면 build 된 파일을 S3에 업로드 함
-  - 경로
-    `musinsa.devel/ui_test/` // TODO 경로명 확정 후 수정 필요
-
 ## 운영
 - 운영 젠킨스
   - 개발 젠킨스 설정 확정 후 생성 예정
