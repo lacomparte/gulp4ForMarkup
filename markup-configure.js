@@ -34,8 +34,8 @@ function getProjectStructureChoices(dir) {
     };
     const allJavascript = {
         name: 'js: 전체',
-        value: { type: 'js', name: '**' },
-        checked: workConfig[argv.path] ? workConfig[argv.path].javascript.indexOf('**') !== -1 : false
+        value: { type: 'javascript', name: '*.js' },
+        checked: workConfig[argv.path] ? workConfig[argv.path].javascript.indexOf('*.js') !== -1 : false
     };
 
     const rootSass = utils.getFileListByExt(path.join(src, 'scss'), '.scss')
@@ -104,7 +104,7 @@ inquirer.prompt([question])
 
         // 선택한 옵션이 없거나 전체를 선택한 경우 모든 디렉토리로 설정한다
         if (isAllJavascript) {
-            javascript = ['**'];
+            javascript = ['*.js'];
         }
 
         // 변경된 내용을 업데이트한다

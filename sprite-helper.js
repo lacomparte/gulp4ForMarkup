@@ -99,7 +99,7 @@ var spriteHelper = function(gulp, env, paths, exclusion, plugins, bUseSubdir, ht
         allTasks.push(taskName);
 
         gulp.task(taskName, function(){
-            var spriteData = gulp.src(src)
+            var spriteData = gulp.src(src, { allowEmpty:true })
                 .pipe(spritesmith(createSpriteOptions(dirname, isVertical)));
             var imgStream = spriteData.img
                 .pipe(gulp.dest(targetDir));

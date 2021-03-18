@@ -3,6 +3,7 @@ var argv = require('yargs').argv;
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 var config = require('../config').sass;
+var browserSync = require('browser-sync')
 var sassModuleImporter = require('sass-module-importer');
 
 function nodeSassFunctions(sassCompiler) {
@@ -33,7 +34,8 @@ function nodeSassFunctions(sassCompiler) {
 // .pipe(gulp.dest(config.dest)); 바로 위 .pipe(plugins.sourcemaps.write('./')) 추가
 
 module.exports = gulp.task(config.taskname, function () {
-    return gulp.src(config.src)
+    return gulp.src(config.src, { allowEmpty:true })
+        .pipe(plugins.sourcemaps.init())
         .pipe(plugins.sass({
             importer: sassModuleImporter(),
             outputStyle : config.options.outputStyle,
@@ -44,5 +46,7 @@ module.exports = gulp.task(config.taskname, function () {
         .pipe(plugins.autoprefixer(config.autoprefixerOptions))
         .pipe(plugins.csscomb(config.csscomb))
         .pipe(plugins.cleanCss(config.cleancss))
-        .pipe(gulp.dest(config.dest));
+        .pipe(plugins.sourcemaps.write('./'))
+        .pipe(gulp.dest(config.dest))
+        .pipe(browserSync.stream({ match: "*.scss" }));
 });

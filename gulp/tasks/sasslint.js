@@ -8,7 +8,7 @@ module.exports = gulp.task(config.taskname, function () {
     mkdirSync(config.dest);
     var file = fs.createWriteStream(config.dest);
 
-    return gulp.src(config.src)
+    return gulp.src(config.src, { allowEmpty:true })
         .pipe(plugins.sassLint({
             configFile: config.rule
         }))

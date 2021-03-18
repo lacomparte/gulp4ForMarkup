@@ -36,8 +36,10 @@ module.exports = gulp.task(config.taskname, async () => {
               }
             }
             const dataObject = eval('(' + fileContent.substring(objectStart, objectEnd) + ')');
-            fileObject.title = dataObject.title || '';
-            fileObject.subTitle = dataObject.title_sub || '';
+            if (dataObject && dataObject.header) {
+              fileObject.title = dataObject.header.title || '';
+              fileObject.subTitle = dataObject.header.title_sub || '';
+            }
             fileObject.file = file;
           }
           directoryData.files.push(fileObject);
@@ -45,7 +47,7 @@ module.exports = gulp.task(config.taskname, async () => {
     }
   });
 
-  return gulp.src(config.base + '/index.html', { base: config.base })
+  return gulp.src(config.base + '/index.html', { base: config.base, allowEmpty: true })
     .pipe(template({ fileList }))
     .pipe(gulp.dest(config.dest));  
 });

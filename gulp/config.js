@@ -13,7 +13,6 @@ if (argv.subdomain === 'mobile') {
 
 const PROXY_PORT = argv.port || 8088;
 const workConfig = require('./util/work-config')(ENV, SRC_DIR);
-
 module.exports = {
     clean: {
         taskname: 'clean',

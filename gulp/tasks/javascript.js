@@ -7,10 +7,7 @@ var plugins = require('gulp-load-plugins')();
 var config = require('../config').javascript;
 
 module.exports = gulp.task(config.taskname, function() {
-  return gulp.src(config.src)
-    // .pipe(plugins.jsImport({
-    //   hideConsole: false
-    // }))
+  return gulp.src(config.src, { allowEmpty:true })
     .pipe(bro({
       transform: [
         babelify.configure({
