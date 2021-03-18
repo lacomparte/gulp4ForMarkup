@@ -21,10 +21,10 @@
   ],
   "bugs": {
     "url": "https://git.musinsa.com/projects/UI/repos/ui-musinsa/browse",
-    "email": "ksrrr.rak@musinsa.com"
+    "email": "lacomparte@gmail.com"
   },
-  "author": "musinsa",
-  "license": "UNLICENSED",
+  "author": "untitled",
+  "license": "MITLICENSED",
   "private": true,
   "devDependencies": {
     "@babel/cli": "^7.12.10",
